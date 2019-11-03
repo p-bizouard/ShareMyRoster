@@ -78,4 +78,4 @@ workflows:
           requires:
             - test
 orbs:
-  kube-orb: circleci/kubernetes@x.y.z
+  kube-orb: circleci/kubernetes@0.10.0
