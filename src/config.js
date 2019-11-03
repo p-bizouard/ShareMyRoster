@@ -44,7 +44,7 @@ module.exports = {
 
   // Database
   databaseUrl:
-    process.env.DATABASE_URL || 'mysql://root:@localhost:3307/battlescribe',
+    process.env.DATABASE_URL || 'mysql://root:@localhost:3307/rosterviewer',
 
   // Web analytics
   analytics: {
