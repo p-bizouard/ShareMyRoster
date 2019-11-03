@@ -379,7 +379,7 @@
   },
   {
     "id": "layout.feedback",
-    "message": "Poser une question ou reporter un bug",
+    "message": "Poser une question ou reporter un bug.",
     "defaultMessage": "Ask a question or report an issue",
     "files": [
       "src/components/Feedback/Feedback.js"
