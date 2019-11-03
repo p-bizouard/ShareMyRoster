@@ -1,0 +1,472 @@
+[
+  {
+    "id": "navigation.about",
+    "description": "About link in header",
+    "defaultMessage": "About",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.contact",
+    "description": "Contact link in header",
+    "defaultMessage": "Contact",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.login",
+    "description": "Log in link in header",
+    "defaultMessage": "Log in",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.separator.or",
+    "description": "Last separator in list, lowercase \"or\"",
+    "defaultMessage": "or",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.signup",
+    "description": "Sign up link in header",
+    "defaultMessage": "Sign up",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "login.title",
+    "description": "Log in page title",
+    "defaultMessage": "Log In",
+    "message": "",
+    "files": [
+      "src/routes/login/index.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.1_in_1",
+    "defaultMessage": "Full page",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.2_in_1",
+    "defaultMessage": "Two ine one",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.4_in_1",
+    "defaultMessage": "Four ine one",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.load_example",
+    "defaultMessage": "Load the example",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.print_it",
+    "defaultMessage": "Print",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.reset",
+    "defaultMessage": "Reset",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.subtitle",
+    "defaultMessage": "View, share and print your {link} rosters !",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.title",
+    "defaultMessage": "Roster viewer",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.ability",
+    "defaultMessage": "Ability",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitAbilitiesTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.description",
+    "defaultMessage": "Description",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitAbilitiesTable.js",
+      "src/components/Roster/UnitPsychicsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.abilitie",
+    "defaultMessage": "{count, plural, one {Abilitiy} other {Abilities}} :",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitCategories.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.faction",
+    "defaultMessage": "{count, plural, one {Faction} other {Factions}} :",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitCategories.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.keyword",
+    "defaultMessage": "{count, plural, one {Keyword} other {Keywords}} :",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitCategories.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.explosion",
+    "defaultMessage": "Explosion :",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.psychic_power",
+    "defaultMessage": "Psychic power",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.a",
+    "defaultMessage": "A",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.bs",
+    "defaultMessage": "BS",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.ld",
+    "defaultMessage": "Ld",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.m",
+    "defaultMessage": "M",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.model",
+    "defaultMessage": "Model",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.s",
+    "defaultMessage": "S",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js",
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.save",
+    "defaultMessage": "Save",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.t",
+    "defaultMessage": "T",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.w",
+    "defaultMessage": "W",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.ws",
+    "defaultMessage": "WS",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.transport",
+    "defaultMessage": "Transport :",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.weapon",
+    "defaultMessage": "{count, plural, one {Weapon} other {Weapons}} :",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.psychic_power",
+    "defaultMessage": "Psychic power",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitPsychicsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.range",
+    "defaultMessage": "Range",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitPsychicsTable.js",
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.warp_charge",
+    "defaultMessage": "Warp charge",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitPsychicsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.abilities",
+    "defaultMessage": "Abilities",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.ap",
+    "defaultMessage": "AP",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.d",
+    "defaultMessage": "D",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.type",
+    "defaultMessage": "Type",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.weapon",
+    "defaultMessage": "Weapon",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.1_in_1_tooltip",
+    "defaultMessage": "Default margin and font size",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.2_in_1_tooltip",
+    "defaultMessage": "12mm margin and 110% font size. Remember to change the pages per sheet in your printer configuration.",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.4_in_1_tooltip",
+    "defaultMessage": "5mm margin and 130% font size. Remember to change the pages per sheet in your printer configuration.",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.feedback",
+    "defaultMessage": "Ask a question or report an issue",
+    "message": "",
+    "files": [
+      "src/components/Feedback/Feedback.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.close",
+    "defaultMessage": "Close",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.copy_clipboard",
+    "defaultMessage": "Copy to clipboard",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.hide_all",
+    "defaultMessage": "Hide all",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.hide_show",
+    "defaultMessage": "Hide / show",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.share",
+    "defaultMessage": "Share",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.share_title",
+    "defaultMessage": "Share your roster",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "layout.configuration.show_all",
+    "defaultMessage": "Show all",
+    "message": "",
+    "files": [
+      "src/components/Header/Header.js"
+    ]
+  },
+  {
+    "id": "uploader.open_file",
+    "defaultMessage": "Open file",
+    "message": "",
+    "files": [
+      "src/components/Roster/RoszUploader.js"
+    ]
+  },
+  {
+    "id": "uploader.title",
+    "defaultMessage": "Upload your roster file (with .rosz extension)",
+    "message": "",
+    "files": [
+      "src/components/Roster/RoszUploader.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.table.max",
+    "defaultMessage": "Max",
+    "message": "",
+    "files": [
+      "src/components/Roster/Force.js",
+      "src/components/Roster/UnitModelsTable.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.rules",
+    "defaultMessage": "{count, plural, one {Rule} other {Rules}} :",
+    "message": "",
+    "files": [
+      "src/components/Roster/UnitCategories.js"
+    ]
+  }
+]

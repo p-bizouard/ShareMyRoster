@@ -1,0 +1,74 @@
+[
+  {
+    "id": "unit.keyword.Character",
+    "message": "Personnage"
+  },
+  {
+    "id": "unit.keyword.Vehicle",
+    "message": "Véhicule"
+  },
+  {
+    "id": "unit.keyword.Elites",
+    "message": "Élites"
+  },
+  {
+    "id": "unit.keyword.Beast",
+    "message": "Bête"
+  },
+  {
+    "id": "unit.keyword.Fast Attack",
+    "message": "Attaque rapide"
+  },
+  {
+    "id": "unit.keyword.Fly",
+    "message": "Vol"
+  },
+  {
+    "id": "unit.keyword.Jump Pack",
+    "message": "Jet Pack"
+  },
+  {
+    "id": "unit.keyword.Cavalry",
+    "message": "Cavalerie"
+  },
+  {
+    "id": "unit.keyword.Heavy Support",
+    "message": "Soutien"
+  },
+  {
+    "id": "unit.keyword.Infantry",
+    "message": "Infanterie"
+  },
+  {
+    "id": "unit.keyword.Troops",
+    "message": "Troupes"
+  },
+  {
+    "id": "unit.keyword.Dedicated Transport",
+    "message": "Transport assigné"
+  },
+  {
+    "id": "unit.keyword.XXXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.keyword.XXXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.keyword.XXXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.keyword.XXXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.keyword.XXXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.keyword.XXXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  }
+]

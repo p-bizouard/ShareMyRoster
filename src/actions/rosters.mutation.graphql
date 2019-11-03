@@ -1,0 +1,5 @@
+mutation SaveRoster($rosz: String!) {
+  databaseCreateRoster(rosz: $rosz) {
+    key
+  }
+}

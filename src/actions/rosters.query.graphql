@@ -1,0 +1,5 @@
+query GetRoster($key: String!) {
+  databaseGetRoster(key: $key) {
+    rosz
+  }
+}

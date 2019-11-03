@@ -1,0 +1,42 @@
+version: '3.2'
+# Create networks to be used to isolate containers
+networks:
+  # Server network to hold database and backend
+  servernetwork: {}
+# Create named volumes to mount to containers.
+volumes:
+  # Create a named volume to hold database data
+  database-storage: {}
+# Define services to be run.
+services:
+  database:
+    image: m27g5ysm.gra5.container-registry.ovh.net/rosterviewer/database
+    build: ./docker-database/
+    volumes:
+      - database-storage:/var/lib/mysql
+    environment:
+      # Since we didn't set any password, default root password is empty.
+      # Make sure Mariadb accepts the empty password and runs.
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    ports:
+      # Expose the Mysql port for local development.
+      # This is so we can connect to the database using `localhost` or the ip of the docker host.
+      - "3306:3306"
+    networks:
+      # Add the database service to the servernetwork.
+      - servernetwork
+  application:
+    image: m27g5ysm.gra5.container-registry.ovh.net/rosterviewer/application
+    build:
+      context: ./
+    volumes:
+      - ./application:/application/code
+    environment:
+      - DATABASE_URL=mysql://root:@database:3306/rosterviewer
+      - CONTACT_EMAIL=bizouap@gmail.com
+    ports:
+      - "3000:3000"
+    networks:
+      - servernetwork
+    depends_on:
+      - database

@@ -1,0 +1,61 @@
+version: 2
+jobs:
+  build_application:
+    docker:
+      - image: circleci/node:stretch
+    working_directory: ~/RosterViewer
+    steps:
+      - setup_remote_docker:
+          version: 17.09.0-ce
+      - checkout
+      - run:
+          name: Build Image & Register Task
+          command: |
+            yarn install
+            yarn run build -- --release
+            ls -la build/
+            docker build -t $DOCKER_REGISTRY/rosterviewer/application:latest .
+            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+            docker push $DOCKER_REGISTRY/rosterviewer/application:latest
+  build_database:
+    machine: true
+    working_directory: ~/RosterViewer
+    steps:
+      - checkout
+      - run:
+          name: Build Image & Register Task
+          command: |
+            cd docker-database
+            docker build -t $DOCKER_REGISTRY/rosterviewer/database:latest .
+            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+            docker push $DOCKER_REGISTRY/rosterviewer/database:latest
+  
+  test:
+    machine: true
+    working_directory: ~/RosterViewer
+    steps:
+      - checkout
+      - run:
+          name: Run docker-login and docker-pull
+          command: |
+            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+            docker-compose pull
+      - run:
+          name: Run docker-up
+          command: |
+            docker-compose up -d
+      - run:
+          name: Run curl test
+          command: |
+            docker-compose exec application curl -4 --retry 10 --retry-delay 1 --retry-connrefused http://localhost:3000/
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build_application
+      - build_database
+      - test:
+          requires:
+            - build_application
+            - build_database

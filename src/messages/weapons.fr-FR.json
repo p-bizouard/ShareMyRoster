@@ -1,0 +1,446 @@
+[
+  {
+    "id": "unit.weapon.Pistol",
+    "message": "Pistolet"
+  },
+  {
+    "id": "unit.weapon.Melee",
+    "message": "Mêlée"
+  },
+  {
+    "id": "unit.weapon.Grenade",
+    "message": "Grenade"
+  },
+  {
+    "id": "unit.weapon.User",
+    "message": "Utilisateur"
+  },
+  {
+    "id": "unit.weapon.Rapid Fire",
+    "message": "Tir rapide"
+  },
+  {
+    "id": "unit.weapon.Bolt pistol",
+    "message": "Pistolet bolter"
+  },
+  {
+    "id": "unit.weapon.Bolt rifle",
+    "message": "Fusil bolter"
+  },
+  {
+    "id": "unit.weapon.Frag grenade",
+    "message": "Grenade frag"
+  },
+  {
+    "id": "unit.weapon.Krak grenade",
+    "message": "Grenade krak"
+  },
+  {
+    "id": "unit.weapon.Plasma incinerator, Standard",
+    "message": "Incinérateur à plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma incinerator, Supercharge",
+    "message": "Incinérateur à plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma incinerator, Supercharge",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Plasma Incinerator",
+    "message": "Incinérateur à plasma"
+  },
+  {
+    "id": "unit.weapon.Plasma pistol, Standard",
+    "message": "Pistolet plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma pistol, Supercharge",
+    "message": "Pistolet plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma pistol, Supercharge",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Plasma pistol (Standard)",
+    "message": "Pistolet plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma pistol (Supercharge)",
+    "message": "Pistolet plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma pistol (Supercharge)",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Plasma pistol (standard)",
+    "message": "Pistolet plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma pistol (supercharge)",
+    "message": "Pistolet plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma pistol (supercharge)",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Plasma pistol",
+    "message": "Pistolet plasma"
+  },
+  {
+    "id": "unit.weapon.Plasma gun, Standard",
+    "message": "Fusil à plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma gun, Supercharge",
+    "message": "Fusil à plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma gun, Supercharge",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Plasma gun (Standard)",
+    "message": "Fusil à plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma gun (Supercharged)",
+    "message": "Fusil à plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma gun (Supercharged)",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Plasma gun",
+    "message": "Fusil à plasma"
+  },
+  {
+    "id": "unit.weapon.Boltgun",
+    "message": "Fusil bolter"
+  },
+  {
+    "id": "unit.weapon.Meltagun",
+    "message": "Fuseur"
+  },
+  {
+    "id": "unit.weapon_ability.Meltagun",
+    "message": "Si la cible est à mi-portée ou moins de cette arme, jeter 2 dés lorsque vous infligez ses dégats et défaussez le résultat le plus bas"
+  },
+  {
+    "id": "unit.weapon.Power fist",
+    "message": "Gantelet énergétique"
+  },
+  {
+    "id": "unit.weapon_ability.Power fist",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Power Fist",
+    "message": "Gantelet énergétique"
+  },
+  {
+    "id": "unit.weapon_ability.Power Fist",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Chainsword",
+    "message": "Épée tronsoneuse"
+  },
+  {
+    "id": "unit.weapon_ability.Chainsword",
+    "message": "+1 attaque en phase de Combat"
+  },
+  {
+    "id": "unit.weapon.Boltgun",
+    "message": "Fusil bolter"
+  },
+  {
+    "id": "unit.weapon.Heavy flamer",
+    "message": "Lance flamme lourd"
+  },
+  {
+    "id": "unit.weapon_ability.Heavy flamer",
+    "message": "Cette arme touche automatiquement sa cible"
+  },
+  {
+    "id": "unit.weapon.Storm bolter",
+    "message": "Bolter storm"
+  },
+  {
+    "id": "unit.weapon.Assault cannon",
+    "message": "Canon d'assaut"
+  },
+  {
+    "id": "unit.weapon.Heavy",
+    "message": "Lourd"
+  },
+  {
+    "id": "unit.weapon.Assault",
+    "message": "Assaut"
+  },
+  {
+    "id": "unit.weapon.Assault bolter",
+    "message": "Bolter d'assaut"
+  },
+  {
+    "id": "unit.weapon.Assault Bolter",
+    "message": "Bolter d'assaut"
+  },
+  {
+    "id": "unit.weapon.Frost sword",
+    "message": "Épée de givre"
+  },
+  {
+    "id": "unit.weapon.Crushing teeth and claws",
+    "message": "Crocs et griffes"
+  },
+  {
+    "id": "unit.weapon_ability.Crushing teeth and claws",
+    "message": "Après que cette figurine ai fini ses attaques en phase de combat, vous pouvez effectuer 3 attaques additionnelles avec ce profil d'arme"
+  },
+  {
+    "id": "unit.weapon.Master-crafted power sword",
+    "message": "Épée énergétique de maître"
+  },
+  {
+    "id": "unit.weapon.Foehammer",
+    "message": "Marteau à Ennemis"
+  },
+  {
+    "id": "unit.weapon.Foehammer (melee)",
+    "message": "Marteau à Ennemis (mêlée)"
+  },
+  {
+    "id": "unit.weapon_ability.Foehammer (melee)",
+    "message": "Lorsqu'elle cible des Personnages ou des Monstres, cette arme a dégat 3"
+  },
+  {
+    "id": "unit.weapon.Foehammer (shooting)",
+    "message": "Marteau à Ennemis (tir)"
+  },
+  {
+    "id": "unit.weapon_ability.Foehammer (shooting)",
+    "message": "Lorsqu'elle cible des Personnages ou des Monstres, cette arme a dégat 3"
+  },
+  {
+    "id": "unit.weapon.Boltstorm gauntlet",
+    "message": "Gantelet Boltstorm"
+  },
+  {
+    "id": "unit.weapon.Boltstorm gauntlet (melee)",
+    "message": "Gantelet Boltstorm (mêlée)"
+  },
+  {
+    "id": "unit.weapon_ability.Boltstorm gauntlet (melee)",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Boltstorm gauntlet (shooting)",
+    "message": "Gantelet Boltstorm (tir)"
+  },
+  {
+    "id": "unit.weapon_ability.Staff of the Stormcaller",
+    "message": "Vous pouvez relancer 1 test d'Abjuration raté à chaque phase Psychique adverse"
+  },
+  {
+    "id": "unit.weapon.The Murderclaws",
+    "message": "Griffes Meurtrières"
+  },
+  {
+    "id": "unit.weapon_ability.The Murderclaws",
+    "message": "Vous pouvez relancer les jets de blessure ratés"
+  },
+  {
+    "id": "unit.weapon.Hunter-killer missile",
+    "message": "Missile Hunter-killer"
+  },
+  {
+    "id": "unit.weapon_ability.Hunter-killer missile",
+    "message": "Une figurine peut tirer son missile hunter-killer une fois par partie"
+  },
+  {
+    "id": "unit.weapon.Teeth and claws",
+    "message": "Griffes et crocs"
+  },
+  {
+    "id": "unit.weapon.Frost claws",
+    "message": "Griffes de givre"
+  },
+  {
+    "id": "unit.weapon_ability.Frost claws",
+    "message": "+1 attaque en phase de combat. De plus, vous pouvez relancer les jets de blessure ratés"
+  },
+  {
+    "id": "unit.weapon.Wulfen claws",
+    "message": "Griffes de Wulfen"
+  },
+  {
+    "id": "unit.weapon.Thunder hammer",
+    "message": "Marteau Tonerre"
+  },
+  {
+    "id": "unit.weapon_ability.Thunder hammer",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Great frost axe",
+    "message": "Grande hache de givre"
+  },
+  {
+    "id": "unit.weapon_ability.Great frost axe",
+    "message": "+1 attaque si l'unité a chargé lors du tour"
+  },
+  {
+    "id": "unit.weapon.Lasgun",
+    "message": "Fusil laser"
+  },
+  {
+    "id": "unit.weapon.Hot-shot lasgun",
+    "message": "Fusil radiant laser"
+  },
+  {
+    "id": "unit.weapon.Laspistol",
+    "message": "Pistolet laser"
+  },
+  {
+    "id": "unit.weapon.Power Klaw",
+    "message": "Pince énergétique"
+  },
+  {
+    "id": "unit.weapon_ability.Power Klaw",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Plasma cannon, Standard",
+    "message": "Canon à plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma cannon, Supercharge",
+    "message": "Canon à plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma cannon, Supercharge",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Executioner Plasma Cannon - Standard",
+    "message": "Canon Plasma Executioner - Standard"
+  },
+  {
+    "id": "unit.weapon.Executioner Plasma Cannon - Supercharge",
+    "message": "Canon Plasma Executioner - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Executioner Plasma Cannon - Supercharge",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Lascannon",
+    "message": "Canon laser"
+  },
+  {
+    "id": "unit.weapon.Mortar",
+    "message": "Mortier"
+  },
+  {
+    "id": "unit.weapon.Hot-shot Laspistol",
+    "message": "Pistolet radiant laster"
+  },
+  {
+    "id": "unit.weapon.Hot-shot Lasgun",
+    "message": "Fusil radiant laster"
+  },
+  {
+    "id": "unit.weapon.Bullgryn Maul",
+    "message": "Masse de Bullgrun"
+  },
+  {
+    "id": "unit.weapon.Frag Bombs",
+    "message": "Bombes Frag"
+  },
+  {
+    "id": "unit.weapon.Sniper rifle",
+    "message": "Fusil sniper"
+  },
+  {
+    "id": "unit.weapon_ability.Sniper rifle",
+    "message": "Peut cibler un Personnage même s'il n'est pas l'unité visible la plus proche. Sur un jet de blessure de 6+, elle inflige une BM en plus."
+  },
+  {
+    "id": "unit.weapon.Missile launcher",
+    "message": "Lance missile"
+  },
+  {
+    "id": "unit.weapon.Missile launcher, Frag missile",
+    "message": "Lance missle Frag"
+  },
+  {
+    "id": "unit.weapon.Missile launcher, Krak missile",
+    "message": "Lance missile Krak"
+  },
+  {
+    "id": "unit.weapon.Heavy bolter",
+    "message": "Bolter lourd"
+  },
+  {
+    "id": "unit.weapon.Exitus Pistol",
+    "message": "Pistolet Exitus"
+  },
+  {
+    "id": "unit.weapon_ability.Exitus Pistol",
+    "message": "Les sauvegardes invulnérables ne peuvent pas être prises en compte. Cette arme inflige des dégats sur les Infanterie sur du 2+"
+  },
+  {
+    "id": "unit.weapon.Blind Grenades",
+    "message": "Grenades aveuglantes"
+  },
+  {
+    "id": "unit.weapon_ability.Blind Grenades",
+    "message": "Cette arme n'inflige aucun domage. Au lieu de cela, l'unité ennemie touchée aura -1 pour les jets de touche jusqu'à la fin du tour"
+  },
+  {
+    "id": "unit.weapon.Exitus Rifle",
+    "message": "Fusil Exitus"
+  },
+  {
+    "id": "unit.weapon_ability.Exitus Rifle",
+    "message": "Les sauvegardes invulnérables ne peuvent pas être prises en compte. Cette arme inflige des dégats sur les Infanterie sur du 2+"
+  },
+  {
+    "id": "unit.weapon.Power sword",
+    "message": "Épée énergétique"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "unit.psychic_name.Living Lightning",
+    "message": "Éclair vivant"
+  },
+  {
+    "id": "unit.psychic_description.Living Lightning",
+    "message": "S'il est manifesté, l'unité ennemie visible la plus proche à 18'' ou moins subit D3 BM. Si cela détruit l'unité, l'unité ennemie la plus proche et à 18'' ou moins de la dernière figurine retirée de cette unité subit D3 blessures mortelles, et ainsi de suite."
+  },
+  {
+    "id": "unit.psychic_name.Tempest's Wrath",
+    "message": "Colère de la tempête"
+  },
+  {
+    "id": "unit.psychic_description.Tempest's Wrath",
+    "message": "S'il est manifesté, choisissez une unité ennemie visible à 24'' ou moins. Jusqu'au début de votre prochaine phase Psychique, votre adversaire doit soustraire 1 aux jets de touche qu'il effectue pour cette unité."
+  },
+  {
+    "id": "unit.psychic_name.Murderous Hurricane",
+    "message": "Ouragan meurtrier"
+  },
+  {
+    "id": "unit.psychic_description.Murderous Hurricane",
+    "message": "S'il est manifesté, choisisez ue unité ennemie visible à 18'' ou moins. Jetez un dé par figurine dans l'unité ; l'unité subit une BM pour chaque 6 obtenu."
+  },
+  {
+    "id": "unit.psychic_name.Fury of the Wolf Spirits",
+    "message": "Fureur des esprits loups"
+  },
+  {
+    "id": "unit.psychic_description.Fury of the Wolf Spirits",
+    "message": "S'il est manifesté, le Rune Priest gagne l'arme suivant jusqu'au début de votre prochaine phase Psychique : Freki and Geri"
+  },
+  {
+    "id": "unit.psychic_name.Storm Caller",
+    "message": "Messager de la tempête"
+  },
+  {
+    "id": "unit.psychic_description.Storm Caller",
+    "message": "S'il est manifesté, jusqu'au début de votre prochaine phase psychique, les psykers et les unités Space Wolves amies à 6'' ou moins de lui gagnent le bénéfice du couvert"
+  },
+  {
+    "id": "unit.psychic_name.Jaws of the World Wolf",
+    "message": "Mâchoires du loup du monde"
+  },
+  {
+    "id": "unit.psychic_description.Jaws of the World Wolf",
+    "message": "S'il est manifesté, choisissez une unité ennemie à 18'' ou moins et n'étant pas un Véhicule. Jetez 2D6 et soustrayez la caractéristique de Mouvement de la cible ; la cible subit un nombre de BM égal au résultat."
+  },
+  {
+    "id": "unit.psychic_name.XXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.psychic_description.XXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.psychic_name.XXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.psychic_description.XXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXXX"
+  }
+]
