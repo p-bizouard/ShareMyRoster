@@ -47,12 +47,15 @@ class Header extends React.Component {
     roster: PropTypes.shape({
       key: PropTypes.string.isRequired,
       json: PropTypes.string.isRequired,
-    }).isRequired,
+    }),
     initRosterFromKey: PropTypes.func.isRequired,
     saveRosterRosz: PropTypes.func.isRequired,
     setRuntimeVariable: PropTypes.func.isRequired,
     setRosterKey: PropTypes.func.isRequired,
     setRosterJson: PropTypes.func.isRequired,
+  };
+  static defaultProps = {
+    roster: null,
   };
 
   static hideShow(e) {

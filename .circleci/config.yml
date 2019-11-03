@@ -12,7 +12,7 @@ jobs:
           name: Build Image & Register Task
           command: |
             yarn install
-            yarn run build -- --release
+            yarn run build --release
             ls -la build/
             docker build -t $DOCKER_REGISTRY/rosterviewer/application:latest .
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS

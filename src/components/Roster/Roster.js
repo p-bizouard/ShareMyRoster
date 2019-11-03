@@ -17,11 +17,12 @@ class Roster extends React.Component {
     printType: PropTypes.string,
     roster: PropTypes.shape({
       json: PropTypes.string.isRequired,
-    }).isRequired,
+    }),
   };
 
   static defaultProps = {
-    printType: ''
+    printType: '',
+    roster: null,
   };
 
   constructor() {
