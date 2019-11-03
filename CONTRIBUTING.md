@@ -1,8 +1,4 @@
-## Contributing to React Starter Kit
-
-React Starter Kit is currently the most widely adopted Node.js/React boilerplate used by many
-tech startups around the globe. We're working hard to keep it up to date, making sure that it
-follows best practices and high coding standards, paying extremely close attention to details.
+## Contributing to RosterViewer
 
 Your contributions are welcome and are greatly appreciated! Every little bit helps, and credit
 will always be given.
@@ -19,9 +15,7 @@ those that are disrespectful.
 
 Feedback is the breakfast for champions! We'd love to hear your opinions, discuss potential
 improvements, architecture, theory, internal implementation, etc. Please, join or start a new
-conversation in our [issue tracker](https://github.com/kriasoft/react-starter-kit/issues),
-[Gitter](https://gitter.im/kriasoft/react-starter-kit) chat room, or let's talk face-to-face on
-[Appear.in](https://appear.in/react) or [Skype](http://hatscripts.com/addskype?koistya).
+conversation in our [issue tracker](https://github.com/p-bizouard/RosterViewer/issues)
 
 ### Documentation
 
@@ -33,11 +27,8 @@ files right from GitHub website as described [here](https://help.github.com/arti
 
 Before opening an issue, please:
 
-* Check the [Getting Started](https://github.com/kriasoft/react-starter-kit/blob/master/docs/getting-started.md) guide.
-* Search the [issue tracker](https://github.com/kriasoft/react-starter-kit/issues) to make sure
+* Search the [issue tracker](https://github.com/p-bizouard/RosterViewer/issues) to make sure
   your issue hasn’t already been reported.
-* If your issue sounds more like a question, please post it on StackOverflow.com instead with the
-  tag [react-starter-kit](http://stackoverflow.com/questions/tagged/react-starter-kit).
 
 ### Pull Requests
 
@@ -62,5 +53,5 @@ in the right direction.
 
 ### License
 
-By contributing to React Starter Kit, you agree that your contributions will be licensed under its
-[MIT license](https://github.com/kriasoft/react-starter-kit/blob/master/LICENSE.txt).
+By contributing to RosterViewer, you agree that your contributions will be licensed under its
+[MIT license](https://github.com/p-bizouard/RosterViewer/blob/master/LICENSE.txt).

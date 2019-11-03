@@ -4,6 +4,10 @@ View, share and print your Battlescribe rosters !
 
 [![CircleCI](https://circleci.com/gh/p-bizouard/RosterViewer.svg?style=svg)](https://circleci.com/gh/p-bizouard/RosterViewer)
 
+## Built With
+
+* [React Starter Kit](https://github.com/kriasoft/react-starter-kit) - Isomorphic web app boilerplate with react-intl feature
+
 ### License
 
 This source code is licensed under the MIT
