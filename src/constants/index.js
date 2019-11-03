@@ -8,3 +8,4 @@ export const SET_LOCALE_ERROR = 'SET_LOCALE_ERROR';
 export const SET_ROSTER_KEY = 'SET_ROSTER_KEY';
 export const SET_ROSTER_JSON = 'SET_ROSTER_JSON';
 export const SET_ROSTER_TYPE = 'SET_ROSTER_TYPE';
+
