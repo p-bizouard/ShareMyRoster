@@ -25,5 +25,7 @@ yarn-error.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+.env
+
 # Misc
 .DS_Store

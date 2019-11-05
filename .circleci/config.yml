@@ -16,7 +16,9 @@ jobs:
             ls -la build/
             docker build -t $DOCKER_REGISTRY/rosterviewer/application:latest .
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+            docker tag $DOCKER_REGISTRY/rosterviewer/application:latest $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
             docker push $DOCKER_REGISTRY/rosterviewer/application:latest
+            docker push $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
   build_database:
     machine: true
     working_directory: ~/RosterViewer
@@ -28,7 +30,9 @@ jobs:
             cd docker-database
             docker build -t $DOCKER_REGISTRY/rosterviewer/database:latest .
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+            docker tag $DOCKER_REGISTRY/rosterviewer/database:latest $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
             docker push $DOCKER_REGISTRY/rosterviewer/database:latest
+            docker push $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
   
   test:
     machine: true
@@ -49,21 +53,23 @@ jobs:
           command: |
             docker-compose exec application curl -4 --retry 10 --retry-delay 1 --retry-connrefused http://localhost:3000/
   update:
-    docker:
-      - image: 'cimg/base:stable'
+    machine: true
     steps:
       - checkout
-      - kube-orb/install-kubectl
-      - kube-orb/update-container-image:
-          container-image-updates: '$DOCKER_REGISTRY/rosterviewer/database:latest'
-          get-rollout-status: true
-          record: true
-          resource-name: deployment/database
-      - kube-orb/update-container-image:
-          container-image-updates: '$DOCKER_REGISTRY/rosterviewer/application:latest'
-          get-rollout-status: true
-          record: true
-          resource-name: deployment/webserver
+      - run:
+          name: Install envsubst
+          command: |
+            sudo apt-get update && sudo apt-get -y install gettext-base
+      - run:
+          name: Install kubectl
+          command: |
+            curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+            mv ./kubectl ./build/kubectl
+            chmod u+x ./build/kubectl
+      - run:
+          name: Deploy Code
+          command: ./.circle-ci/kubernetes-deploy.sh
+
 workflows:
   version: 2
   build_and_test:

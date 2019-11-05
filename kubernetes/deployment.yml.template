@@ -1,0 +1,98 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rosterviewer-database-service
+  labels:
+    app: rosterviewer-database
+spec:
+  ports:
+  - port: 3306
+    protocol: TCP
+  selector:
+    app: rosterviewer-database
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database
+spec:
+  selector:
+    matchLabels:
+      app: rosterviewer-database
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: rosterviewer-database
+    spec:
+      imagePullSecrets:
+        - name: registrypullsecret
+      containers:
+      - image: ${DOCKER_REGISTRY}/rosterviewer/database:${COMMIT_SHA1}
+        name: database
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "1"
+        ports:
+        - containerPort: 3306
+          name: database-port
+        imagePullPolicy: Always
+        # volumeMounts:
+        #   - name: mysql-persistent-storage
+        #     mountPath: /var/lib/mysql
+      # volumes:
+      # - name: mysql-persistent-storage
+      #   persistentVolumeClaim:
+      #     claimName: mysql-pv-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rosterviewer-application-service
+  labels:
+    run: rosterviewer-application-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 3000
+    protocol: TCP
+  selector:
+    app: rosterviewer-application
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webserver
+  labels:
+    app: rosterviewer-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rosterviewer-application
+  template:
+    metadata:
+      labels:
+        app: rosterviewer-application
+    spec:
+      imagePullSecrets:
+        - name: registrypullsecret
+      containers:
+      - image: ${DOCKER_REGISTRY}/rosterviewer/application:${COMMIT_SHA1}
+        name: application
+        env:
+        - name: DATABASE_URL
+          value: "mysql://root:@rosterviewer-database-service:3306/rosterviewer"
+        - name: CONTACT_EMAIL
+          value: $CONTACT_EMAIL
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+      #   volumeMounts:
+      #   - name: hostvol
+      #     mountPath: /var/www/html/
+      # volumes:
+      #   - name: hostvol
+      #     hostPath:
+      #       path: /data

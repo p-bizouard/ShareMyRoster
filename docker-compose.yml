@@ -10,7 +10,7 @@ volumes:
 # Define services to be run.
 services:
   database:
-    image: m27g5ysm.gra5.container-registry.ovh.net/rosterviewer/database
+    image: $DOCKER_REGISTRY/rosterviewer/database:latest
     build: ./docker-database/
     volumes:
       - database-storage:/var/lib/mysql
@@ -26,14 +26,14 @@ services:
       # Add the database service to the servernetwork.
       - servernetwork
   application:
-    image: m27g5ysm.gra5.container-registry.ovh.net/rosterviewer/application
+    image: $DOCKER_REGISTRY/rosterviewer/application:latest
     build:
       context: ./
     volumes:
       - ./application:/application/code
     environment:
       - DATABASE_URL=mysql://root:@database:3306/rosterviewer
-      - CONTACT_EMAIL=bizouap@gmail.com
+      - CONTACT_EMAIL=$CONTACT_EMAIL
     ports:
       - "3000:3000"
     networks:
