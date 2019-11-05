@@ -1,8 +1,8 @@
-#! /bin/bash
+#!/bin/bash
 
 set -e
 
-if [[ ! -z "${ENV_DEV}" ]]; then
+if [[ -z "${CIRCLE_SHA1}" ]]; then
     export COMMIT_SHA1=${CIRCLE_SHA1}
     export KUBECTL=./kubectl
 else
