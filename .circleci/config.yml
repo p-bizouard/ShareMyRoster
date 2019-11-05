@@ -52,7 +52,7 @@ jobs:
           name: Run curl test
           command: |
             docker-compose exec application curl -4 --retry 10 --retry-delay 1 --retry-connrefused http://localhost:3000/
-  update:
+  deploy:
     machine: true
     steps:
       - checkout
@@ -67,7 +67,7 @@ jobs:
             chmod u+x ./kubectl
       - run:
           name: Deploy Code
-          command: ./.circle-ci/kubernetes-deploy.sh
+          command: ./.circleci/kubernetes-deployment.sh
 
 workflows:
   version: 2
@@ -79,7 +79,7 @@ workflows:
           requires:
             - build_application
             - build_database
-      - update:
+      - deploy:
           requires:
             - test
 orbs:
