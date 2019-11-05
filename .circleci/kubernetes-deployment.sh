@@ -2,9 +2,7 @@
 
 set -e
 
-CIRCLE_SHA1=$CIRCLE_SHA1
-
-if [[ -z "${CIRCLE_SHA1}" ]]; then
+if [[ ! -z "${ENV_DEV}" ]]; then
     export COMMIT_SHA1=${CIRCLE_SHA1}
     export KUBECTL=./kubectl
 else
@@ -12,7 +10,6 @@ else
     source .env
     set +a
 
-    export COMMIT_SHA1=latest
     export KUBECTL=kubectl.exe
 fi
 
