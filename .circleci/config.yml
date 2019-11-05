@@ -64,8 +64,7 @@ jobs:
           name: Install kubectl
           command: |
             curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-            mv ./kubectl ./build/kubectl
-            chmod u+x ./build/kubectl
+            chmod u+x ./kubectl
       - run:
           name: Deploy Code
           command: ./.circle-ci/kubernetes-deploy.sh
