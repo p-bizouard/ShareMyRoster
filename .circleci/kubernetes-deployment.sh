@@ -2,7 +2,7 @@
 
 set -e
 
-if [[ -z "${CIRCLE_SHA1}" ]]; then
+if [[ "$1" = "circleci" ]]; then
     export COMMIT_SHA1=${CIRCLE_SHA1}
     export KUBECTL=./kubectl
 else
