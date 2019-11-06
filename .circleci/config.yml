@@ -81,15 +81,14 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-    #   - build_application
-    #   - build_database
-    #   - test:
-    #       requires:
-    #         - build_application
-    #         - build_database
-      - deploy
-      # :
-          # requires:
-          #   - test
+      - build_application
+      - build_database
+      - test:
+          requires:
+            - build_application
+            - build_database
+      - deploy:
+          requires:
+            - test
 orbs:
   kube-orb: circleci/kubernetes@0.10.0
