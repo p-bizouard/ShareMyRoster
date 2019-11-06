@@ -16,6 +16,7 @@ fi
 # since the only way for envsubst to work on files is using input/output redirection,
 #  it's not possible to do in-place substitution, so we need to save the output to another file
 #  and overwrite the original with that one.
+mkdir -p build
 envsubst < ./kubernetes/deployment.yml.template > ./build/kubernetes-deployment.yml
 
 echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode > ./build/kubernetes-cert.crt
