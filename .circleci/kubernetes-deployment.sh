@@ -18,6 +18,9 @@ fi
 #  and overwrite the original with that one.
 envsubst < ./kubernetes/deployment.yml.template > ./build/kubernetes-deployment.yml
 
+ls -la
+ls -la build
+
 echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode > ./build/kubernetes-cert.crt
 
 $KUBECTL \

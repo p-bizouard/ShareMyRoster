@@ -13,8 +13,10 @@ jobs:
           command: |
             yarn install
             yarn run build --release
-            ls -la build/
             docker build -t $DOCKER_REGISTRY/rosterviewer/application:latest .
+      - run:
+          name: Build Image & Register Task
+          command: |
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
             docker tag $DOCKER_REGISTRY/rosterviewer/application:latest $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
             docker push $DOCKER_REGISTRY/rosterviewer/application:latest
@@ -25,10 +27,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Build Image & Register Task
+          name: Build Image
           command: |
             cd docker-database
             docker build -t $DOCKER_REGISTRY/rosterviewer/database:latest .
+      - run:
+          name: Tag and push the image
+          command: |
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
             docker tag $DOCKER_REGISTRY/rosterviewer/database:latest $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
             docker push $DOCKER_REGISTRY/rosterviewer/database:latest
