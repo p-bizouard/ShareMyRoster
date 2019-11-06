@@ -1,9 +1,47 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import MyFormattedMessage from '../MyFormattedMessage';
 
 class UnitAbilitiesTable extends React.Component {
+  static propTypes = {
+    unit: PropTypes.shape({
+      $: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      }).isRequired,
+      categories: PropTypes.array,
+      selections: PropTypes.array,
+      profiles: PropTypes.array,
+    }).isRequired,
+  };
+
+  static getWeaponData(weapon) {
+    return {
+      id: weapon.$.id,
+      name: weapon.$.name,
+      range: weapon.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'Range',
+      )._,
+      type: weapon.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'Type',
+      )._,
+      strength: weapon.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'S',
+      )._,
+      ap: weapon.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'AP',
+      )._,
+      damage: weapon.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'D',
+      )._,
+      abilities: weapon.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'Abilities',
+      )._,
+    };
+  }
+
   unitHasWeapons() {
     return this.unitHasPrimaryWeapons() || this.unitHasSecondaryWeapons();
   }
@@ -34,34 +72,7 @@ class UnitAbilitiesTable extends React.Component {
     }, false);
   }
 
-  getWeaponData(weapon) {
-    return {
-      id: weapon.$.id,
-      name: weapon.$.name,
-      range: weapon.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'Range',
-      )._,
-      type: weapon.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'Type',
-      )._,
-      strength: weapon.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'S',
-      )._,
-      ap: weapon.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'AP',
-      )._,
-      damage: weapon.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'D',
-      )._,
-      abilities: weapon.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'Abilities',
-      )._,
-    };
-  }
-
-  renderWeapons(characteristicName) {
-    const { intl } = this.props;
-
+  renderWeapons() {
     let weapons = [];
 
     if (this.props.unit.selections) {
@@ -75,7 +86,11 @@ class UnitAbilitiesTable extends React.Component {
                 .concat(
                   model.profiles[0].profile
                     .filter(profile => profile.$.typeName === 'Weapon')
-                    .map(modelWeapon => this.getWeaponData(modelWeapon), this),
+                    .map(
+                      modelWeapon =>
+                        UnitAbilitiesTable.getWeaponData(modelWeapon),
+                      this,
+                    ),
                 )
                 .flat();
 
@@ -93,7 +108,8 @@ class UnitAbilitiesTable extends React.Component {
                             upgradeAbility.$.typeName === 'Weapon',
                         )
                         .map(
-                          upgradeWeapon => this.getWeaponData(upgradeWeapon),
+                          upgradeWeapon =>
+                            UnitAbilitiesTable.getWeaponData(upgradeWeapon),
                           this,
                         );
                     }, this),
@@ -112,7 +128,10 @@ class UnitAbilitiesTable extends React.Component {
         .concat(
           this.props.unit.profiles[0].profile
             .filter(profile => profile.$.typeName === 'Weapon')
-            .map(modelWeapon => this.getWeaponData(modelWeapon), this),
+            .map(
+              modelWeapon => UnitAbilitiesTable.getWeaponData(modelWeapon),
+              this,
+            ),
         )
         .flat();
     }
@@ -125,11 +144,11 @@ class UnitAbilitiesTable extends React.Component {
 
     dedupWeapons.sort((a, b) => {
       if (
-        !isNaN(parseInt(a.range)) &&
-        !isNaN(parseInt(b.range)) &&
-        parseInt(a.range) !== parseInt(b.range)
+        !Number.isNaN(parseInt(a.range, 10)) &&
+        !Number.isNaN(parseInt(b.range, 10)) &&
+        parseInt(a.range, 10) !== parseInt(b.range, 10)
       )
-        return parseInt(a.range) - parseInt(b.range);
+        return parseInt(a.range, 10) - parseInt(b.range, 10);
       return a.range > b.range ? -1 : 1;
     });
 
@@ -159,7 +178,7 @@ class UnitAbilitiesTable extends React.Component {
             prefix="unit.weapon_ability"
             message={weapon.name}
             defaultMessage={
-              weapon.abilities ? weapon.abilities.replace(/^\-$/, '') : ''
+              weapon.abilities ? weapon.abilities.replace(/^-$/, '') : ''
             }
           />
         </td>

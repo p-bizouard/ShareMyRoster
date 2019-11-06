@@ -19,23 +19,15 @@ export const resolvers = {
   Mutation: {
     async databaseCreateRoster(parent, args) {
       let key = '';
-      while (true) {
+      let exitCondition = true;
+      while (exitCondition) {
         key = Math.random()
           .toString(36)
           .substring(2, 15);
 
-        // If user already exists, throw error
-        const lookupRoster = await Roster.findOne({ where: { key } });
-
-        if (!lookupRoster) {
-          break;
-        }
+        // eslint-disable-next-line no-await-in-loop
+        exitCondition = await Roster.findOne({ where: { key } });
       }
-
-      // var fs = require('fs');
-      // var bitmap = new Buffer(args.rosz, 'base64');
-      // // write buffer to file
-      // fs.writeFileSync(file, bitmap);
 
       // Create new user with profile in database
       const roster = await Roster.create({

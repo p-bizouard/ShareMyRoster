@@ -21,11 +21,6 @@ module.exports = {
   ],
 
   rules: {
-    'declaration-colon-space-before': null,
-    'selector-combinator-space-after': 'never',
-    'selector-combinator-space-before': 'never',
-    'media-feature-colon-space-after': 'never',
-    'no-descending-specificity': null,
     'property-no-unknown': [
       true,
       {

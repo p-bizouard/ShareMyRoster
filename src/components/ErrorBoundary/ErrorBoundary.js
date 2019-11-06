@@ -1,19 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+  static propTypes = {
+    children: PropTypes.isRequired,
+  };
 
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error, info) {
-    // You can also log the error to an error reporting service
-    // logErrorToMyService(error, info);
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
   render() {

@@ -17,7 +17,6 @@ import { addLocaleData } from 'react-intl';
 // This is so bad: requiring all locale if they are not needed?
 /* @intl-code-template import ${lang} from 'react-intl/locale-data/${lang}'; */
 import en from 'react-intl/locale-data/en';
-import cs from 'react-intl/locale-data/cs';
 import fr from 'react-intl/locale-data/fr';
 /* @intl-code-template-end */
 import App from './components/App';
@@ -210,4 +209,4 @@ if (module.hot) {
   });
 }
 
-zip.workerScriptsPath = '/js/zip/';
+window.zip.workerScriptsPath = '/js/zip/';

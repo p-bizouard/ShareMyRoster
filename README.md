@@ -3,6 +3,7 @@
 View, share and print your Battlescribe rosters !
 
 [![CircleCI](https://circleci.com/gh/p-bizouard/RosterViewer.svg?style=svg)](https://circleci.com/gh/p-bizouard/RosterViewer)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fp-bizouard%2FRosterViewer.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fp-bizouard%2FRosterViewer?ref=badge_shield)
 
 ### Built With
 

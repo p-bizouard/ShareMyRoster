@@ -10,14 +10,18 @@
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Footer.css';
-import Link from '../Link';
 
 class Footer extends React.Component {
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          {/* <span className={s.text}>This website is not affiliated with BattleScribe</span> */}
+          <span className={s.text}>
+            This website is not affiliated with{' '}
+            <a className={s.link} href="https://www.battlescribe.net/">
+              BattleScribe
+            </a>
+          </span>
         </div>
       </div>
     );

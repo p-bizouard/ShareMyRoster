@@ -42,11 +42,12 @@ export const resolvers = {
         throw new Error(`Locale '${locale}' not supported`);
       }
 
-      var localeData = [];
+      let localeData = [];
       try {
-        let files = await glob.sync(join(MESSAGES_DIR, `*${locale}.json`));
+        const files = await glob.sync(join(MESSAGES_DIR, `*${locale}.json`));
 
-        for (let i = 0; i < files.length; i++)
+        for (let i = 0; i < files.length; i += 1)
+          // eslint-disable-next-line no-await-in-loop
           localeData = localeData.concat(JSON.parse(await readFile(files[i])));
       } catch (err) {
         if (err.code === 'ENOENT') {
