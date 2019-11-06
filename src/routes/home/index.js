@@ -8,8 +8,6 @@
  */
 
 import React from 'react';
-import Home from './Home';
-import newsQuery from './news.graphql';
 import Layout from '../../components/Layout';
 import Roster from '../../components/Roster/Roster';
 
@@ -20,7 +18,6 @@ async function action({ client, params }) {
     component: (
       <Layout client={client} params={params}>
         <Roster />
-        {/* <Home news={data.reactjsGetAllNews} /> */}
       </Layout>
     ),
   };

@@ -17,10 +17,31 @@ export const createMailtoLink = (email, headers) => {
 };
 
 class Mailto extends React.Component {
-  render() {
-    return this.props.obfuscate
-      ? this.renderObfuscatedLink()
-      : this.renderLink();
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+    email: PropTypes.string.isRequired,
+    headers: PropTypes.shape({}),
+    obfuscate: PropTypes.bool,
+  };
+
+  static defaultProps = {
+    obfuscate: false,
+    headers: {},
+  };
+
+  handleClick(event) {
+    event.preventDefault();
+    const { email, headers } = this.props;
+    window.location.href = createMailtoLink(email, headers);
+  }
+
+  renderObfuscatedLink() {
+    const { email, obfuscate, headers, children, ...others } = this.props;
+    return (
+      <a onClick={this.handleClick} href="mailto:obfuscated" {...others}>
+        {children}
+      </a>
+    );
   }
 
   renderLink() {
@@ -32,35 +53,11 @@ class Mailto extends React.Component {
     );
   }
 
-  renderObfuscatedLink() {
-    const { email, obfuscate, headers, children, ...others } = this.props;
-    return (
-      <a
-        onClick={this.handleClick.bind(this)}
-        href="mailto:obfuscated"
-        {...others}
-      >
-        {children}
-      </a>
-    );
-  }
-
-  handleClick(event) {
-    event.preventDefault();
-    const { email, headers } = this.props;
-    window.location.href = createMailtoLink(email, headers);
+  render() {
+    return this.props.obfuscate
+      ? this.renderObfuscatedLink()
+      : this.renderLink();
   }
 }
-
-Mailto.propTypes = {
-  children: PropTypes.node.isRequired,
-  email: PropTypes.string.isRequired,
-  headers: PropTypes.object,
-  obfuscate: PropTypes.bool,
-};
-
-Mailto.defaultProps = {
-  obfuscate: false,
-};
 
 export default Mailto;

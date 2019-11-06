@@ -1,8 +1,8 @@
 #!/bin/bash
 
 set -e
-ls -la
-if [[ "$1" = "circleci" ]]; then
+
+if [[ "$1" == "circleci" ]]; then
     export COMMIT_SHA1=${CIRCLE_SHA1}
     export KUBECTL=./kubectl
 else
@@ -17,13 +17,13 @@ fi
 #  it's not possible to do in-place substitution, so we need to save the output to another file
 #  and overwrite the original with that one.
 mkdir -p build
-envsubst < ./kubernetes/deployment.yml.template > ./build/kubernetes-deployment.yml
+envsubst <./kubernetes/deployment.yml.template >./build/kubernetes-deployment.yml
 
-echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode > ./build/kubernetes-cert.crt
+echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode >./build/kubernetes-cert.crt
 
 $KUBECTL \
-  --kubeconfig=/dev/null \
-  --server=$KUBERNETES_SERVER \
-  --certificate-authority=./build/kubernetes-cert.crt \
-  --token=$KUBERNETES_TOKEN \
-  apply -f ./build/kubernetes-deployment.yml
+--kubeconfig=/dev/null \
+--server=$KUBERNETES_SERVER \
+--certificate-authority=./build/kubernetes-cert.crt \
+--token=$KUBERNETES_TOKEN \
+apply -f ./build/kubernetes-deployment.yml

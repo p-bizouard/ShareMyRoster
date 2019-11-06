@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import MyFormattedMessage from '../MyFormattedMessage';
 
 export default class UnitAbilitiesTable extends Component {
+  static propTypes = {
+    unit: PropTypes.shape({
+      $: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      }).isRequired,
+      categories: PropTypes.array,
+      selections: PropTypes.array,
+      profiles: PropTypes.array,
+    }).isRequired,
+  };
+
   renderAbilities(characteristicName) {
     let abilities = [];
 

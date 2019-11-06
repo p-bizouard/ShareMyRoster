@@ -1,26 +1,21 @@
-import React, { Component, createRef } from 'react';
+import React, { createRef } from 'react';
 import Dropzone from 'react-dropzone';
 import xml2js from 'xml2js';
+import PropTypes from 'prop-types';
 
-import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { connect } from 'react-redux';
 import { setRuntimeVariable } from '../../actions/runtime';
 import { setRosterJson } from '../../actions/roster';
 
 // App component - represents the whole app
 class RoszUploader extends React.Component {
-  constructor() {
-    super();
-    this.onDrop = files => {
-      this.readRosz(files[0]);
-      this.setState({ files });
-    };
-    this.state = {
-      files: [],
-    };
-  }
+  static propTypes = {
+    setRuntimeVariable: PropTypes.func.isRequired,
+    setRosterJson: PropTypes.func.isRequired,
+  };
 
-  toBase64 = file =>
+  static toBase64 = file =>
     new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.readAsDataURL(file);
@@ -28,50 +23,46 @@ class RoszUploader extends React.Component {
       reader.onerror = error => reject(error);
     });
 
+  constructor() {
+    super();
+    this.onDrop = files => {
+      this.readRosz(files[0]);
+    };
+  }
+
   readRosz(file) {
-    const _this = this;
-
-    const { setRuntimeVariable, setRosterJson } = this.props;
-
-    const callbackApp = this.props.callbackApp;
-    zip.createReader(
-      new zip.BlobReader(file),
+    window.zip.createReader(
+      new window.zip.BlobReader(file),
       reader => {
         // get all entries from the zip
         reader.getEntries(entries => {
           if (entries.length) {
-            entries[0].getData(
-              new zip.TextWriter(),
-              text => {
-                const parser = new xml2js.Parser();
+            entries[0].getData(new window.zip.TextWriter(), text => {
+              const parser = new xml2js.Parser();
 
-                parser.parseString(text, async (err, result) => {
-                  setRuntimeVariable({
+              parser.parseString(text, async (err, result) => {
+                this.props.setRuntimeVariable({
+                  name: 'rosz',
+                  value: await RoszUploader.toBase64(file),
+                });
+
+                const readerB64 = new FileReader();
+                readerB64.onload = function() {
+                  this.props.setRuntimeVariable({
                     name: 'rosz',
-                    value: await _this.toBase64(file),
+                    value: Buffer.from(readerB64.result).toString('base64'),
                   });
+                };
+                readerB64.readAsArrayBuffer(file);
 
-                  const reader_b64 = new FileReader();
-                  reader_b64.onload = function(e) {
-                    setRuntimeVariable({
-                      name: 'rosz',
-                      value: new Buffer(reader_b64.result).toString('base64'),
-                    });
-                  };
-                  reader_b64.readAsArrayBuffer(file);
+                this.props.setRosterJson(result.roster);
+              });
 
-                  setRosterJson(result.roster);
-                });
-
-                // close the zip reader
-                reader.close(() => {
-                  // onclose callback
-                });
-              },
-              (current, total) => {
-                // onprogress callback
-              },
-            );
+              // close the zip reader
+              reader.close(() => {
+                // onclose callback
+              });
+            });
           }
         });
       },
@@ -82,12 +73,6 @@ class RoszUploader extends React.Component {
     );
   }
   render() {
-    const files = this.state.files.map(file => (
-      <li key={file.name}>
-        {file.name} - {file.size} bytes
-      </li>
-    ));
-
     const dropzoneRef = createRef();
     const openDialog = () => {
       // Note that the ref is set async,
@@ -99,7 +84,7 @@ class RoszUploader extends React.Component {
 
     return (
       <Dropzone ref={dropzoneRef} onDrop={this.onDrop} accept=".rosz,.zip,.txt">
-        {({ getRootProps, getInputProps, isDragActive }) => (
+        {({ getRootProps, getInputProps }) => (
           <div className="btn btn-primary btn-lg">
             <div {...getRootProps({ className: 'dropzone' })}>
               <FormattedMessage

@@ -14,6 +14,6 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-.root span:not(:first-child):before {
+.root span:not(:first-child)::before {
   content: '| ';
 }

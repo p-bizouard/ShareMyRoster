@@ -25,28 +25,39 @@ class UnitModelsTable extends React.Component {
 
   static defaultProps = {
     onlyModel: 'false',
-  }
+  };
 
   static getModelCharacteristic(model, profiles, characteristicName) {
     if (
       !profiles
-        .find(profile => profile.$.typeName === 'Unit' || profile.$.typeName === 'Model')
+        .find(
+          profile =>
+            profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
+        )
         .characteristics[0].characteristic.find(
           characteristic => characteristic.$.name === characteristicName,
         )
     )
       return null;
 
-    const matchedProfiles = profiles.filter(profile => profile.$.typeName === 'Unit' || profile.$.typeName === 'Model');
+    const matchedProfiles = profiles.filter(
+      profile =>
+        profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
+    );
 
-    if (matchedProfiles.length === 1 || !matchedProfiles.find(profile => profile.$.name === model.$.name))
+    if (
+      matchedProfiles.length === 1 ||
+      !matchedProfiles.find(profile => profile.$.name === model.$.name)
+    )
       return matchedProfiles[0].characteristics[0].characteristic.find(
         characteristic => characteristic.$.name === characteristicName,
       )._;
 
-    return matchedProfiles.find(profile => profile.$.name === model.$.name).characteristics[0].characteristic.find(
-      characteristic => characteristic.$.name === characteristicName,
-    )._;
+    return matchedProfiles
+      .find(profile => profile.$.name === model.$.name)
+      .characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === characteristicName,
+      )._;
   }
 
   static renderModelsAbilities(model) {
@@ -81,7 +92,7 @@ class UnitModelsTable extends React.Component {
           />
         </li>
       );
-    return null
+    return null;
   }
 
   static renderModelsExplosion(model) {
@@ -163,12 +174,14 @@ class UnitModelsTable extends React.Component {
     const characteristics = [];
     let atLeastOneDifferent = false;
 
-    model.profiles[0].profile.filter(profile => profile.$.typeName === 'Unit').forEach(profile => {
-      const characteristic = JSON.stringify(profile.characteristics);
-      if (characteristics.length && !characteristics.includes(characteristic))
-        atLeastOneDifferent = true;
-      characteristics.push(characteristic);
-    });
+    model.profiles[0].profile
+      .filter(profile => profile.$.typeName === 'Unit')
+      .forEach(profile => {
+        const characteristic = JSON.stringify(profile.characteristics);
+        if (characteristics.length && !characteristics.includes(characteristic))
+          atLeastOneDifferent = true;
+        characteristics.push(characteristic);
+      });
     return atLeastOneDifferent;
   }
 
@@ -218,8 +231,7 @@ class UnitModelsTable extends React.Component {
 
   renderOtherWeapons(selections /* , canHaveSubModels */) {
     return selections.map(model => {
-      if (model.$.entryGroupId && this.unitHasPrimaryModel())
-        return null;
+      if (model.$.entryGroupId && this.unitHasPrimaryModel()) return null;
       if (!model.selections && !model.profiles) return null;
 
       if (
@@ -389,7 +401,7 @@ class UnitModelsTable extends React.Component {
           {keywords.join(', ')}
         </li>
       );
-    return null
+    return null;
   }
 
   renderModels(models, canHaveSubModels) {
@@ -398,7 +410,12 @@ class UnitModelsTable extends React.Component {
     return models.map(model => {
       if (!model.profiles) return null;
 
-      if (!model.profiles[0].profile.find(profile => profile.$.typeName === 'Unit' || profile.$.typeName === 'Model'))
+      if (
+        !model.profiles[0].profile.find(
+          profile =>
+            profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
+        )
+      )
         return null;
 
       if (modelsDone.includes(model.$.name)) return null;
@@ -406,37 +423,53 @@ class UnitModelsTable extends React.Component {
 
       // If multiples submodels with different characteristics, do not regroup them but display new line for each
       if (UnitModelsTable.hasDifferentSubModelsCharacteristics(model)) {
-        return models.filter(selection => selection.selections).map((selection) =>
-          selection.selections[0].selection.filter(subModel => subModel.$.type === 'model' && subModel.$.entryGroupId).map((subModel) => {
-            if (modelsDone.includes(subModel.$.name))
-              return null;
-            modelsDone.push(subModel.$.name);
-            return [
-              <tr key={`model-table-${model.$.id}`}>
-                <td>
-                  <b>
-                    <MyFormattedMessage prefix="unit.name" message={subModel.$.name} />
-                    {subModel.$.number !== '1' && <span> ({subModel.$.number})</span>}
-                  </b>
-                  {this.props.onlyModel !== "true" ? (
-                    <ul className="list-unstyled">
-                      {this.renderModelsWeapons(subModel, model)}
-                      {UnitModelsTable.renderModelsAbilities(subModel)}
-                      {this.renderModelsPsychics(subModel)}
-                      {UnitModelsTable.renderModelsExplosion(subModel)}
-                      {UnitModelsTable.renderModelsTransport(subModel)}
-                    </ul>
-                  ) : (
-                      ''
-                    )}
-                </td>
+        return models.filter(selection => selection.selections).map(
+          selection =>
+            selection.selections[0].selection
+              .filter(
+                subModel =>
+                  subModel.$.type === 'model' && subModel.$.entryGroupId,
+              )
+              .map(subModel => {
+                if (modelsDone.includes(subModel.$.name)) return null;
+                modelsDone.push(subModel.$.name);
+                return [
+                  <tr key={`model-table-${model.$.id}`}>
+                    <td>
+                      <b>
+                        <MyFormattedMessage
+                          prefix="unit.name"
+                          message={subModel.$.name}
+                        />
+                        {subModel.$.number !== '1' && (
+                          <span> ({subModel.$.number})</span>
+                        )}
+                      </b>
+                      {this.props.onlyModel !== 'true' ? (
+                        <ul className="list-unstyled">
+                          {this.renderModelsWeapons(subModel, model)}
+                          {UnitModelsTable.renderModelsAbilities(subModel)}
+                          {this.renderModelsPsychics(subModel)}
+                          {UnitModelsTable.renderModelsExplosion(subModel)}
+                          {UnitModelsTable.renderModelsTransport(subModel)}
+                        </ul>
+                      ) : (
+                        ''
+                      )}
+                    </td>
 
-                {this.characteristicsName.map(value =>
-                  this.renderCharacteristic(subModel, value, model.profiles ? model.profiles[0].profile : null),
-                )}
-              </tr>
-            ]
-          }, this), this);
+                    {this.characteristicsName.map(value =>
+                      this.renderCharacteristic(
+                        subModel,
+                        value,
+                        model.profiles ? model.profiles[0].profile : null,
+                      ),
+                    )}
+                  </tr>,
+                ];
+              }, this),
+          this,
+        );
       }
 
       return (
@@ -446,7 +479,7 @@ class UnitModelsTable extends React.Component {
               <MyFormattedMessage prefix="unit.name" message={model.$.name} />
               {model.$.number !== '1' && <span> ({model.$.number})</span>}
             </b>
-            {this.props.onlyModel !== "true" ? (
+            {this.props.onlyModel !== 'true' ? (
               <ul className="list-unstyled">
                 {this.renderModelsWeapons(model)}
                 {UnitModelsTable.renderModelsAbilities(model)}
@@ -457,16 +490,14 @@ class UnitModelsTable extends React.Component {
                 {canHaveSubModels ? this.renderSubModels(models, model) : ''}
               </ul>
             ) : (
-                ''
-              )}
+              ''
+            )}
           </td>
 
-          {
-            this.characteristicsName.map(value =>
-              this.renderCharacteristic(model, value),
-            )
-          }
-        </tr >
+          {this.characteristicsName.map(value =>
+            this.renderCharacteristic(model, value),
+          )}
+        </tr>
       );
     }, this);
   }
@@ -481,9 +512,12 @@ class UnitModelsTable extends React.Component {
       return null;
     }
 
-
     // Current model base
-    const value = UnitModelsTable.getModelCharacteristic(model, profiles, characteristicName);
+    const value = UnitModelsTable.getModelCharacteristic(
+      model,
+      profiles,
+      characteristicName,
+    );
 
     let woundedCharacteristics = null;
     // Current model wounded
@@ -567,7 +601,7 @@ class UnitModelsTable extends React.Component {
                     className="d-block"
                     key={`wounded-${model.$.id}-${
                       profile.$.id
-                      }-${characteristicName}`}
+                    }-${characteristicName}`}
                   >
                     {
                       profile.characteristics[0].characteristic.find(
@@ -603,12 +637,12 @@ class UnitModelsTable extends React.Component {
                 </span>,
               ];
               woundedCharacteristics = woundedCharacteristics.concat(
-                woundProfileWounded.map((profile) => (
+                woundProfileWounded.map(profile => (
                   <span
                     className="d-block"
                     key={`wounded-${model.$.id}-${
                       profile.$.id
-                      }-${characteristicName}`}
+                    }-${characteristicName}`}
                   >
                     {
                       profile.characteristics[0].characteristic.find(
@@ -628,22 +662,25 @@ class UnitModelsTable extends React.Component {
     }
 
     // Characteristics of sub models
-    let characteristicsOfUnit = this.props.unit.selections[0].selection.map(submodel => {
-      if (!submodel.profiles) return [0];
+    let characteristicsOfUnit = this.props.unit.selections[0].selection.map(
+      submodel => {
+        if (!submodel.profiles) return [0];
 
-      return submodel.profiles[0].profile
-        .filter(
-          profile =>
-            profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
-        )
-        .map(unit =>
-          parseInt(
-            unit.characteristics[0].characteristic.find(
-              characteristic => characteristic.$.name === characteristicName,
-            )._, 10
-          ),
-        );
-    });
+        return submodel.profiles[0].profile
+          .filter(
+            profile =>
+              profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
+          )
+          .map(unit =>
+            parseInt(
+              unit.characteristics[0].characteristic.find(
+                characteristic => characteristic.$.name === characteristicName,
+              )._,
+              10,
+            ),
+          );
+      },
+    );
 
     // Characteristics of top models
     if (this.props.unit.profiles) {
@@ -659,11 +696,12 @@ class UnitModelsTable extends React.Component {
                 characteristic => characteristic.$.name === characteristicName,
               )
                 ? parseInt(
-                  unit.characteristics[0].characteristic.find(
-                    characteristic =>
-                      characteristic.$.name === characteristicName,
-                  )._, 10
-                )
+                    unit.characteristics[0].characteristic.find(
+                      characteristic =>
+                        characteristic.$.name === characteristicName,
+                    )._,
+                    10,
+                  )
                 : 0,
           ),
       );
@@ -677,9 +715,11 @@ class UnitModelsTable extends React.Component {
       Math.min(...characteristicsOfUnit) !== Math.max(...characteristicsOfUnit)
     ) {
       if (['M', 'S', 'T', 'W', 'A', 'Ld'].indexOf(characteristicName) !== -1)
-        getBetterStat = Math.max(...characteristicsOfUnit) === parseInt(value, 10);
+        getBetterStat =
+          Math.max(...characteristicsOfUnit) === parseInt(value, 10);
       else
-        getBetterStat = Math.min(...characteristicsOfUnit) === parseInt(value, 10);
+        getBetterStat =
+          Math.min(...characteristicsOfUnit) === parseInt(value, 10);
     }
     return (
       <td
@@ -698,41 +738,42 @@ class UnitModelsTable extends React.Component {
     // Avoid warning
     if (!model && model) return null;
 
-    return models
-      .filter(selection => selection.selections)
-      .map((selection) => selection.selections[0].selection
-        .filter(
-          subModel => subModel.$.type === 'model' && subModel.$.entryGroupId,
-        )
-        .map((subModel) => {
-          if (modelsDone.includes(subModel.$.name))
-            return null;
-          modelsDone.push(subModel.$.name);
-          return [
-            <li key={`submodel_${subModel.$.id}`}>
-              <u>
-                <MyFormattedMessage
-                  prefix="unit.name"
-                  message={subModel.$.name}
-                />
-                {subModel.$.number !== '1' && (
-                  <span> ({subModel.$.number})</span>
-                )}
-              </u>
-              {this.props.onlyModel !== "true" ? (
-                <ul className="list-unstyled">
-                  {this.renderModelsWeapons(subModel)}
-                  {UnitModelsTable.renderModelsAbilities(subModel)}
-                  {this.renderModelsPsychics(subModel)}
-                  {UnitModelsTable.renderModelsExplosion(subModel)}
-                  {UnitModelsTable.renderModelsTransport(subModel)}
-                </ul>
-              ) : (
+    return models.filter(selection => selection.selections).map(
+      selection =>
+        selection.selections[0].selection
+          .filter(
+            subModel => subModel.$.type === 'model' && subModel.$.entryGroupId,
+          )
+          .map(subModel => {
+            if (modelsDone.includes(subModel.$.name)) return null;
+            modelsDone.push(subModel.$.name);
+            return [
+              <li key={`submodel_${subModel.$.id}`}>
+                <u>
+                  <MyFormattedMessage
+                    prefix="unit.name"
+                    message={subModel.$.name}
+                  />
+                  {subModel.$.number !== '1' && (
+                    <span> ({subModel.$.number})</span>
+                  )}
+                </u>
+                {this.props.onlyModel !== 'true' ? (
+                  <ul className="list-unstyled">
+                    {this.renderModelsWeapons(subModel)}
+                    {UnitModelsTable.renderModelsAbilities(subModel)}
+                    {this.renderModelsPsychics(subModel)}
+                    {UnitModelsTable.renderModelsExplosion(subModel)}
+                    {UnitModelsTable.renderModelsTransport(subModel)}
+                  </ul>
+                ) : (
                   ''
                 )}
-            </li>,
-          ];
-        }, this), this);
+              </li>,
+            ];
+          }, this),
+      this,
+    );
   }
 
   render() {
@@ -740,10 +781,10 @@ class UnitModelsTable extends React.Component {
 
     if (__DEV__ && this.props.showOnlyIds.length) {
       if (!this.props.showOnlyIds.includes(this.props.unit.$.id)) return null;
-      console.info(`[${this.props.unit.$.name}]`)
+      console.info(`[${this.props.unit.$.name}]`);
     }
 
-    if (this.props.onlyModel === "true")
+    if (this.props.onlyModel === 'true')
       return [
         this.renderModels([this.props.unit], true),
         this.renderModels(this.props.unit.selections[0].selection, false),
@@ -821,8 +862,8 @@ class UnitModelsTable extends React.Component {
                   />
                 </th>
               ) : (
-                  ''
-                )}
+                ''
+              )}
             </tr>
           </thead>
           <tbody>

@@ -8,16 +8,21 @@
  */
 
 import React from 'react';
-import { FormattedMessage, injectIntl, intlShape } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { setRuntimeVariable } from '../../actions/runtime';
 
 import s from './Feedback.css';
-import Mailto from '../Mailto/Mailto.js';
+import Mailto from '../Mailto/Mailto';
 
 class Feedback extends React.Component {
+  static propTypes = {
+    contactEmail: PropTypes.string.isRequired,
+  };
+
   render() {
     const { contactEmail } = this.props;
     return (

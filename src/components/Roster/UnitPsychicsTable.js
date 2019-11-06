@@ -1,9 +1,38 @@
 import React, { Component } from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import MyFormattedMessage from '../MyFormattedMessage';
 
 export default class UnitPsychicsTable extends Component {
+  static propTypes = {
+    unit: PropTypes.shape({
+      $: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+      }).isRequired,
+      categories: PropTypes.array,
+      selections: PropTypes.array,
+      profiles: PropTypes.array,
+    }).isRequired,
+  };
+
+  static getPsychicData(psychic) {
+    return {
+      id: psychic.$.id,
+      name: psychic.$.name,
+      charge: psychic.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'Warp Charge',
+      )._,
+      range: psychic.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'Range',
+      )._,
+      description: psychic.characteristics[0].characteristic.find(
+        characteristic => characteristic.$.name === 'Details',
+      )._,
+    };
+  }
+
   unitHasPsychics() {
     return this.unitHasPrimaryPsychics() || this.unitHasSecondaryPsychics();
   }
@@ -32,23 +61,7 @@ export default class UnitPsychicsTable extends Component {
     }, false);
   }
 
-  getPsychicData(psychic) {
-    return {
-      id: psychic.$.id,
-      name: psychic.$.name,
-      charge: psychic.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'Warp Charge',
-      )._,
-      range: psychic.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'Range',
-      )._,
-      description: psychic.characteristics[0].characteristic.find(
-        characteristic => characteristic.$.name === 'Details',
-      )._,
-    };
-  }
-
-  renderPsychics(characteristicName) {
+  renderPsychics() {
     let psychics = [];
 
     if (this.props.unit.selections) {
@@ -63,7 +76,8 @@ export default class UnitPsychicsTable extends Component {
                   model.profiles[0].profile
                     .filter(profile => profile.$.typeName === 'Psychic Power')
                     .map(
-                      modelPsychic => this.getPsychicData(modelPsychic),
+                      modelPsychic =>
+                        UnitPsychicsTable.getPsychicData(modelPsychic),
                       this,
                     ),
                 )
@@ -83,7 +97,8 @@ export default class UnitPsychicsTable extends Component {
                             upgradeAbility.$.typeName === 'Psychic Power',
                         )
                         .map(
-                          upgradePsychic => this.getPsychicData(upgradePsychic),
+                          upgradePsychic =>
+                            UnitPsychicsTable.getPsychicData(upgradePsychic),
                           this,
                         );
                     }, this),
@@ -102,7 +117,10 @@ export default class UnitPsychicsTable extends Component {
         .concat(
           this.props.unit.profiles[0].profile
             .filter(profile => profile.$.typeName === 'Psychic Power')
-            .map(modelPsychic => this.getPsychicData(modelPsychic), this),
+            .map(
+              modelPsychic => UnitPsychicsTable.getPsychicData(modelPsychic),
+              this,
+            ),
         )
         .flat();
     }
@@ -134,7 +152,7 @@ export default class UnitPsychicsTable extends Component {
             prefix="unit.psychic_description"
             message={psychic.name}
             defaultMessage={
-              psychic.abilities ? psychic.abilities.replace(/^\-$/, '') : ''
+              psychic.abilities ? psychic.abilities.replace(/^-$/, '') : ''
             }
           />
         </td>
