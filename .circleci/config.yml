@@ -74,6 +74,7 @@ jobs:
           name: Deploy Code
           command: |
             chmod +x ./.circleci/kubernetes-deployment.sh
+            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
             ./.circleci/kubernetes-deployment.sh circleci
 
 workflows:
