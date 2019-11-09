@@ -1,0 +1,283 @@
+[
+  {
+    "id": "unit.ability_name.Voice of Command (Leader)",
+    "message": "Commandement vocal (Leader)"
+  },
+  {
+    "id": "unit.ability_description.Voice of Command (Leader)",
+    "message":
+      "Une fois par round de bataille, si votre leader est sur le champ de bataille et n'est pas secoué, il peut donner un ordre aux autres membres de votre kill team au début de la phase de tir. Pour ce faire, choisissez une autre figurine amie qui n'est pas secouée et à 12'' de votre leader. Une figurine ne peut être affectée que par un seul ordre par round de bataille"
+  },
+  {
+    "id": "unit.ability_name.Born Soldiers",
+    "message": "Soldats nés"
+  },
+  {
+    "id": "unit.ability_description.Born Soldiers",
+    "message":
+      "Relancez les jets de touche de 1 pour les unités CADIAN ne s'étant pas déplacées. Si c'est une INFANTRIE et qu'elle recoit l'ordre \"En joue!\" et si elle ne s'est pas déplacée, l'unité peut relancer les jets de touche ratés à la phase de tir"
+  },
+  {
+    "id": "unit.ability_name.Power Field",
+    "message": "Champ de force"
+  },
+  {
+    "id": "unit.ability_description.Power Field",
+    "message": "Sauvegarde invulnérable à 4+"
+  },
+  {
+    "id": "unit.ability_name.Hero of Hades Hive",
+    "message": "Héro de la ruche Hades"
+  },
+  {
+    "id": "unit.ability_description.Hero of Hades Hive",
+    "message":
+      "Relancez les jets de touche de 1 des unités AM amies à 6''. Vous pouvez relancer tous les jets de touche si l'unité amie attaque une unité ORK"
+  },
+  {
+    "id": "unit.ability_name.Iron Will",
+    "message": "Volonté de fer"
+  },
+  {
+    "id": "unit.ability_description.Iron Will",
+    "message":
+      "Jetez un D6 à chaque fois que Yarrick perd son dernier PV. Sur 3+ le PV n'est pas perdu."
+  },
+  {
+    "id": "unit.ability_name.Summary Execution",
+    "message": "Exécution Sommaire"
+  },
+  {
+    "id": "unit.ability_description.Summary Execution",
+    "message":
+      "Les unités AM à 6'' d'un Commissar ne perdent jamais plus d'une figurine à cause d'un est de moral raté"
+  },
+  {
+    "id": "unit.ability_name.Aura of Discipline",
+    "message": "Aura de discipline"
+  },
+  {
+    "id": "unit.ability_description.Aura of Discipline",
+    "message":
+      "Toutes les unités AM à 6'' d'un Commissar peuvent utiliser son Commandement plutôt que le leur"
+  },
+  {
+    "id": "unit.ability_name.Voice of Command",
+    "message": "Commandement Verbal"
+  },
+  {
+    "id": "unit.ability_description.Voice of Command",
+    "message":
+      "Peut donner un unique Ordre au début des phases de Tir à une unité Infanterie à 6'' du même <Régiment>"
+  },
+  {
+    "id": "unit.ability_name.Refractor Field",
+    "message": "Champ Réfracteur"
+  },
+  {
+    "id": "unit.ability_description.Refractor Field",
+    "message": "Sauvegarde invulnérable 5+"
+  },
+  {
+    "id": "unit.ability_name.Senior Officer",
+    "message": "Officier Supérieur"
+  },
+  {
+    "id": "unit.ability_description.Senior Officer",
+    "message": "Peut donner 2 Ordres par tour."
+  },
+  {
+    "id": "unit.ability_name.Superior Tactical Training",
+    "message": "Formation tactique supérieure"
+  },
+  {
+    "id": "unit.ability_description.Superior Tactical Training",
+    "message":
+      "Jetez un dé chaque fois que votre Seigneur de Guerre lance un ordre. Sur 4+ cet ordre peut affecter une unité CADIANE supplémentaire du même type (Infanterie/Tank) et située à 6'' du Seigneur de Guerre"
+  },
+  {
+    "id": "unit.ability_name.Knight Commander",
+    "message": "Chevalier Commandeur"
+  },
+  {
+    "id": "unit.ability_description.Knight Commander",
+    "message": "Pask peut lancer 2 ordres par tour."
+  },
+  {
+    "id": "unit.ability_name.Explodes (6+/6\"/D3)",
+    "message": "Explosion"
+  },
+  {
+    "id": "unit.ability_description.Explodes (6+/6\"/D3)",
+    "message":
+      "Si détruit, lancer un D6. Explose sur 6. Les unités à 6'' subissent D3 BM"
+  },
+  {
+    "id": "unit.ability_name.Grinding Advance",
+    "message": "Avance implacable"
+  },
+  {
+    "id": "unit.ability_description.Grinding Advance",
+    "message":
+      "Si le Leman Russ bouge de moins de la moitié de sa distance de mouvement, il peut tirer 2x sur la même unité avec son arme de tourelle. De plus, la tourelle ne subit pas de malus de -1 à la touche des armes lourdes s'il s'est déplacé."
+  },
+  {
+    "id": "unit.ability_name.Emergency Plasma Vents",
+    "message": "Évents à Plasma d'urgence"
+  },
+  {
+    "id": "unit.ability_description.Emergency Plasma Vents",
+    "message":
+      "Si cette figurine tire avec un Canon à Plasma surchargé et effectue un jet de touche de 1, elle n'est pas détruite. À la place, elle subit une BM par 1"
+  },
+  {
+    "id": "unit.ability_name.Aerial Drop",
+    "message": "Saut de Combat"
+  },
+  {
+    "id": "unit.ability_description.Aerial Drop",
+    "message": "Au déploiement, cette unité peut être placée en FEP"
+  },
+  {
+    "id": "unit.ability_name.Vox-caster",
+    "message": "Émetteur vox"
+  },
+  {
+    "id": "unit.ability_description.Vox-caster",
+    "message":
+      "Si un Officier ami est à 3'' ou moins d'une unité avec un Émétteur vox, elle peut étenddre la portée de ses ordres à 18'' si l'unité ciblée a aussi un émetteur vox"
+  },
+  {
+    "id": "unit.ability_name.Astral Devination",
+    "message": "Divination astrale"
+  },
+  {
+    "id": "unit.ability_description.Astral Devination",
+    "message":
+      "Au début de votre phase de tir, choisissez une unité ennemie à 18''. Pour la durée de la phase, l'unité ne bénéfície d'aucun couvert pour ses jets de sauvegarde des unités AM amies à 6'' ou moins du Psyker"
+  },
+  {
+    "id": "unit.ability_name.Telepathic Assault",
+    "message": "Assaut télépathique"
+  },
+  {
+    "id": "unit.ability_description.Telepathic Assault",
+    "message":
+      "Jetez 1D6 au lieu de 2D6 pour les jets psychique de Châtiment lors de la phase psy"
+  },
+  {
+    "id": "unit.ability_name.Slabshield",
+    "message": "Mantelet"
+  },
+  {
+    "id": "unit.ability_description.Slabshield",
+    "message": "Ajoutez +2 au jets de sauvegarde"
+  },
+  {
+    "id": "unit.ability_name.Medi-pack",
+    "message": "Médipac"
+  },
+  {
+    "id": "unit.ability_description.Medi-pack",
+    "message":
+      "À la fin de votre phase de mouvement, une figurine avec Médipac peut tenter de soigner une unité infanterie à 3''. Jetez un D6, sur 4+ une figurine récupère 1PV perdu (peut récupérer une figurine tuée)"
+  },
+  {
+    "id": "unit.ability_name.Find the Best Spot",
+    "message": "Emplacement idéal"
+  },
+  {
+    "id": "unit.ability_description.Find the Best Spot",
+    "message":
+      "Au lieu de se déployer normalement, cette unité peut attendre que les 2 armées soient déployées, puis se placer n'importe où sur la table à 18'' ou plus d'une figurine ennemie"
+  },
+  {
+    "id": "unit.ability_name.Naturally Stealthy",
+    "message": "Naturellement Discrets"
+  },
+  {
+    "id": "unit.ability_description.Naturally Stealthy",
+    "message": "+2 de sauvegarde au lieu de +1 lorsqu'ils sont à couvert"
+  },
+  {
+    "id": "unit.ability_name.Shoot Sharp and Scarper",
+    "message": "On tire et on décampe !"
+  },
+  {
+    "id": "unit.ability_description.Shoot Sharp and Scarper",
+    "message":
+      "Immédiatement après avoir tiré (autrement qu'en État d'Alerte), cette unité peut se déplacer comme s'il s'agissait d'une phase de Mouvement"
+  },
+  {
+    "id": "unit.ability_name.Scout Vehicle",
+    "message": "Véhicule de Reco."
+  },
+  {
+    "id": "unit.ability_description.Scout Vehicle",
+    "message":
+      "Au début du 1er round ais avant d'entamer le 1er tour, vous pouvez déplacer cette unité de 9'' ou moins. Elle doit terminer ce mouvement à plus de 9'' de toute figurine ennemie."
+  },
+  {
+    "id": "unit.ability_name.Explodes (6+/3\"/1)",
+    "message": "Explosion"
+  },
+  {
+    "id": "unit.ability_description.Explodes (6+/3\"/1)",
+    "message":
+      "Si cette figurine est réduite à 0 PV, jetez un D6 avant de retirer cette figurine. Sur un 6 les unités à 3'' subissent 1 blessure mortelle"
+  },
+  {
+    "id": "unit.ability_name.Vehicle Squadron",
+    "message": "Escadron de véhicule"
+  },
+  {
+    "id": "unit.ability_description.Vehicle Squadron",
+    "message":
+      "Au déploiement, les figurines de cette unité doivent être à 6'' les unes des autres. À partir de cet instant chaque figurine opère indépendamment et est traitée à tout point de vue comme une unité distincte"
+  },
+  {
+    "id": "unit.ability_name.Spy Mask",
+    "message": "Masque d'espion"
+  },
+  {
+    "id": "unit.ability_description.Spy Mask",
+    "message":
+      "Les unités ennemies ne bénéficient pas du couvert contre les armes de tir"
+  },
+  {
+    "id": "unit.ability_name.Stealth Suit",
+    "message": "Combinaison de camouflage"
+  },
+  {
+    "id": "unit.ability_description.Stealth Suit",
+    "message":
+      "-1 aux jets de tir contre cette figurine. -2 si cette figurine est sut un terrain"
+  },
+  {
+    "id": "unit.ability_name.Deadshot",
+    "message": "Abbatu"
+  },
+  {
+    "id": "unit.ability_description.Deadshot",
+    "message":
+      "Peut cibler un personnage même s'il n'est pas l'unité visible la plus proche. De plus tous jets de blessure de 6 génère D6 dégats au lieu de D3"
+  },
+  {
+    "id": "unit.ability_name.Faultless Aim",
+    "message": "Viseur sans faille"
+  },
+  {
+    "id": "unit.ability_description.Faultless Aim",
+    "message":
+      "Si cette figurine est resté stationnaire lors de sa phase de mouvement, elle touche sur du 2+ peu importe les modificateurs (touche toujours sur du 6+ en État d'Alerte)"
+  },
+  {
+    "id": "unit.ability_name.Head Shot",
+    "message": "Head Shot"
+  },
+  {
+    "id": "unit.ability_description.Head Shot",
+    "message":
+      "Après la phase de tir, lancez un D6 si cette figurine a infligé un dégat mais n'a pas été tuée. Lancez un D6. Sur 3+ cette unité subit une BM. Si cette unité n'a pas été tuée, lancez un D6. Puis sur 5+, puis sur 6+"
+  }
+]

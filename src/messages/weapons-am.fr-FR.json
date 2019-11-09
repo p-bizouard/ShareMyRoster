@@ -1,0 +1,134 @@
+[
+  {
+    "id": "unit.weapon.Hunter-killer missile",
+    "message": "Missile Hunter-killer"
+  },
+  {
+    "id": "unit.weapon_ability.Hunter-killer missile",
+    "message":
+      "Une figurine peut tirer son missile hunter-killer une fois par partie"
+  },
+  {
+    "id": "unit.weapon.Lasgun",
+    "message": "Fusil laser"
+  },
+  {
+    "id": "unit.weapon.Hot-shot lasgun",
+    "message": "Fusil radiant laser"
+  },
+  {
+    "id": "unit.weapon.Laspistol",
+    "message": "Pistolet laser"
+  },
+  {
+    "id": "unit.weapon.Power Klaw",
+    "message": "Pince énergétique"
+  },
+  {
+    "id": "unit.weapon_ability.Power Klaw",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Plasma cannon, Standard",
+    "message": "Canon à plasma - Standard"
+  },
+  {
+    "id": "unit.weapon.Plasma cannon, Supercharge",
+    "message": "Canon à plasma - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Plasma cannon, Supercharge",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Executioner Plasma Cannon - Standard",
+    "message": "Canon Plasma Executioner - Standard"
+  },
+  {
+    "id": "unit.weapon.Executioner Plasma Cannon - Supercharge",
+    "message": "Canon Plasma Executioner - Surchargé"
+  },
+  {
+    "id": "unit.weapon_ability.Executioner Plasma Cannon - Supercharge",
+    "message": "Sur un jet de touche de 1, le porteur est tué"
+  },
+  {
+    "id": "unit.weapon.Lascannon",
+    "message": "Canon laser"
+  },
+  {
+    "id": "unit.weapon.Mortar",
+    "message": "Mortier"
+  },
+  {
+    "id": "unit.weapon.Hot-shot Laspistol",
+    "message": "Pistolet radiant laster"
+  },
+  {
+    "id": "unit.weapon.Hot-shot Lasgun",
+    "message": "Fusil radiant laster"
+  },
+  {
+    "id": "unit.weapon.Bullgryn Maul",
+    "message": "Masse de Bullgrun"
+  },
+  {
+    "id": "unit.weapon.Frag Bombs",
+    "message": "Bombes Frag"
+  },
+  {
+    "id": "unit.weapon.Exitus Pistol",
+    "message": "Pistolet Exitus"
+  },
+  {
+    "id": "unit.weapon_ability.Exitus Pistol",
+    "message":
+      "Les sauvegardes invulnérables ne peuvent pas être prises en compte. Cette arme inflige des dégats sur les Infanterie sur du 2+"
+  },
+  {
+    "id": "unit.weapon.Blind Grenades",
+    "message": "Grenades aveuglantes"
+  },
+  {
+    "id": "unit.weapon_ability.Blind Grenades",
+    "message":
+      "Cette arme n'inflige aucun domage. Au lieu de cela, l'unité ennemie touchée aura -1 pour les jets de touche jusqu'à la fin du tour"
+  },
+  {
+    "id": "unit.weapon.Exitus Rifle",
+    "message": "Fusil Exitus"
+  },
+  {
+    "id": "unit.weapon_ability.Exitus Rifle",
+    "message":
+      "Les sauvegardes invulnérables ne peuvent pas être prises en compte. Cette arme inflige des dégats sur les Infanterie sur du 2+"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  }
+]

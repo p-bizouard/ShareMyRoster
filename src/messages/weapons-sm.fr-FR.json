@@ -1,0 +1,126 @@
+[
+  {
+    "id": "unit.weapon.Frost sword",
+    "message": "Épée de givre"
+  },
+  {
+    "id": "unit.weapon.Crushing teeth and claws",
+    "message": "Crocs et griffes"
+  },
+  {
+    "id": "unit.weapon_ability.Crushing teeth and claws",
+    "message": "Après que cette figurine ai fini ses attaques en phase de combat, vous pouvez effectuer 3 attaques additionnelles avec ce profil d'arme"
+  },
+  {
+    "id": "unit.weapon.Master-crafted power sword",
+    "message": "Épée énergétique de maître"
+  },
+  {
+    "id": "unit.weapon.Foehammer",
+    "message": "Marteau à Ennemis"
+  },
+  {
+    "id": "unit.weapon.Foehammer (melee)",
+    "message": "Marteau à Ennemis (mêlée)"
+  },
+  {
+    "id": "unit.weapon_ability.Foehammer (melee)",
+    "message": "Lorsqu'elle cible des Personnages ou des Monstres, cette arme a dégat 3"
+  },
+  {
+    "id": "unit.weapon.Foehammer (shooting)",
+    "message": "Marteau à Ennemis (tir)"
+  },
+  {
+    "id": "unit.weapon_ability.Foehammer (shooting)",
+    "message": "Lorsqu'elle cible des Personnages ou des Monstres, cette arme a dégat 3"
+  },
+  {
+    "id": "unit.weapon.Boltstorm gauntlet",
+    "message": "Gantelet Boltstorm"
+  },
+  {
+    "id": "unit.weapon.Boltstorm gauntlet (melee)",
+    "message": "Gantelet Boltstorm (mêlée)"
+  },
+  {
+    "id": "unit.weapon_ability.Boltstorm gauntlet (melee)",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Boltstorm gauntlet (shooting)",
+    "message": "Gantelet Boltstorm (tir)"
+  },
+  {
+    "id": "unit.weapon_ability.Staff of the Stormcaller",
+    "message": "Vous pouvez relancer 1 test d'Abjuration raté à chaque phase Psychique adverse"
+  },
+  {
+    "id": "unit.weapon.The Murderclaws",
+    "message": "Griffes Meurtrières"
+  },
+  {
+    "id": "unit.weapon_ability.The Murderclaws",
+    "message": "Vous pouvez relancer les jets de blessure ratés"
+  },
+  {
+    "id": "unit.weapon.Teeth and claws",
+    "message": "Griffes et crocs"
+  },
+  {
+    "id": "unit.weapon.Frost claws",
+    "message": "Griffes de givre"
+  },
+  {
+    "id": "unit.weapon_ability.Frost claws",
+    "message": "+1 attaque en phase de combat. De plus, vous pouvez relancer les jets de blessure ratés"
+  },
+  {
+    "id": "unit.weapon.Wulfen claws",
+    "message": "Griffes de Wulfen"
+  },
+  {
+    "id": "unit.weapon.Thunder hammer",
+    "message": "Marteau Tonerre"
+  },
+  {
+    "id": "unit.weapon_ability.Thunder hammer",
+    "message": "-1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.Great frost axe",
+    "message": "Grande hache de givre"
+  },
+  {
+    "id": "unit.weapon_ability.Great frost axe",
+    "message": "+1 attaque si l'unité a chargé lors du tour"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  }
+]

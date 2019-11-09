@@ -18,13 +18,8 @@ export function setRosterKey(key) {
 }
 
 export function setRosterJson(json) {
-  return async (dispatch, { history }) => {
-    dispatch({
-      type: SET_ROSTER_JSON,
-      payload: {
-        json,
-      },
-    });
+  return async (dispatch, getState, { history }) => {
+    dispatch({ type: SET_ROSTER_JSON, payload: { json } });
     if (!json) history.push(``);
   };
 }
@@ -41,7 +36,7 @@ export function setRosterType(type) {
 }
 
 export function initRosterFromKey(key) {
-  return async (dispatch, { client }) => {
+  return async (dispatch, getState, { client }) => {
     dispatch(setRosterKey(key));
 
     const { data } = await client.query({

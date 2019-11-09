@@ -52,7 +52,7 @@ class RoszUploader extends React.Component {
                     name: 'rosz',
                     value: Buffer.from(readerB64.result).toString('base64'),
                   });
-                };
+                }.bind(this);
                 readerB64.readAsArrayBuffer(file);
 
                 this.props.setRosterJson(result.roster);

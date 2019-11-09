@@ -1,0 +1,64 @@
+[
+  {
+    "id": "unit.ability_name.Reassuring",
+    "message": "Rassurant"
+  },
+  {
+    "id": "unit.ability_description.Reassuring",
+    "message":
+      "Cette figurine n'est jamais traitée comme secouée lorsque vous effectuez des tests de Sang-Froid pour le reste de votre kill team"
+  },
+  {
+    "id": "unit.ability_name.And They Shall Know No Fear",
+    "message": "Et ils ne connaîtront pas la Peur"
+  },
+  {
+    "id": "unit.ability_description.And They Shall Know No Fear",
+    "message":
+      "Vous pouvez relancer les tests de Sang-Froid pour cette figurine"
+  },
+  {
+    "id": "unit.ability_name.Transhuman Physiology",
+    "message": "Physiologie Transhumaine"
+  },
+  {
+    "id": "unit.ability_description.Transhuman Physiology",
+    "message":
+      "Ignorez la pénalité imposée par une des blessures légères de cette figurine à ses jets de touche"
+  },
+  {
+    "id": "unit.ability_name.Marksman",
+    "message": "Tireur d'Élite"
+  },
+  {
+    "id": "unit.ability_description.Marksman",
+    "message":
+      "Relancez les jets de touche de 1 pour les attaques de tir de cette figurine"
+  },
+  {
+    "id": "unit.ability_name.Resourceful",
+    "message": "Débrouillard"
+  },
+  {
+    "id": "unit.ability_description.Resourceful",
+    "message":
+      "Tant que cette figurine est sur le champ de bataille et n'est pas secouée, vous gagnez un PC supplémentaire au début du round de bataille"
+  },
+  {
+    "id": "unit.ability_name.Expert Fighter",
+    "message": "Combatant Expert"
+  },
+  {
+    "id": "unit.ability_description.Expert Fighter",
+    "message": "Ajoutez 1 à la caractéristique d'Attaques de cette figurine"
+  },
+  {
+    "id": "unit.ability_name.Breacher",
+    "message": "Briseur"
+  },
+  {
+    "id": "unit.ability_description.Breacher",
+    "message":
+      "Ajoutez 1 aux jets de blessure pour cette figurine contre les cibles masquées"
+  }
+]

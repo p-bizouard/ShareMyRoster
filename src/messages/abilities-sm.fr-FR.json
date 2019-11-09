@@ -1,0 +1,345 @@
+[
+  {
+    "id": "unit.ability_name.Psychic hood",
+    "message": "Coiffe Psychique"
+  },
+  {
+    "id": "unit.ability_description.Psychic hood",
+    "message":
+      "Vous pouvez ajouter 1 aux tests d'Abjuration effectués contre les Psykers à 12'' ou moins"
+  },
+  {
+    "id": "unit.ability_name.Runic Terminator Armour",
+    "message": "Armure Terminator Runique"
+  },
+  {
+    "id": "unit.ability_description.Runic Terminator Armour",
+    "message": "Cette figurine a une sauvegarde invulnérable de 4+"
+  },
+  {
+    "id": "unit.ability_name.Teleport Strike",
+    "message": "Frappe par téléportation"
+  },
+  {
+    "id": "unit.ability_description.Teleport Strike",
+    "message":
+      "Au déploiement, placer cette unité en frappe en profondeur. À la fin d'une phase de mouvement, placer cette unité à plus de 9'' d'une figurine ennemie"
+  },
+  {
+    "id": "unit.ability_name.Lord of Tempests",
+    "message": "Seigneur des Tempêtes"
+  },
+  {
+    "id": "unit.ability_description.Lord of Tempests",
+    "message": "Vous pouvez ajouter 1 aux tests Psychiques"
+  },
+  {
+    "id": "unit.ability_name.Healing Balms",
+    "message": "Baumes de Guérison"
+  },
+  {
+    "id": "unit.ability_description.Healing Balms",
+    "message":
+      "À la fin de votre phase de mouvement, Narra peut tenter de soigner une figurine Infanterie, Cavalerie ou Motard à 3'' ou moins de lui. La figurine récupère D3 PV perdus"
+  },
+  {
+    "id": "unit.ability_name.Wolf Amulet",
+    "message": "Amulette du Loup"
+  },
+  {
+    "id": "unit.ability_description.Wolf Amulet",
+    "message": "Sauvegarde invulnérable de 4+"
+  },
+  {
+    "id": "unit.ability_name.Slayer's Oath",
+    "message": "Serment du Tueur"
+  },
+  {
+    "id": "unit.ability_description.Slayer's Oath",
+    "message":
+      "Vous pouvez relancer les jets de touche ratés en phase de combat à 6'' ou moins. S'il tue un Personnage ou un Monstre, pour le restant de la bataille, vous pouvez ajouter 1 au jets de blessure en phase de combat pour les unités à 6''"
+  },
+  {
+    "id": "unit.ability_name.Wolf Helm of Russ",
+    "message": "Haume du Loup de Russ"
+  },
+  {
+    "id": "unit.ability_description.Wolf Helm of Russ",
+    "message":
+      "Les unités Spaces wolves amies à 9'' ou moins peuvent utiliser son Commandement au lieu du leur"
+  },
+  {
+    "id": "unit.ability_name.Jump Pack Assault",
+    "message": "Assaut par Réacteur Dorsal"
+  },
+  {
+    "id": "unit.ability_description.Jump Pack Assault",
+    "message":
+      "Au déploiement, placer sette figurine en frappe en profondeur. À la fin d'une phase de Mouvement, placer cette figurine à au moins 9'' d'une figurine ennemie"
+  },
+  {
+    "id": "unit.ability_name.Belt of Russ",
+    "message": "Ceinture de Russ"
+  },
+  {
+    "id": "unit.ability_description.Belt of Russ",
+    "message": "Le porteur a une sauvegarde invulnérable de 4+"
+  },
+  {
+    "id": "unit.ability_name.Jarl of Fenris",
+    "message": "Jarl de Fenris"
+  },
+  {
+    "id": "unit.ability_description.Jarl of Fenris",
+    "message":
+      "Vous pouvez relancer les jets de touche de 1 pour les unités Space Wolves amies à 6'' ou moins"
+  },
+  {
+    "id": "unit.ability_name.Wolf standard",
+    "message": "Étandard du Loup"
+  },
+  {
+    "id": "unit.ability_description.Wolf standard",
+    "message":
+      "Vous pouvez relancer les jets de 1 pour une unité qui a un étandard du loup lorsqu'elle Avance ou Charge"
+  },
+  {
+    "id": "unit.ability_name.Mixed Unit",
+    "message": "Unité Mixte"
+  },
+  {
+    "id": "unit.ability_description.Mixed Unit",
+    "message": "Un Wolf Guard Terminator Pack Leader a le mot-clé TERMINATOR"
+  },
+  {
+    "id": "unit.ability_name.Auxiliary Grenade Launcher",
+    "message": "Lance-grenades Auxiliaire"
+  },
+  {
+    "id": "unit.ability_description.Auxiliary Grenade Launcher",
+    "message":
+      "La portée des grenades d'une figurine avec lance-grenades auxiliaire est de 30''"
+  },
+  {
+    "id":
+      "unit.ability_description.This model can transport 10 SPACE WOLVES INFANTRY models. It cannot transport JUMP PACK, TERMINATOR, PRIMARIS, or WULFEN  models.",
+    "message":
+      "Cette figurine peut transport 10 Infanterie Space wolves. Elle ne peut pas transporter de Jet pack, Terminators, Primaris ou Wulfens"
+  },
+  {
+    "id": "unit.ability_name.Iron Halo",
+    "message": "Halo de fer"
+  },
+  {
+    "id": "unit.ability_description.Iron Halo",
+    "message": "Le porteur a une sauvegarde invulnérable de 4+"
+  },
+  {
+    "id": "unit.ability_name.Rites of Battle",
+    "message": "Rites de bataille"
+  },
+  {
+    "id": "unit.ability_description.Rites of Battle",
+    "message":
+      "Vous pouvez relancer les jets de touche de 1 pour les unités <CHAPTER> à 6''"
+  },
+
+  {
+    "id": "unit.ability_name.Combat Squads",
+    "message": "Esquade de combat"
+  },
+  {
+    "id": "unit.ability_description.Combat Squads",
+    "message":
+      "Au début du déploiement, si cette unité contient son nombre maximum de figurines, vous pouvez diviser cette esquade en 2 esquades de taille égale"
+  },
+  {
+    "id": "unit.ability_name.Storm shield",
+    "message": "Bouclier storm"
+  },
+  {
+    "id": "unit.ability_description.Storm shield",
+    "message":
+      "Une figurine équipée d'un bouclier Storm a une sauvegarde invulnérable de 3+"
+  },
+  {
+    "id": "unit.ability_name.Storm Shield",
+    "message": "Bouclier storm"
+  },
+  {
+    "id": "unit.ability_description.Storm Shield",
+    "message":
+      "Une figurine équipée d'un bouclier Storm a une sauvegarde invulnérable de 3+"
+  },
+  {
+    "id": "unit.ability_name.Murderlust",
+    "message": "Soif de meurtre"
+  },
+  {
+    "id": "unit.ability_description.Murderlust",
+    "message":
+      "Vous pouvez relancer les jets de charge ratés. De plus, au tour lors duquel Murderfang a réussi une charge, augmentez de 2 sa caractéristique d'Attaque jusqu'à la fin du tour."
+  },
+  {
+    "id": "unit.ability_name.Force of Untamed Destruction",
+    "message": "Indomptable Force de Destruction"
+  },
+  {
+    "id": "unit.ability_description.Force of Untamed Destruction",
+    "message": "Murderfang ne peut pas être votre  Seigneur de Guerre"
+  },
+  {
+    "id": "unit.ability_name.Explodes (Dreadnought)",
+    "message": "Explosion"
+  },
+  {
+    "id": "unit.ability_description.Explodes (Dreadnought)",
+    "message":
+      "Si cette figurine est réduite à 0 PV, jetez un D6 avant de retirer cette figurine. Sur un 6 les unités à 3'' subissent D3 blessures mortelles"
+  },
+  {
+    "id": "unit.ability_name.Crux Terminatus",
+    "message": "Crux Terminatus"
+  },
+  {
+    "id": "unit.ability_description.Crux Terminatus",
+    "message": "Le porteur a une sauvegarde invulnérable de 5+"
+  },
+  {
+    "id": "unit.ability_name.Meteoric Descent",
+    "message": "Chute Météorique"
+  },
+  {
+    "id": "unit.ability_description.Meteoric Descent",
+    "message":
+      "Au déploiement, vous pouvez placer cette unité en orbite et non sur le champ de bataille. À la fin d'une de vos phases de mouvement, placez cette unité à plus de 9'' d'une figurine ennemie"
+  },
+  {
+    "id": "unit.ability_name.Crushing Charge",
+    "message": "Charge broyeuse"
+  },
+  {
+    "id": "unit.ability_description.Crushing Charge",
+    "message":
+      "Jetez un D6 à chaque fois qu'une figurine termine un mouvement de charge à 1'' ou moins d'une figurine ennemie ; sur 6 l'unité enemie subit 1 blessure mortelle"
+  },
+  {
+    "id": "unit.ability_name.Pack Mentality",
+    "message": "Esprit de Meute"
+  },
+  {
+    "id": "unit.ability_description.Pack Mentality",
+    "message":
+      "Ajoutez 1 au Cd de cette unité si elle contient 6 figurines ou plus. Ajoutez 2 à la place si elle en contient 10 ou plus"
+  },
+  {
+    "id": "unit.ability_name.Swift Hunters",
+    "message": "Chasseurs Agiles"
+  },
+  {
+    "id": "unit.ability_description.Swift Hunters",
+    "message": "Vous pouvez relancer les jets de charge ratés pour cette unité"
+  },
+  {
+    "id": "unit.ability_name.Beserk Charge",
+    "message": "Charge Berserk"
+  },
+  {
+    "id": "unit.ability_description.Beserk Charge",
+    "message":
+      "Lors d'un tour où cette unité a réussi une charge, les figurines de cette unité gagnent +1 attaque"
+  },
+  {
+    "id": "unit.ability_name.Headstrong",
+    "message": "Entêtés"
+  },
+  {
+    "id": "unit.ability_description.Headstrong",
+    "message":
+      "Si cette unité n'a pas de Wolf Guard Pack Leader ou qu'elle soit à 6'' ou plus, cette unité doit déclarer une charge si elle en a la possibilité"
+  },
+  {
+    "id": "unit.ability_name.Saga of the Bear",
+    "message": "Saga de l'ours"
+  },
+  {
+    "id": "unit.ability_description.Saga of the Bear",
+    "message":
+      "Si cette figurine subit une blessure, lancez un D6. Sur un 6 elle ne perd pas de PV. Réussir une sauvegarde déclanche la légende et apporte cette capacité à toutes les unités Space Wolves à 6''"
+  },
+  {
+    "id": "unit.ability_name.The Anvil Sheild",
+    "message": "Le bouclier Enclume"
+  },
+  {
+    "id": "unit.ability_description.The Anvil Sheild",
+    "message":
+      "Sauvegarde invulnérable de 3+. De plus réduisez tous les dégats subits de 1 (jusqu'à un minimum de 1)"
+  },
+  {
+    "id": "unit.ability_name.Champion of the Kingsguard",
+    "message": "Champion de la Garde du Roi"
+  },
+  {
+    "id": "unit.ability_description.Champion of the Kingsguard",
+    "message":
+      "Vous pouvez relancer les jets de touches ratés en phase de combat lorsqu'il cible un personnage. En outre vous pouvez effectuer +1 attaque en phase de combat pour toutes les figurines WOLF GUARD amies à 6'' ou moins au début de la phase"
+  },
+  {
+    "id": "unit.ability_name.Thane to the High King",
+    "message": "Baron du Haut Roi"
+  },
+  {
+    "id": "unit.ability_description.Thane to the High King",
+    "message":
+      "Vous pouvez relancer les jets de blessure de 1 pour les unités Space Wolves amies à 6'' ou moins"
+  },
+  {
+    "id": "unit.ability_name.Death Frenzy",
+    "message": "Frénésie de Mort"
+  },
+  {
+    "id": "unit.ability_description.Death Frenzy",
+    "message":
+      "Jetez un D6 chaque fois qu'une figurine perd un PV ; sur 5+ ce PV n'est pas perdu. Si une figurine est tuée lors d'une phase de combat, vous pouvez attaquer avec cette figurine avant de la retirer une fois que l'unité énnemie a effectué toutes ses attaques, même si vous avez déjà attaqué à ce tour"
+  },
+  {
+    "id": "unit.ability_name.Curse of the Wulfen (Hunt)",
+    "message": "Malédiction du Wulfen (Chasser)"
+  },
+  {
+    "id": "unit.ability_description.Curse of the Wulfen (Hunt)",
+    "message":
+      "Vous pouvez relancer les jets de charge ratés pour les unités Space Wolves amies d'Infanterie, Motards ou Cavalerie à 6'' ou moins. 12'' pour les Blood Claws"
+  },
+  {
+    "id": "unit.ability_name.Curse of the Wulfen (Kill)",
+    "message": "Malédiction du Wulfen (Tuer)"
+  },
+  {
+    "id": "unit.ability_description.Curse of the Wulfen (Kill)",
+    "message":
+      "+1 attaque pour les unités Space Wolves amies d'Infanterie, Motard et Cavalerie à 6'' ou moins en phase de combat. 12'' pour les Blood Claws. Les Wulfen ne sont pas affectés par cette aptitude, ni les unités qui ont chargé à ce tour en étant à la porté de l'aptitude Malédiction du Wulfen"
+  },
+  {
+    "id": "unit.ability_name.Bounding Lope",
+    "message": "Course à la Curée"
+  },
+  {
+    "id": "unit.ability_description.Bounding Lope",
+    "message": "Cette unité peut Avancer et Charger au même tour"
+  },
+  {
+    "id": "unit.ability_name.And They Shall Know No Fear",
+    "message": "Et ils ne connaitront pas la peur"
+  },
+  {
+    "id": "unit.ability_name.Hunters Unleashed",
+    "message": "Chasseurs déchaînés"
+  },
+  {
+    "id": "unit.ability_description.Hunters Unleashed",
+    "message":
+      "Si cette unité a chargé, a été chargée ou a effectuée une intervention héroïque, +1 attaque en phase de combat. Les personnages font des interventions héroïques à 6''"
+  }
+]

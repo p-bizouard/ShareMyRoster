@@ -62,8 +62,9 @@ class Header extends React.Component {
     const { action } = e.target.parentElement.dataset;
     // eslint-disable-next-line no-undef
     if (action === 'show') $('.card .collapse').collapse('show');
-    // eslint-disable-next-line no-undef
-    else $('.card .collapse').collapse('hide');
+    else
+      // eslint-disable-next-line no-undef
+      $('.card .collapse').collapse('hide');
     e.preventDefault();
     return true;
   }
@@ -85,7 +86,7 @@ class Header extends React.Component {
       return '';
     return `${window.location.protocol}//${window.location.hostname}${
       window.location.port ? `:${window.location.port}` : ''
-      }/r/${this.props.roster.key}`;
+    }/r/${this.props.roster.key}`;
   }
 
   handlePrintChange(printType) {
@@ -138,7 +139,7 @@ class Header extends React.Component {
               <span className={s.brandTxt}>
                 <FormattedMessage
                   id="layout.title"
-                  defaultMessage="Roster viewer"
+                  defaultMessage="ShareMyRoster"
                 />
               </span>
             </Link>
@@ -324,23 +325,23 @@ class Header extends React.Component {
                   </button>
                 </>
               ) : (
-                  <div>
-                    <RoszUploader />
-                    <button
-                      className="d-block btn btn-block btn-link"
-                      onClick={e => {
-                        this.props.setRosterKey(null);
-                        this.props.setRosterJson(DefaultData.roster);
-                        e.preventDefault();
-                      }}
-                    >
-                      <FormattedMessage
-                        id="layout.configuration.load_example"
-                        defaultMessage="Load the example"
-                      />
-                    </button>
-                  </div>
-                )}
+                <div>
+                  <RoszUploader />
+                  <button
+                    className="d-block btn btn-block btn-link"
+                    onClick={e => {
+                      this.props.setRosterKey(null);
+                      this.props.setRosterJson(DefaultData.roster);
+                      e.preventDefault();
+                    }}
+                  >
+                    <FormattedMessage
+                      id="layout.configuration.load_example"
+                      defaultMessage="Load the example"
+                    />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
 

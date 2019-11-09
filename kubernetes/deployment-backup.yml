@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database-backup
+spec:
+  selector:
+    matchLabels:
+      app: rosterviewer-database-backup
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: rosterviewer-database-backup
+    spec:
+      imagePullSecrets:
+        - name: registrypullsecret
+      containers:
+      - image: databack/mysql-backup
+        name: database-backup
+        env:
+        - name: DB_DUMP_TARGET
+          value: /db
+        - name: DB_USER
+          value: root
+        - name: DB_DUMP_FREQ
+          value: "2"
+        - name: DB_SERVER
+          value: rosterviewer-database-service
+        - name: DB_PORT
+          value: "3306"
+        volumeMounts:
+        - name: hostvol
+          mountPath: /db
+      volumes:
+        - name: hostvol
+          hostPath:
+            path: /db
+    #  - /path/to/pre-backup/scripts:/scripts.d/pre-backup
+    #  - /path/to/post-backup/scripts:/scripts.d/post-backup
