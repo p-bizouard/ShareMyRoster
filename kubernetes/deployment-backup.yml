@@ -1,40 +1,80 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: PersistentVolumeClaim
 metadata:
   name: database-backup
 spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: cinder-classic
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database-backup-view
+spec:
   selector:
     matchLabels:
-      app: rosterviewer-database-backup
+      app: database-backup-view
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: rosterviewer-database-backup
+        app: database-backup-view
     spec:
-      imagePullSecrets:
-        - name: registrypullsecret
+      securityContext:
+        fsGroup: 1234
       containers:
-      - image: databack/mysql-backup
-        name: database-backup
-        env:
-        - name: DB_DUMP_TARGET
-          value: /db
-        - name: DB_USER
-          value: root
-        - name: DB_DUMP_FREQ
-          value: "2"
-        - name: DB_SERVER
-          value: rosterviewer-database-service
-        - name: DB_PORT
-          value: "3306"
+      - image: alpine
+        name: database-backup-view
+        command: [ "/bin/sh", "-c", "--" ]
+        args: [ "trap : TERM INT; (while true; do sleep 1000; done) & wait" ]
         volumeMounts:
         - name: hostvol
           mountPath: /db
       volumes:
         - name: hostvol
-          hostPath:
-            path: /db
+          persistentVolumeClaim:
+            claimName: database-backup
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: database-backup
+spec:
+  schedule: "30 20 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          imagePullSecrets:
+            - name: registrypullsecret
+          securityContext:
+            fsGroup: 1234
+          containers:
+          - image: databack/mysql-backup
+            name: database-backup
+            env:
+            - name: DB_DUMP_TARGET
+              value: /db
+            - name: DB_USER
+              value: root
+            - name: RUN_ONCE
+            - name: DB_SERVER
+              value: rosterviewer-database-service
+            - name: DB_PORT
+              value: "3306"
+            volumeMounts:
+            - name: hostvol
+              mountPath: /db
+          volumes:
+            - name: hostvol
+              persistentVolumeClaim:
+                claimName: database-backup
     #  - /path/to/pre-backup/scripts:/scripts.d/pre-backup
     #  - /path/to/post-backup/scripts:/scripts.d/post-backup
+# kubectl patch pv persistantvolume -p '{"spec":{"persistentVolumeReclaimPolicy":"Retain"}}'

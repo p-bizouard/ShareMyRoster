@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { injectIntl } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
@@ -52,43 +52,23 @@ class Roster extends React.Component {
 
   renderModelsRecap(showOnlyIds) {
     if (this.getRoster())
-      return (
-        <div className="force mt-4 force-recap">
-          <h2>Récapitulatif par détachement</h2>
+      return <div className="force mt-4 force-recap">
+          <h2>
+            <FormattedMessage id="DatasheetTemplate.sumary_detachment" defaultMessage="Summary by detachment" />
+          </h2>
           <div className="accordion">
             <div className="card">
               <h4 className="card-header">
-                <button
-                  className="btn btn-link"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target={`#card-recap-${this.getRoster().$.id}`}
-                  aria-expanded="true"
-                  aria-controls={`card-recap-${this.getRoster().$.id}`}
-                >
-                  Récapitulatif
+                <button className="btn btn-link" type="button" data-toggle="collapse" data-target={`#card-recap-${this.getRoster().$.id}`} aria-expanded="true" aria-controls={`card-recap-${this.getRoster().$.id}`}>
+                  <FormattedMessage id="DatasheetTemplate.sumary" defaultMessage="Summary" />
                 </button>
               </h4>
-              <div
-                id={`card-recap-${this.getRoster().$.id}`}
-                className="collapse show"
-              >
-                {this.getRoster().forces[0].force.map((force, index) =>
-                  <Force
-                    key={force.$.id}
-                    force={force}
-                    index={index}
-                    rosterName={this.getRoster().$.name}
-                    cost={this.getRoster().costs[0].cost}
-                    recap="true"
-                    showOnlyIds={showOnlyIds}
-                  />
-                  , this)}
+              <div id={`card-recap-${this.getRoster().$.id}`} className="collapse show">
+                {this.getRoster().forces[0].force.map((force, index) => <Force key={force.$.id} force={force} index={index} rosterName={this.getRoster().$.name} cost={this.getRoster().costs[0].cost} recap="true" showOnlyIds={showOnlyIds} />, this)}
               </div>
             </div>
           </div>
-        </div>
-      );
+        </div>;
     return null;
   }
 

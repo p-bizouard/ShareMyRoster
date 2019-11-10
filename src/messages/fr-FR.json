@@ -3,37 +3,49 @@
     "id": "layout.configuration.1_in_1",
     "defaultMessage": "Full page",
     "message": "Pleine page",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.2_in_1",
     "defaultMessage": "Two ine one",
     "message": "Deux en un",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.4_in_1",
     "defaultMessage": "Four ine one",
     "message": "Quatre en un",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.load_example",
     "defaultMessage": "Load the example",
     "message": "Charger l'exemple",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.print_it",
     "defaultMessage": "Print",
     "message": "Imprimer",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.reset",
     "defaultMessage": "Reset",
     "message": "Réinitialiser",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.title",
@@ -44,19 +56,25 @@
     "id": "layout.subtitle",
     "defaultMessage": "View, share and print your {link} rosters !",
     "message": "Visualisez, partagez et imprimmez vos rosters {link} !",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.title",
     "defaultMessage": "ShareMyRoster",
     "message": "ShareMyRoster",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.ability",
     "defaultMessage": "Ability",
     "message": "Capacité",
-    "files": ["src/components/Roster/UnitAbilitiesTable.js"]
+    "files": [
+      "src/components/Roster/UnitAbilitiesTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.description",
@@ -80,7 +98,9 @@
     "id": "DatasheetTemplate.faction",
     "defaultMessage": "{count, plural, one {Faction} other {Factions}} :",
     "message": "{count, plural, one {Faction} other {Factions}} :",
-    "files": ["src/components/Roster/UnitCategories.js"]
+    "files": [
+      "src/components/Roster/UnitCategories.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.keyword",
@@ -95,13 +115,17 @@
     "id": "DatasheetTemplate.explosion",
     "defaultMessage": "Explosion :",
     "message": "Explosion :",
-    "files": ["src/components/Roster/UnitModelsTable.js"]
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.psychic_power",
     "defaultMessage": "Psychic power",
     "message": "Pouvoir psychique :",
-    "files": ["src/components/Roster/UnitModelsTable.js"]
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.a",
@@ -198,19 +222,25 @@
     "id": "DatasheetTemplate.transport",
     "defaultMessage": "Transport :",
     "message": "Transport :",
-    "files": ["src/components/Roster/UnitModelsTable.js"]
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.weapon",
     "defaultMessage": "{count, plural, one {Weapon} other {Weapons}} :",
     "message": "{count, plural, one {Arme} other {Armes}} :",
-    "files": ["src/components/Roster/UnitModelsTable.js"]
+    "files": [
+      "src/components/Roster/UnitModelsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.psychic_power",
     "defaultMessage": "Psychic power",
     "message": "Pouvoir psychique",
-    "files": ["src/components/Roster/UnitPsychicsTable.js"]
+    "files": [
+      "src/components/Roster/UnitPsychicsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.range",
@@ -225,117 +255,153 @@
     "id": "DatasheetTemplate.table.warp_charge",
     "defaultMessage": "Warp charge",
     "message": "Charge warp",
-    "files": ["src/components/Roster/UnitPsychicsTable.js"]
+    "files": [
+      "src/components/Roster/UnitPsychicsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.abilities",
     "defaultMessage": "Abilities",
     "message": "Capacités",
-    "files": ["src/components/Roster/UnitWeaponsTable.js"]
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.ap",
     "defaultMessage": "AP",
     "message": "PA",
-    "files": ["src/components/Roster/UnitWeaponsTable.js"]
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.d",
     "defaultMessage": "D",
     "message": "D",
-    "files": ["src/components/Roster/UnitWeaponsTable.js"]
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.type",
     "defaultMessage": "Type",
     "message": "Type",
-    "files": ["src/components/Roster/UnitWeaponsTable.js"]
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.weapon",
     "defaultMessage": "Weapon",
     "message": "Arme",
-    "files": ["src/components/Roster/UnitWeaponsTable.js"]
+    "files": [
+      "src/components/Roster/UnitWeaponsTable.js"
+    ]
   },
   {
     "id": "layout.configuration.1_in_1_tooltip",
     "message": "Taille et marge par défaut",
     "defaultMessage": "Default margin and font size",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.2_in_1_tooltip",
-    "defaultMessage":
-      "12mm margin and 110% font size. Remember to change the pages per sheet in your printer configuration.",
+    "defaultMessage": "12mm margin and 110% font size. Remember to change the pages per sheet in your printer configuration.",
     "message": "",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.4_in_1_tooltip",
-    "defaultMessage":
-      "5mm margin and 130% font size. Remember to change the pages per sheet in your printer configuration.",
+    "defaultMessage": "5mm margin and 130% font size. Remember to change the pages per sheet in your printer configuration.",
     "message": "",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.feedback",
     "message": "Poser une question ou reporter un bug",
     "defaultMessage": "Ask a question or report an issue",
-    "files": ["src/components/Feedback/Feedback.js"]
+    "files": [
+      "src/components/Feedback/Feedback.js"
+    ]
   },
   {
     "id": "layout.configuration.close",
     "message": "Fermer",
     "defaultMessage": "Close",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.copy_clipboard",
     "message": "Copier dans le presse-papier",
     "defaultMessage": "Copy to clipboard",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.hide_all",
     "message": "Tout cacher",
     "defaultMessage": "Hide all",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.hide_show",
     "message": "Cacher / afficher",
     "defaultMessage": "Hide / show",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.share",
     "message": "Partager",
     "defaultMessage": "Share",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.share_title",
     "message": "Partager votre roster",
     "defaultMessage": "Share your roster",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "layout.configuration.show_all",
     "message": "Tout afficher",
     "defaultMessage": "Show all",
-    "files": ["src/components/Header/Header.js"]
+    "files": [
+      "src/components/Header/Header.js"
+    ]
   },
   {
     "id": "uploader.open_file",
     "message": "Ouvrir un fichier",
     "defaultMessage": "Open file",
-    "files": ["src/components/Roster/RoszUploader.js"]
+    "files": [
+      "src/components/Roster/RoszUploader.js"
+    ]
   },
   {
     "id": "uploader.title",
     "message": "Uploadez votre roster (fichier en .rosz)",
     "defaultMessage": "Upload your roster file (with .rosz extension)",
-    "files": ["src/components/Roster/RoszUploader.js"]
+    "files": [
+      "src/components/Roster/RoszUploader.js"
+    ]
   },
   {
     "id": "DatasheetTemplate.table.max",
@@ -350,6 +416,69 @@
     "id": "DatasheetTemplate.rules",
     "defaultMessage": "{count, plural, one {Rule} other {Rules}} :",
     "message": "",
-    "files": ["src/components/Roster/UnitCategories.js"]
+    "files": [
+      "src/components/Roster/UnitCategories.js"
+    ]
+  },
+  {
+    "id": "navigation.about",
+    "description": "About link in header",
+    "defaultMessage": "About",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.contact",
+    "description": "Contact link in header",
+    "defaultMessage": "Contact",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.login",
+    "description": "Log in link in header",
+    "defaultMessage": "Log in",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.separator.or",
+    "description": "Last separator in list, lowercase \"or\"",
+    "defaultMessage": "or",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "navigation.signup",
+    "description": "Sign up link in header",
+    "defaultMessage": "Sign up",
+    "message": "",
+    "files": [
+      "src/components/Navigation/Navigation.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.sumary",
+    "defaultMessage": "Summary",
+    "message": "Récapitulatif",
+    "files": [
+      "src/components/Roster/Roster.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.sumary_detachment",
+    "defaultMessage": "Summary by detachment",
+    "message": "Récapitulatif par détachement",
+    "files": [
+      "src/components/Roster/Roster.js"
+    ]
   }
 ]

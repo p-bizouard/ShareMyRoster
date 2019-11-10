@@ -3,10 +3,7 @@
     "id": "login.title",
     "defaultMessage": "Log In",
     "message": "Log In",
-    "description": "Log in page title",
-    "files": [
-      "src/routes/login/index.js"
-    ]
+    "description": "Log in page title"
   },
   {
     "id": "navigation.about",
@@ -111,7 +108,7 @@
   },
   {
     "id": "layout.title",
-    "defaultMessage": "Roster viewer",
+    "defaultMessage": "ShareMyRoster",
     "message": "",
     "files": [
       "src/components/Header/Header.js"
@@ -467,6 +464,22 @@
     "message": "",
     "files": [
       "src/components/Roster/UnitCategories.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.sumary",
+    "defaultMessage": "Summary",
+    "message": "",
+    "files": [
+      "src/components/Roster/Roster.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.sumary_detachment",
+    "defaultMessage": "Summary by detachment",
+    "message": "",
+    "files": [
+      "src/components/Roster/Roster.js"
     ]
   }
 ]

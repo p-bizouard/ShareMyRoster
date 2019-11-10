@@ -45,15 +45,6 @@
     ]
   },
   {
-    "id": "login.title",
-    "description": "Log in page title",
-    "defaultMessage": "Log In",
-    "message": "",
-    "files": [
-      "src/routes/login/index.js"
-    ]
-  },
-  {
     "id": "layout.configuration.1_in_1",
     "defaultMessage": "Full page",
     "message": "",
@@ -111,7 +102,7 @@
   },
   {
     "id": "layout.title",
-    "defaultMessage": "Roster viewer",
+    "defaultMessage": "ShareMyRoster",
     "message": "",
     "files": [
       "src/components/Header/Header.js"
@@ -467,6 +458,22 @@
     "message": "",
     "files": [
       "src/components/Roster/UnitCategories.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.sumary",
+    "defaultMessage": "Summary",
+    "message": "",
+    "files": [
+      "src/components/Roster/Roster.js"
+    ]
+  },
+  {
+    "id": "DatasheetTemplate.sumary_detachment",
+    "defaultMessage": "Summary by detachment",
+    "message": "",
+    "files": [
+      "src/components/Roster/Roster.js"
     ]
   }
 ]

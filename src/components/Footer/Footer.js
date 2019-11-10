@@ -17,7 +17,8 @@ class Footer extends React.Component {
       <div className={s.root}>
         <div className={s.container}>
           <span className={s.text}>
-            This website is not affiliated with{' '}
+            This website is not affiliated with, maintained, authorized,
+            endorsed or sponsored by{' '}
             <a className={s.link} href="https://www.battlescribe.net/">
               BattleScribe
             </a>
