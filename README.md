@@ -1,9 +1,9 @@
 ## Roster Viewer
 
-View, share and print your Battlescribe rosters !
+View, share and print your Battlescribe rosters ! Live at [https://www.sharemyroster.com/](https://www.sharemyroster.com/)
 
 [![CircleCI](https://circleci.com/gh/p-bizouard/ShareMyRoster.svg?style=svg)](https://circleci.com/gh/p-bizouard/ShareMyRoster)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fp-bizouard%2FShareMyRoster.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fp-bizouard%2FShareMyRoster?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fp-bizouard%2FRosterViewer.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fp-bizouard%2FRosterViewer?ref=badge_shield)
 
 ### Built With
 
@@ -15,5 +15,3 @@ This source code is licensed under the MIT
 license found in the [LICENSE.txt](https://github.com/p-bizouard/ShareMyRoster/blob/master/LICENSE.txt)
 file. The documentation to the project is licensed under the
 [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) license.
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fp-bizouard%2FShareMyRoster.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fp-bizouard%2FShareMyRoster?ref=badge_large)

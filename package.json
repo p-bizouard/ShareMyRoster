@@ -79,6 +79,7 @@
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.9.0",
     "react-dropzone": "^10.1.7",
+    "react-helmet": "^5.2.1",
     "react-intl": "^2.4.0",
     "react-redux": "^5.0.6",
     "recursive-readdir": "^2.2.2",

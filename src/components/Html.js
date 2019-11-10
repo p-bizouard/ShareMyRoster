@@ -10,6 +10,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
+
 import config from '../config';
 
 /* eslint-disable react/no-danger */
@@ -42,8 +43,10 @@ class Html extends React.Component {
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+
           <title>{title}</title>
           <meta name="description" content={description} />
+
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {scripts.map(script => (
             <link key={script} rel="preload" href={script} as="script" />

@@ -13,7 +13,7 @@ import Roster from '../../components/Roster/Roster';
 
 async function action({ client, params }) {
   return {
-    title: 'React Starter Kit',
+    title: 'ShareMyRoster',
     chunks: ['home'],
     component: (
       <Layout client={client} params={params}>
