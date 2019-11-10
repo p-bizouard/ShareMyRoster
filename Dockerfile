@@ -7,7 +7,7 @@ COPY ./build/package.json .
 COPY ./build/yarn.lock .
 
 # Install curl
-RUN apk --no-cache add curl mysql mysql-client
+RUN apk --no-cache add curl
 
 # Install Node.js dependencies
 RUN yarn install --production --no-progress

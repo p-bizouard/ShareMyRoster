@@ -44,7 +44,8 @@ module.exports = {
 
   // Database
   databaseUrl:
-    process.env.DATABASE_URL || 'mysql://root:@localhost:3307/rosterviewer',
+    process.env.DATABASE_URL ||
+    'mysql://root:@rosterviewer-database-service:3306/rosterviewer',
 
   // Web analytics
   analytics: {
