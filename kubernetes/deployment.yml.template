@@ -31,6 +31,7 @@ spec:
       containers:
       - image: ${DOCKER_REGISTRY}/rosterviewer/database:${COMMIT_SHA1}
         name: database
+        args: ['--ignore-db-dir=lost+found']
         env:
         - name: MYSQL_ALLOW_EMPTY_PASSWORD
           value: "1"

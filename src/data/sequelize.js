@@ -10,6 +10,8 @@
 import Sequelize from 'sequelize';
 import config from '../config';
 
+// eslint-disable-next-line no-console
+console.log('Sequelize configuration :', config.databaseUrl);
 const sequelize = new Sequelize(config.databaseUrl, {
   define: {
     freezeTableName: true,
