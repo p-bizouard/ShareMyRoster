@@ -14,6 +14,7 @@ import Roster from '../../components/Roster/Roster';
 async function action({ client, params }) {
   return {
     title: 'ShareMyRoster',
+    description: 'View, share and print your Battlescribe rosters !',
     chunks: ['home'],
     component: (
       <Layout client={client} params={params}>

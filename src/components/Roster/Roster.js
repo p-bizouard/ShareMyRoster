@@ -56,8 +56,6 @@ class Roster extends React.Component {
         <Helmet>
           <title>{title}</title>
           <meta property="og:title" content={title} />
-          <meta name="description" content="Check my roster" />
-          <meta name="og:description" content="Check my roster" />
         </Helmet>,
         this.getRoster().forces[0].force.map((force, index) => (
           <Force
