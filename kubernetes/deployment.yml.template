@@ -48,7 +48,7 @@ spec:
         readinessProbe:
           exec:
             # Check we can execute queries over TCP (skip-networking is off).
-            command: ["mysql", "-h", "127.0.0.1", "-e", "SELECT 1"]
+            command: ["mysql", "-h", "127.0.0.1", "-e", "SELECT 1 "]
           initialDelaySeconds: 5
           periodSeconds: 2
           timeoutSeconds: 1
@@ -92,6 +92,10 @@ spec:
     spec:
       imagePullSecrets:
         - name: registrypullsecret
+      initContainers:
+      - name: init-mysql
+        image: busybox
+        command: ["sh", "-c", "for i in $(seq 1 300); do nc -zvw1 rosterviewer-database-service 3306 && exit 0 || sleep 3; done; exit 1 "]
       containers:
       - image: ${DOCKER_REGISTRY}/rosterviewer/application:${COMMIT_SHA1}
         name: application
@@ -110,7 +114,3 @@ spec:
       #   - name: hostvol
       #     hostPath:
       #       path: /data
-      initContainers:
-      - name: init-mysql
-        image: busybox
-        command: ['sh', '-c', 'until nslookup rosterviewer-database-service; do echo waiting for mysql; sleep 2; done;']

@@ -7,6 +7,7 @@ if [[ "$1" == "circleci" ]]; then
     export KUBECTL=./kubectl
 else
     set -a
+    export COMMIT_SHA1=latest
     source .env
     set +a
 

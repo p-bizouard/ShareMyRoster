@@ -38,24 +38,26 @@ class Roster extends React.Component {
 
   renderRoster(showOnlyIds) {
     if (this.getRoster()) {
+      const title = `${this.getRoster().$.name} (${
+        this.getRoster().costs[0].cost
+          ? `${this.getRoster().costs[0].cost[0].$.value} ${
+              this.getRoster().costs[0].cost[0].$.name
+            }`
+          : ''
+      }${
+        this.getRoster().costs[1] && this.getRoster().costs[1].cost
+          ? ` ${this.getRoster().costs[0].cost[1].$.value} ${
+              this.getRoster().costs[0].cost[1].$.name
+            }`
+          : ''
+      })`;
+
       return [
         <Helmet>
-          <title>
-            {this.getRoster().$.name}
-            (
-            {this.getRoster().costs[0].cost
-              ? `${this.getRoster().costs[0].cost[0].$.value} ${
-                  this.getRoster().costs[0].cost[0].$.name
-                }`
-              : ''}
-            {this.getRoster().costs[0].cost && this.getRoster().costs[0].cost[1]
-              ? `${this.getRoster().costs[0].cost[1].$.value} ${
-                  this.getRoster().costs[0].cost[1].$.name
-                }`
-              : ''}
-            )
-          </title>
-          {/* <meta name="description" content={description} /> */}
+          <title>{title}</title>
+          <meta property="og:title" content={title} />
+          <meta name="description" content="Check my roster" />
+          <meta name="og:description" content="Check my roster" />
         </Helmet>,
         this.getRoster().forces[0].force.map((force, index) => (
           <Force
