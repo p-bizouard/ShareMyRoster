@@ -29,7 +29,7 @@ spec:
       imagePullSecrets:
         - name: registrypullsecret
       containers:
-      - image: ${DOCKER_REGISTRY}/rosterviewer/database:${COMMIT_SHA1}
+      - image: mariadb:10.1
         name: database
         args: ['--ignore-db-dir=lost+found']
         env:
