@@ -18,7 +18,8 @@ fi
 #  it's not possible to do in-place substitution, so we need to save the output to another file
 #  and overwrite the original with that one.
 mkdir -p build
-envsubst <./kubernetes/deployment.yml.template >./build/kubernetes-deployment.yml
+envsubst <./kubernetes/deployment.template.yml >./build/kubernetes-deployment.yml
+envsubst <./kubernetes/deployment-backup.template.yml >./build/kubernetes-deployment-backup.yml
 
 echo "$KUBERNETES_CLUSTER_CERTIFICATE" | base64 --decode >./build/kubernetes-cert.crt
 
@@ -28,3 +29,10 @@ $KUBECTL \
 --certificate-authority=./build/kubernetes-cert.crt \
 --token=$KUBERNETES_TOKEN \
 apply -f ./build/kubernetes-deployment.yml
+
+$KUBECTL \
+--kubeconfig=/dev/null \
+--server=$KUBERNETES_SERVER \
+--certificate-authority=./build/kubernetes-cert.crt \
+--token=$KUBERNETES_TOKEN \
+apply -f ./build/kubernetes-deployment-backup.yml

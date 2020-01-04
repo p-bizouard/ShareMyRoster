@@ -21,23 +21,23 @@ jobs:
             docker tag $DOCKER_REGISTRY/rosterviewer/application:latest $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
             docker push $DOCKER_REGISTRY/rosterviewer/application:latest
             docker push $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
-  build_database:
-    machine: true
-    working_directory: ~/RosterViewer
-    steps:
-      - checkout
-      - run:
-          name: Build Image
-          command: |
-            cd docker-database
-            docker build -t $DOCKER_REGISTRY/rosterviewer/database:latest .
-      - run:
-          name: Tag and push the image
-          command: |
-            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
-            docker tag $DOCKER_REGISTRY/rosterviewer/database:latest $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
-            docker push $DOCKER_REGISTRY/rosterviewer/database:latest
-            docker push $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
+  # build_database:
+  #   machine: true
+  #   working_directory: ~/RosterViewer
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Build Image
+  #         command: |
+  #           cd docker-database
+  #           docker build -t $DOCKER_REGISTRY/rosterviewer/database:latest .
+  #     - run:
+  #         name: Tag and push the image
+  #         command: |
+  #           docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+  #           docker tag $DOCKER_REGISTRY/rosterviewer/database:latest $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
+  #           docker push $DOCKER_REGISTRY/rosterviewer/database:latest
+  #           docker push $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
   
   test:
     machine: true
@@ -82,11 +82,11 @@ workflows:
   build_and_test:
     jobs:
       - build_application
-      - build_database
+      # - build_database
       - test:
           requires:
             - build_application
-            - build_database
+            # - build_database
       - deploy:
           requires:
             - test
