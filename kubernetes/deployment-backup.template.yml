@@ -45,7 +45,9 @@ kind: CronJob
 metadata:
   name: database-backup
 spec:
-  schedule: "30 22 * * *"
+  schedule: "40 13 * * *"
+  successfulJobsHistoryLimit: 5
+  failedJobsHistoryLimit: 5
   jobTemplate:
     spec:
       template:
