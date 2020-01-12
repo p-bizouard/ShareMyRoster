@@ -9,6 +9,7 @@ services:
     image: mariadb:10.1
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD=1
+      - MYSQL_DATABASE=rosterviewer
     ports:
       - "3306:3306"
     networks:
