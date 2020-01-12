@@ -50,12 +50,9 @@ jobs:
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
             docker-compose pull
       - run:
-          name: Run docker-up
+          name: Run docker-up & curl test
           command: |
             docker-compose up -d
-      - run:
-          name: Run curl test
-          command: |
             sleep 10
             docker-compose exec application curl -4 --retry 10 --retry-delay 5 --retry-connrefused -v http://localhost:3000/
   deploy:
