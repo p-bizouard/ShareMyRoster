@@ -5,6 +5,15 @@ networks:
   servernetwork: {}
 # Define services to be run.
 services:
+  database:
+    image: mariadb:10.1
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1
+    ports:
+      - "3306:3306"
+    networks:
+      # Add the database service to the servernetwork.
+      - servernetwork
   application:
     image: $DOCKER_REGISTRY/rosterviewer/application:latest
     build:
