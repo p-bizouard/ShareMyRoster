@@ -32,6 +32,8 @@ module.exports = {
   },
 
   rules: {
+    'jsx-a11y/anchor-has-content': 'off',
+    'jsx-a11y/heading-has-content': 'off',
     'func-names': 'off',
 
     // Forbid the use of extraneous packages

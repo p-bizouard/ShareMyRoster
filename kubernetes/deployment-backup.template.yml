@@ -1,58 +1,17 @@
-# apiVersion: v1
-# kind: PersistentVolumeClaim
-# metadata:
-#   name: database-backup
-# spec:
-#   accessModes:
-#     - ReadWriteOnce
-#   resources:
-#     requests:
-#       storage: 5Gi
-#   storageClassName: cinder-classic
-# ---
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: database-backup-view
-spec:
-  selector:
-    matchLabels:
-      app: database-backup-view
-  strategy:
-    type: Recreate
-  template:
-    metadata:
-      labels:
-        app: database-backup-view
-    spec:
-      securityContext:
-        fsGroup: 1234
-      containers:
-      - image: alpine
-        name: database-backup-view
-        command: [ "/bin/sh", "-c", "--" ]
-        args: [ "trap : TERM INT; (while true; do sleep 1000; done) & wait" ]
-      #   volumeMounts:
-      #   - name: hostvol
-      #     mountPath: /db
-      # volumes:
-      #   - name: hostvol
-      #     persistentVolumeClaim:
-      #       claimName: database-backup
----
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: database-backup
 spec:
-  schedule: "40 13 * * *"
-  successfulJobsHistoryLimit: 5
+  schedule: "*/1 * * * *"
+  successfulJobsHistoryLimit: 10
   failedJobsHistoryLimit: 5
+  concurrencyPolicy: Replace
   jobTemplate:
     spec:
       template:
         spec:
-          restartPolicy: OnFailure
+          restartPolicy: Never
           imagePullSecrets:
             - name: registrypullsecret
           securityContext:
@@ -63,8 +22,6 @@ spec:
             env:
             - name: DB_DUMP_TARGET
               value: ${DB_DUMP_TARGET}
-            # - name: DB_DUMP_TARGET
-            #   value: /db
             - name: DB_USER
               value: root
             - name: RUN_ONCE
@@ -83,13 +40,3 @@ spec:
               value: ${AWS_DEFAULT_REGION}
             - name: AWS_ENDPOINT_URL
               value: ${AWS_ENDPOINT_URL}
-          #   volumeMounts:
-          #   - name: hostvol
-          #     mountPath: /db
-          # volumes:
-          #   - name: hostvol
-          #     persistentVolumeClaim:
-          #       claimName: database-backup
-    #  - /path/to/pre-backup/scripts:/scripts.d/pre-backup
-    #  - /path/to/post-backup/scripts:/scripts.d/post-backup
-# kubectl patch pv persistantvolume -p '{"spec":{"persistentVolumeReclaimPolicy":"Retain"}}'

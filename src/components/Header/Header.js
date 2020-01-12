@@ -40,8 +40,6 @@ import {
   initRosterFromKey,
 } from '../../actions/roster';
 
-const DefaultData = require('../Roster/DefaultData.json');
-
 class Header extends React.Component {
   static propTypes = {
     roster: PropTypes.shape({
@@ -53,18 +51,19 @@ class Header extends React.Component {
     setRuntimeVariable: PropTypes.func.isRequired,
     setRosterKey: PropTypes.func.isRequired,
     setRosterJson: PropTypes.func.isRequired,
+    rosz: PropTypes.shape({}),
   };
   static defaultProps = {
     roster: null,
+    rosz: null,
   };
 
   static hideShow(e) {
     const { action } = e.target.parentElement.dataset;
     // eslint-disable-next-line no-undef
     if (action === 'show') $('.card .collapse').collapse('show');
-    else
-      // eslint-disable-next-line no-undef
-      $('.card .collapse').collapse('hide');
+    // eslint-disable-next-line no-undef
+    else $('.card .collapse').collapse('hide');
     e.preventDefault();
     return true;
   }
@@ -128,7 +127,15 @@ class Header extends React.Component {
         <div className={s.root}>
           <div className={s.container}>
             <LanguageSwitcher />
-            <Link className={s.brand} to="/">
+            <Link
+              className={s.brand}
+              to="/"
+              onClick={e => {
+                this.props.setRosterKey(null);
+                this.props.setRosterJson(null);
+                e.preventDefault();
+              }}
+            >
               {/* <img
               src={logoUrl}
               srcSet={`${logoUrl2x} 2x`}
@@ -157,19 +164,23 @@ class Header extends React.Component {
 
               {this.props.roster && this.props.roster.json ? (
                 <>
-                  <button
-                    type="button"
-                    className="btn btn-success btn-lg"
-                    onClick={e => {
-                      this.share();
-                      e.preventDefault();
-                    }}
-                  >
-                    <FormattedMessage
-                      id="layout.configuration.share"
-                      defaultMessage="Share"
-                    />
-                  </button>
+                  {this.props.rosz ? (
+                    <button
+                      type="button"
+                      className="btn btn-success btn-lg"
+                      onClick={e => {
+                        this.share();
+                        e.preventDefault();
+                      }}
+                    >
+                      <FormattedMessage
+                        id="layout.configuration.share"
+                        defaultMessage="Share"
+                      />
+                    </button>
+                  ) : (
+                    ''
+                  )}
 
                   <div className="dropdown d-inline ml-2">
                     <button
@@ -330,8 +341,7 @@ class Header extends React.Component {
                   <button
                     className="d-block btn btn-block btn-link"
                     onClick={e => {
-                      this.props.setRosterKey(null);
-                      this.props.setRosterJson(DefaultData.roster);
+                      window.location.href = `/r/demo`;
                       e.preventDefault();
                     }}
                   >
@@ -411,6 +421,7 @@ class Header extends React.Component {
 
 const mapState = state => ({
   roster: state.roster,
+  rosz: state.runtime.rosz,
 });
 
 const mapDispatch = {

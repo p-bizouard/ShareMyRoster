@@ -12,13 +12,15 @@ import s from './Roster.less';
 
 import Force from './Force';
 
-// App component - represents the whole app
+const ReactMarkdown = require('react-markdown');
+
 class Roster extends React.Component {
   static propTypes = {
     printType: PropTypes.string,
     roster: PropTypes.shape({
       json: PropTypes.string.isRequired,
     }),
+    intl: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -36,93 +38,97 @@ class Roster extends React.Component {
     return this.props.roster ? this.props.roster.json : null;
   }
 
-  renderRoster(showOnlyIds) {
-    if (this.getRoster()) {
-      const title = `${this.getRoster().$.name} (${
-        this.getRoster().costs[0].cost
-          ? `${this.getRoster().costs[0].cost[0].$.value} ${
-              this.getRoster().costs[0].cost[0].$.name
-            }`
-          : ''
-      }${
-        this.getRoster().costs[1] && this.getRoster().costs[1].cost
-          ? ` ${this.getRoster().costs[0].cost[1].$.value} ${
-              this.getRoster().costs[0].cost[1].$.name
-            }`
-          : ''
-      })`;
+  renderHelp() {
+    // https://www.freeformatter.com/json-escape.html#ad-output)
+    const source = this.props.intl.formatMessage({
+      id: `cms.homepage`,
+      defaultMessage: 'Homepage',
+    });
+    return <ReactMarkdown source={source} />;
+  }
 
-      return [
-        <Helmet>
-          <title>{title}</title>
-          <meta property="og:title" content={title} />
-        </Helmet>,
-        this.getRoster().forces[0].force.map((force, index) => (
-          <Force
-            key={force.$.id}
-            force={force}
-            index={index}
-            rosterName={this.getRoster().$.name}
-            cost={this.getRoster().costs[0].cost}
-            showOnlyIds={showOnlyIds}
-          />
-        )),
-      ];
-    }
-    return null;
+  renderRoster(showOnlyIds) {
+    const title = `${this.getRoster().$.name} (${
+      this.getRoster().costs[0].cost
+        ? `${this.getRoster().costs[0].cost[0].$.value} ${
+            this.getRoster().costs[0].cost[0].$.name
+          }`
+        : ''
+    }${
+      this.getRoster().costs[1] && this.getRoster().costs[1].cost
+        ? ` ${this.getRoster().costs[0].cost[1].$.value} ${
+            this.getRoster().costs[0].cost[1].$.name
+          }`
+        : ''
+    })`;
+
+    return [
+      <Helmet>
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+      </Helmet>,
+      this.getRoster().forces[0].force.map((force, index) => (
+        <Force
+          key={force.$.id}
+          force={force}
+          index={index}
+          rosterName={this.getRoster().$.name}
+          cost={this.getRoster().costs[0].cost}
+          showOnlyIds={showOnlyIds}
+        />
+      )),
+    ];
   }
 
   renderModelsRecap(showOnlyIds) {
-    if (this.getRoster())
-      return (
-        <div className="force mt-4 force-recap">
-          <h2>
-            <FormattedMessage
-              id="DatasheetTemplate.sumary_detachment"
-              defaultMessage="Summary by detachment"
-            />
-          </h2>
-          <div className="accordion">
-            <div className="card">
-              <h4 className="card-header">
-                <button
-                  className="btn btn-link"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target={`#card-recap-${this.getRoster().$.id}`}
-                  aria-expanded="true"
-                  aria-controls={`card-recap-${this.getRoster().$.id}`}
-                >
-                  <FormattedMessage
-                    id="DatasheetTemplate.sumary"
-                    defaultMessage="Summary"
-                  />
-                </button>
-              </h4>
-              <div
-                id={`card-recap-${this.getRoster().$.id}`}
-                className="collapse show"
+    return (
+      <div className="force mt-4 force-recap">
+        <h2>
+          <FormattedMessage
+            id="DatasheetTemplate.sumary_detachment"
+            defaultMessage="Summary by detachment"
+          />
+        </h2>
+        <div className="accordion">
+          <div className="card">
+            <h4 className="card-header">
+              <button
+                className="btn btn-link"
+                type="button"
+                data-toggle="collapse"
+                data-target={`#card-recap-${this.getRoster().$.id}`}
+                aria-expanded="true"
+                aria-controls={`card-recap-${this.getRoster().$.id}`}
               >
-                {this.getRoster().forces[0].force.map(
-                  (force, index) => (
-                    <Force
-                      key={force.$.id}
-                      force={force}
-                      index={index}
-                      rosterName={this.getRoster().$.name}
-                      cost={this.getRoster().costs[0].cost}
-                      recap="true"
-                      showOnlyIds={showOnlyIds}
-                    />
-                  ),
-                  this,
-                )}
-              </div>
+                <FormattedMessage
+                  id="DatasheetTemplate.sumary"
+                  defaultMessage="Summary"
+                />
+              </button>
+            </h4>
+            <div
+              id={`card-recap-${this.getRoster().$.id}`}
+              className="collapse show"
+            >
+              {this.getRoster().forces[0].force.map(
+                (force, index) => (
+                  <Force
+                    key={force.$.id}
+                    force={force}
+                    index={index}
+                    rosterName={this.getRoster().$.name}
+                    cost={this.getRoster().costs[0].cost}
+                    recap="true"
+                    showOnlyIds={showOnlyIds}
+                  />
+                ),
+                this,
+              )}
             </div>
           </div>
         </div>
-      );
-    return null;
+      </div>
+    );
   }
 
   render() {
@@ -133,8 +139,12 @@ class Roster extends React.Component {
     return (
       <div className="container">
         <div id="roster" className={printType}>
-          {this.renderRoster(showOnlyIds)}
-          {this.renderModelsRecap(showOnlyIds)}
+          {this.getRoster()
+            ? [
+                this.renderRoster(showOnlyIds),
+                this.renderModelsRecap(showOnlyIds),
+              ]
+            : this.renderHelp()}
         </div>
       </div>
     );

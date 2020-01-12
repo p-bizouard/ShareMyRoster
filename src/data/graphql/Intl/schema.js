@@ -8,7 +8,7 @@
  */
 import fs from 'fs';
 import { join } from 'path';
-import Promise from 'bluebird';
+// import Promise from 'bluebird';
 import glob from 'glob';
 import { locales } from '../../../config';
 
@@ -33,7 +33,7 @@ export const queries = [
 
 const MESSAGES_DIR = process.env.MESSAGES_DIR || join(__dirname, './messages');
 
-const readFile = Promise.promisify(fs.readFile);
+// const readFileSync = Promise.promisify(fs.readFileSync);
 
 export const resolvers = {
   Query: {
@@ -44,11 +44,35 @@ export const resolvers = {
 
       let localeData = [];
       try {
-        const files = await glob.sync(join(MESSAGES_DIR, `*${locale}.json`));
+        const jsonFiles = await glob.sync(
+          join(MESSAGES_DIR, `*${locale}.json`),
+        );
 
-        for (let i = 0; i < files.length; i += 1)
+        for (let i = 0; i < jsonFiles.length; i += 1)
+          localeData = localeData.concat(
+            // eslint-disable-next-line no-await-in-loop
+            JSON.parse(fs.readFileSync(jsonFiles[i])),
+          );
+
+        const mdFiles = await glob.sync(join(MESSAGES_DIR, `*/*${locale}.md`));
+
+        for (let i = 0; i < mdFiles.length; i += 1) {
+          const messageId = mdFiles[i]
+            .replace(`.${locale}.md`, '')
+            .match(/.*\/cms\/(.*)/);
+
+          localeData.push({
+            id: `cms.${messageId[1]}`,
+            // eslint-disable-next-line no-await-in-loop
+            message: fs.readFileSync(mdFiles[i], 'utf8'),
+          });
+
           // eslint-disable-next-line no-await-in-loop
-          localeData = localeData.concat(JSON.parse(await readFile(files[i])));
+          // localeData = localeData.concat(
+          //   JSON.parse(await readFile(jsonFiles[i])),
+          // );
+          // console.log(localeData);
+        }
       } catch (err) {
         if (err.code === 'ENOENT') {
           throw new Error(`Locale '${locale}' not found`);

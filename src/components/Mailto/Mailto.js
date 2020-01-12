@@ -28,6 +28,10 @@ class Mailto extends React.Component {
     obfuscate: false,
     headers: {},
   };
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
 
   handleClick(event) {
     event.preventDefault();

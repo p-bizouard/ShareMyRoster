@@ -33,7 +33,7 @@ import errorPageStyle from './routes/error/ErrorPage.css';
 import createFetch from './createFetch';
 // import passport from './passport';
 import router from './router';
-import models from './data/models';
+import models, { Roster } from './data/models';
 import schema from './data/schema';
 // import assets from './asset-manifest.json'; // eslint-disable-line import/no-unresolved
 import chunks from './chunk-manifest.json'; // eslint-disable-line import/no-unresolved
@@ -41,6 +41,8 @@ import configureStore from './store/configureStore';
 import { setRuntimeVariable } from './actions/runtime';
 import { setLocale } from './actions/intl';
 import config from './config';
+
+import demoRoster from './data/graphql/Database/rosters/demo';
 
 process.on('unhandledRejection', (reason, p) => {
   console.error('Unhandled Rejection at:', p, 'reason:', reason);
@@ -324,5 +326,19 @@ if (module.hot) {
   app.hot = module.hot;
   module.hot.accept('./router');
 }
+
+Roster.findOne({ where: { key: 'demo' } }).then(roster => {
+  if (!roster) {
+    Roster.create({
+      key: 'demo',
+      rosz: demoRoster,
+    });
+  } else if (roster.rosz !== demoRoster) {
+    roster.update({
+      key: 'demo',
+      rosz: demoRoster,
+    });
+  }
+});
 
 export default app;

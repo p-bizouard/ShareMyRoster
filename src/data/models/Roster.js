@@ -21,6 +21,8 @@ const Roster = Model.define(
 
     key: {
       type: DataType.STRING(255),
+      allowNull: false,
+      unique: true,
     },
 
     rosz: {

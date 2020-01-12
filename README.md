@@ -1,4 +1,4 @@
-## Roster Viewer
+## Share my Roster
 
 View, share and print your Battlescribe rosters ! Live at [https://www.sharemyroster.com/](https://www.sharemyroster.com/)
 
