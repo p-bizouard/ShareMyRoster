@@ -21,57 +21,21 @@ jobs:
             docker tag $DOCKER_REGISTRY/rosterviewer/application:latest $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
             docker push $DOCKER_REGISTRY/rosterviewer/application:latest
             docker push $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
-  # build_database:
+  # test:
   #   machine: true
   #   working_directory: ~/RosterViewer
   #   steps:
   #     - checkout
   #     - run:
-  #         name: Build Image
-  #         command: |
-  #           cd docker-database
-  #           docker build -t $DOCKER_REGISTRY/rosterviewer/database:latest .
-  #     - run:
-  #         name: Tag and push the image
+  #         name: Run docker-login and docker-pull
   #         command: |
   #           docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
-  #           docker tag $DOCKER_REGISTRY/rosterviewer/database:latest $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
-  #           docker push $DOCKER_REGISTRY/rosterviewer/database:latest
-  #           docker push $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
-  
-  build_application_and_test:
-    docker:
-      - image: circleci/node:stretch
-    working_directory: ~/RosterViewer
-    steps:
-      - setup_remote_docker:
-          version: 17.09.0-ce
-      - checkout
-      - run:
-          name: Build
-          command: |
-            yarn install
-            yarn run build --release
-      - run:
-          name: Run docker-up & curl test
-          command: |
-            docker-compose up -d
-            docker-compose exec application curl -4 --retry 10 --retry-delay 5 --retry-connrefused -v http://127.0.0.1:3000/
-  test:
-    machine: true
-    working_directory: ~/RosterViewer
-    steps:
-      - checkout
-      - run:
-          name: Run docker-login and docker-pull
-          command: |
-            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
-            docker-compose pull
-      - run:
-          name: Run docker-up & curl test
-          command: |
-            docker-compose up -d
-            docker-compose exec application curl -4 --retry 10 --retry-delay 5 --retry-connrefused -v http://127.0.0.1:3000/
+  #           docker-compose pull
+  #     - run:
+  #         name: Run docker-up & curl test
+  #         command: |
+  #           docker-compose up -d
+  #           docker-compose exec application curl -4 --retry 10 --retry-delay 5 --retry-connrefused -v http://127.0.0.1:3000/
   deploy:
     machine: true
     steps:
@@ -97,27 +61,10 @@ workflows:
   build_and_test:
     jobs:
       - build_application
-      - build_application_and_test
-      # - build_database
-      - test:
-          requires:
-            - build_application
-            # - build_database
-      - deploy:
-          requires:
-            - test
-# workflows:
-#   version: 2
-#   build_and_test:
-#     jobs:
-#       - build_application
-#       # - build_database
-#       - test:
-#           requires:
-#             - build_application
-#             # - build_database
-#       - deploy:
-#           requires:
-#             - test
-orbs:
-  kube-orb: circleci/kubernetes@0.10.0
+      - test
+      # - test:
+      #     requires:
+      #       - build_application
+      # - deploy:
+      #     requires:
+      #       - test
