@@ -40,9 +40,12 @@ jobs:
   #           docker push $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
   
   build_application_and_test:
-    machine: true
+    docker:
+      - image: circleci/node:stretch
     working_directory: ~/RosterViewer
     steps:
+      - setup_remote_docker:
+          version: 17.09.0-ce
       - checkout
       - run:
           name: Build
