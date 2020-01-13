@@ -54,7 +54,7 @@ jobs:
           command: |
             docker-compose up -d
             docker-compose exec application curl -4 --retry 10 --retry-delay 5 --retry-connrefused -v http://localhost:3000/
-  test2:
+  test:
     machine: true
     working_directory: ~/RosterViewer
     steps:
