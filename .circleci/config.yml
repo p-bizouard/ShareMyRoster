@@ -39,7 +39,22 @@ jobs:
   #           docker push $DOCKER_REGISTRY/rosterviewer/database:latest
   #           docker push $DOCKER_REGISTRY/rosterviewer/database:$CIRCLE_SHA1
   
-  test:
+  build_application_and_test:
+    machine: true
+    working_directory: ~/RosterViewer
+    steps:
+      - checkout
+      - run:
+          name: Build
+          command: |
+            yarn install
+            yarn run build --release
+      - run:
+          name: Run docker-up & curl test
+          command: |
+            docker-compose up -d
+            docker-compose exec application curl -4 --retry 10 --retry-delay 5 --retry-connrefused -v http://localhost:3000/
+  test2:
     machine: true
     working_directory: ~/RosterViewer
     steps:
@@ -53,7 +68,6 @@ jobs:
           name: Run docker-up & curl test
           command: |
             docker-compose up -d
-            sleep 10
             docker-compose exec application curl -4 --retry 10 --retry-delay 5 --retry-connrefused -v http://localhost:3000/
   deploy:
     machine: true
@@ -80,6 +94,7 @@ workflows:
   build_and_test:
     jobs:
       - build_application
+      - build_application_and_test
       # - build_database
       - test:
           requires:
@@ -88,5 +103,18 @@ workflows:
       - deploy:
           requires:
             - test
+# workflows:
+#   version: 2
+#   build_and_test:
+#     jobs:
+#       - build_application
+#       # - build_database
+#       - test:
+#           requires:
+#             - build_application
+#             # - build_database
+#       - deploy:
+#           requires:
+#             - test
 orbs:
   kube-orb: circleci/kubernetes@0.10.0
