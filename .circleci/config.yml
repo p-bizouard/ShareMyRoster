@@ -61,7 +61,7 @@ workflows:
   build_and_test:
     jobs:
       - build_application
-      - test
+      - deploy
       # - test:
       #     requires:
       #       - build_application
