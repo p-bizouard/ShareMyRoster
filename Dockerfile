@@ -14,8 +14,9 @@ RUN yarn install --production --no-progress
 
 # Copy application files
 COPY ./build .
+COPY ./tools/wait-for-it.sh .
 
 # Run the container under "node" user by default
 USER node
-
+# "./wait-for-it.sh", "database:5432", "--", 
 CMD [ "node", "server.js" ]
