@@ -48,8 +48,9 @@ jobs:
           command: |
             sudo apt-get update && sudo apt-get -y install gettext-base
       - run:
-          name: Install kubectl
+          name: Install kubectl & Helm
           command: |
+            curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
             curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
             chmod u+x ./kubectl
             echo "$KUBECONFIG_BASE64" | base64 --decode > ~/kube-config
