@@ -35,7 +35,7 @@ securityContext: {}
 
 database:
   type: ClusterIP
-  port: 3306
+  port: 5432
   persistentVolume:
     enabled: true
     fullname: sharemyroster
@@ -43,8 +43,8 @@ database:
     size: 5Gi
     storageClassName: cinder-classic
   image:
-    repository: mariadb
-    version: 10.1
+    repository: postgres
+    version: 12
 application:
   type: ClusterIP
   port: 3000

@@ -5,15 +5,15 @@ networks:
   servernetwork: {}
 # Define services to be run.
 services:
-  database:
-    image: mariadb:10.1
+  postgres:
+    image: postgres:12
+    restart: on-failure
     environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=1
-      - MYSQL_DATABASE=rosterviewer
-    ports:
-      - "3306:3306"
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: docker
+      ports: 5432
     networks:
-      # Add the database service to the servernetwork.
       - servernetwork
   application:
     image: sharemyroster/application:latest
@@ -22,11 +22,20 @@ services:
     volumes:
       - ./application:/application/code
     environment:
-      - DATABASE_URL=mysql://root:@database:3306/rosterviewer
+      - DATABASE_URL=postgres://docker:docker@postgres:5432/docker
       - CONTACT_EMAIL=$CONTACT_EMAIL
     ports:
       - "3000:3000"
     networks:
       - servernetwork
     depends_on:
-      - database
+      - postgres
+  phppgadmin:
+    build: phppgadmin-docker
+    ports:
+      - 127.0.0.1:9080:80
+    depends_on:
+      - postgres
+    environment:
+      PPA_DEFAULTDB: docker
+      PPA_HOST: postgres

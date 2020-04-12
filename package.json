@@ -66,6 +66,7 @@
     "normalize.css": "^8.0.0",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
+    "pg": "^8.0.2",
     "popper.js": "^1.15.0",
     "postcss-svgo": "^4.0.2",
     "pretty-error": "^2.1.1",

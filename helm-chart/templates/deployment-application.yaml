@@ -46,7 +46,7 @@ spec:
               port: http
           env:
           - name: DATABASE_URL
-            value: "mysql://root:@{{ include "helm-chart.fullname" . }}-database:{{ .Values.database.port }}/{{ include "helm-chart.fullname" . }}"
+            value: "postgres://{{ include "helm-chart.fullname" . }}:{{ include "helm-chart.fullname" . }}@{{ include "helm-chart.fullname" . }}-database:{{ .Values.database.port }}/{{ include "helm-chart.fullname" . }}"
           - name: CONTACT_EMAIL
             value: {{ .Values.application.contactEmail }}
           resources:
