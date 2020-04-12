@@ -8,6 +8,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.application.port }}
   selector:
     {{- include "helm-chart.selectorLabels" . | nindent 4 }}
     app: {{ include "helm-chart.fullname" . }}
