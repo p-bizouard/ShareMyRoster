@@ -314,6 +314,20 @@ const promise = models.sync().catch(err => console.error(err.stack));
 if (!module.hot) {
   promise.then(() => {
     app.listen(config.port, () => {
+      Roster.findOne({ where: { key: 'demo' } }).then(roster => {
+        if (!roster) {
+          Roster.create({
+            key: 'demo',
+            rosz: demoRoster,
+          });
+        } else if (roster.rosz !== demoRoster) {
+          roster.update({
+            key: 'demo',
+            rosz: demoRoster,
+          });
+        }
+      });
+
       console.info(`The server is running at http://localhost:${config.port}/`);
     });
   });
@@ -326,19 +340,5 @@ if (module.hot) {
   app.hot = module.hot;
   module.hot.accept('./router');
 }
-
-Roster.findOne({ where: { key: 'demo' } }).then(roster => {
-  if (!roster) {
-    Roster.create({
-      key: 'demo',
-      rosz: demoRoster,
-    });
-  } else if (roster.rosz !== demoRoster) {
-    roster.update({
-      key: 'demo',
-      rosz: demoRoster,
-    });
-  }
-});
 
 export default app;
