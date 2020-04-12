@@ -3,27 +3,30 @@ jobs:
   build_application:
     docker:
       - image: circleci/node:stretch
-    working_directory: ~/RosterViewer
+    working_directory: ~/sharemyroster
     steps:
       - setup_remote_docker:
           version: 17.09.0-ce
       - checkout
       - run:
-          name: Build Image & Register Task
+          name: Build application
           command: |
             yarn install
             yarn run build --release
-            docker build -t $DOCKER_REGISTRY/rosterviewer/application:latest .
       - run:
-          name: Build Image & Register Task
+          name: Build docker image
+          command: |
+            docker build -t $DOCKER_REGISTRY/sharemyroster/application:latest .
+      - run:
+          name: Push image to repository
           command: |
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
-            docker tag $DOCKER_REGISTRY/rosterviewer/application:latest $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
-            docker push $DOCKER_REGISTRY/rosterviewer/application:latest
-            docker push $DOCKER_REGISTRY/rosterviewer/application:$CIRCLE_SHA1
+            docker tag $DOCKER_REGISTRY/sharemyroster/application:latest $DOCKER_REGISTRY/sharemyroster/application:$CIRCLE_SHA1
+            docker push $DOCKER_REGISTRY/sharemyroster/application:latest
+            docker push $DOCKER_REGISTRY/sharemyroster/application:$CIRCLE_SHA1
   # test:
   #   machine: true
-  #   working_directory: ~/RosterViewer
+  #   working_directory: ~/sharemyroster
   #   steps:
   #     - checkout
   #     - run:
@@ -49,13 +52,15 @@ jobs:
           command: |
             curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
             chmod u+x ./kubectl
+            echo $KUBECONFIG | base64 --decode > ~/kube-config
+            export KUBECONFIG=~/kube-config
       - run:
           name: Deploy Code
-          command: |
-            chmod +x ./.circleci/kubernetes-deployment.sh
-            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+          #chmod +x ./.circleci/kubernetes-deployment.sh
             ./.circleci/kubernetes-deployment.sh circleci
-
+          command: |
+            docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+            helm upgrade -i sharemyroster ./helm-chart/ --reuse-values --set image.version="$CIRCLE_SHA1"
 workflows:
   version: 2
   build_and_test:

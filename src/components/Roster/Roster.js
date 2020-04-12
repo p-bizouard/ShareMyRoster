@@ -1,3 +1,4 @@
+// @flow
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { injectIntl, FormattedMessage } from 'react-intl';
@@ -34,11 +35,11 @@ class Roster extends React.Component {
     this.renderRoster = this.renderRoster.bind(this);
   }
 
-  getRoster() {
+  getRoster(): Object {
     return this.props.roster ? this.props.roster.json : null;
   }
 
-  renderHelp() {
+  renderHelp(): React.Element<C> {
     // https://www.freeformatter.com/json-escape.html#ad-output)
     const source = this.props.intl.formatMessage({
       id: `cms.homepage`,

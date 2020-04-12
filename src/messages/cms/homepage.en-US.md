@@ -2,7 +2,7 @@
 
 ShareMyRoster is an open source tool allowing you to share your BattleScribe list on the Internet, or to print the datasheets of your units in a format optimized for the wargame.
 
-## Utilisation
+## Usage
 
 Click on the "Open a file" button, or drop your .rosz file directly on the blue area.
 And that's all !

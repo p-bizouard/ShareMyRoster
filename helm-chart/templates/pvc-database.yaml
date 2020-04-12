@@ -1,0 +1,28 @@
+{{- if .Values.database.persistentVolume.enabled -}}
+{{- if not .Values.database.persistentVolume.existingClaim -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  {{- if .Values.database.persistentVolume.annotations }}
+  annotations:
+{{ toYaml .Values.database.persistentVolume.annotations | indent 4 }}
+  {{- end }}
+  name: {{ include "helm-chart.fullname" . }}-database
+spec:
+  accessModes:
+{{ toYaml .Values.database.persistentVolume.accessModes | indent 4 }}
+{{- if .Values.database.persistentVolume.storageClass }}
+{{- if (eq "-" .Values.database.persistentVolume.storageClass) }}
+  storageClassName: ""
+{{- else }}
+  storageClassName: "{{ .Values.database.persistentVolume.storageClass }}"
+{{- end }}
+{{- end }}
+{{- if .Values.database.persistentVolume.volumeBindingMode }}
+  volumeBindingModeName: "{{ .Values.database.persistentVolume.volumeBindingMode }}"
+{{- end }}
+  resources:
+    requests:
+      storage: "{{ .Values.database.persistentVolume.size }}"
+{{- end -}}
+{{- end -}}

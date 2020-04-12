@@ -16,7 +16,7 @@ services:
       # Add the database service to the servernetwork.
       - servernetwork
   application:
-    image: $DOCKER_REGISTRY/rosterviewer/application:latest
+    image: sharemyroster/application:latest
     build:
       context: ./
     volumes:

@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "helm-chart.fullname" . }}-database
+spec:
+  selector:
+    matchLabels:
+      app: {{ include "helm-chart.fullname" . }}-database
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: {{ include "helm-chart.fullname" . }}-database
+    spec:
+      containers:
+      - image: mariadb:10.1
+        name: {{ include "helm-chart.fullname" . }}-database
+        args: ['--ignore-db-dir=lost+found']
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "1"
+        - name: MYSQL_DATABASE
+          value: "{{ include "helm-chart.fullname" . }}"
+        ports:
+        - containerPort: {{ .Values.database.port }}
+          name: database
+        imagePullPolicy: Always
+        livenessProbe:
+          exec:
+            command: ["mysqladmin", "ping"]
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+        readinessProbe:
+          exec:
+            # Check we can execute queries over TCP (skip-networking is off).
+            command: ["mysql", "-h", "127.0.0.1", "-P", "{{ .Values.database.port }}", "-e", "SELECT 1 "]
+          initialDelaySeconds: 5
+          periodSeconds: 2
+          timeoutSeconds: 1
+        volumeMounts:
+        - name: {{ include "helm-chart.fullname" . }}-database
+          mountPath:  /var/lib/mysql
+      volumes:
+        - name: {{ include "helm-chart.fullname" . }}-database
+          persistentVolumeClaim:
+            claimName: {{ include "helm-chart.fullname" . }}-database
