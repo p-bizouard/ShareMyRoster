@@ -52,7 +52,7 @@ jobs:
           command: |
             curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
             chmod u+x ./kubectl
-            echo $KUBECONFIG | base64 --decode > ~/kube-config
+            echo "$KUBECONFIG_BASE64" | base64 --decode > ~/kube-config
             export KUBECONFIG=~/kube-config
       - run:
           name: Deploy Code
