@@ -54,16 +54,13 @@ jobs:
             curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
             chmod u+x ./kubectl
             echo "$KUBECONFIG_BASE64" | base64 --decode > ~/kube-config
-            wc -l ~/kube-config
-            export KUBECONFIG=~/kube-config
-            echo $KUBECONFIG
       - run:
           name: Deploy Code
           #chmod +x ./.circleci/kubernetes-deployment.sh
           # ./.circleci/kubernetes-deployment.sh circleci
           command: |
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
-            helm upgrade -i sharemyroster ./helm-chart/ --reuse-values --set image.version="$CIRCLE_SHA1"
+            helm --kubeconfig ~/kube-config upgrade -i sharemyroster ./helm-chart/ --reuse-values --set image.version="$CIRCLE_SHA1"
 workflows:
   version: 2
   build_and_test:
