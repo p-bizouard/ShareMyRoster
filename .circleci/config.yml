@@ -57,7 +57,7 @@ jobs:
       - run:
           name: Deploy Code
           #chmod +x ./.circleci/kubernetes-deployment.sh
-            ./.circleci/kubernetes-deployment.sh circleci
+          # ./.circleci/kubernetes-deployment.sh circleci
           command: |
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
             helm upgrade -i sharemyroster ./helm-chart/ --reuse-values --set image.version="$CIRCLE_SHA1"
