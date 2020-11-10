@@ -1,8 +1,6 @@
 version: '3.2'
 # Create networks to be used to isolate containers
-networks:
-  # Server network to hold database and backend
-  servernetwork: {}
+
 # Define services to be run.
 services:
   postgres:
@@ -12,24 +10,8 @@ services:
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: docker
-      ports: 5432
-    networks:
-      - servernetwork
-  application:
-    image: sharemyroster/application:latest
-    build:
-      context: ./
-    volumes:
-      - ./application:/application/code
-    environment:
-      - DATABASE_URL=postgres://docker:docker@postgres:5432/docker
-      - CONTACT_EMAIL=$CONTACT_EMAIL
-    ports:
-      - "3000:3000"
-    networks:
-      - servernetwork
-    depends_on:
-      - postgres
+    ports: 
+      - 127.0.0.1:5432:5432
   phppgadmin:
     build: phppgadmin-docker
     ports:
@@ -39,3 +21,5 @@ services:
     environment:
       PPA_DEFAULTDB: docker
       PPA_HOST: postgres
+    depends_on:
+      - postgres

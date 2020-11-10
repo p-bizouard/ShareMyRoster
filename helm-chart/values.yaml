@@ -3,11 +3,6 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
-image:
-  repository: core.harbor.bizouard.fr/sharemyroster/application
-  pullPolicy: Always
-
 imagePullSecrets: ~
 
 nameOverride: ""
@@ -41,11 +36,15 @@ database:
     fullname: sharemyroster
     accessModes:  [ReadWriteOnce]
     size: 5Gi
-    storageClassName: cinder-classic
+    storageClass: csi-cinder-high-speed
   image:
     repository: postgres
     version: 12
 application:
+  image:
+    repository: ~
+    version: latest
+  pullPolicy: Always
   type: ClusterIP
   port: 3000
   contactEmail: ~

@@ -23,6 +23,6 @@ spec:
 {{- end }}
   resources:
     requests:
-      storage: "{{ .Values.database.persistentVolume.size }}"
+      storage: {{ .Values.database.persistentVolume.size }}
 {{- end -}}
 {{- end -}}

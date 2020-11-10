@@ -30,8 +30,8 @@ spec:
         - name: {{ .Chart.Name }}-application
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.version }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          image: "{{ .Values.application.image.repository }}:{{ .Values.application.image.version }}"
+          imagePullPolicy: {{ .Values.application.pullPolicy }}
           ports:
           - name: http
             containerPort: {{ .Values.application.port }}
@@ -39,11 +39,11 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: http
+              port: {{ .Values.application.port }} #http
           readinessProbe:
             httpGet:
               path: /
-              port: http
+              port: {{ .Values.application.port }} #http
           env:
           - name: DATABASE_URL
             value: "postgres://{{ include "helm-chart.fullname" . }}:{{ include "helm-chart.fullname" . }}@{{ include "helm-chart.fullname" . }}-database:{{ .Values.database.port }}/{{ include "helm-chart.fullname" . }}"
