@@ -8,6 +8,10 @@
     "message": "Véhicule"
   },
   {
+    "id": "unit.keyword.Angels of Death",
+    "message": "Anges de la mort (+1 A en charge, bolters tir rapides x2, doctrines)"
+  },
+  {
     "id": "unit.keyword.Elites",
     "message": "Élites"
   },

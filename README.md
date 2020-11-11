@@ -9,6 +9,33 @@ View, share and print your Battlescribe rosters ! Live at [https://www.sharemyro
 
 * [React Starter Kit](https://github.com/kriasoft/react-starter-kit) - Isomorphic web app boilerplate with react-intl feature
 
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+### Prerequisites
+
+### Installation
+
+1.  Clone the repo
+
+```sh
+git clone https://github.com/p-bizouard/ShareMyRoster.git
+cd ShareMyRoster
+```
+
+2.  Install NPM packages
+
+```sh
+yarn install
+```
+
+3.  Run dev server
+
+```sh
+yarn start
+```
+
 ### License
 
 This source code is licensed under the MIT

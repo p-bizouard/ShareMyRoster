@@ -32,6 +32,10 @@
     "message": "Grenade frag"
   },
   {
+    "id": "unit.weapon_ability.Frag grenade",
+    "message": "Blast (3 attaques minimum contre les unités de 6+ figurines, 6 contre les unités de 11+)"
+  },
+  {
     "id": "unit.weapon.Krak grenade",
     "message": "Grenade krak"
   },
@@ -129,7 +133,7 @@
   },
   {
     "id": "unit.weapon_ability.Meltagun",
-    "message": "Si la cible est à mi-portée ou moins de cette arme, jeter 2 dés lorsque vous infligez ses dégats et défaussez le résultat le plus bas"
+    "message": "Si la cible est à mi-portée ou moins de cette arme, l'attaque fait dégats D6+2"
   },
   {
     "id": "unit.weapon.Power fist",
@@ -220,16 +224,12 @@
     "message": "Épée énergétique"
   },
   {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon.Multi-melta",
+    "message": "Multi fuseur"
   },
   {
-    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
-  },
-  {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon_ability.Multi-melta",
+    "message": "Si la cible est à mi-portée ou moins de cette arme, l'attaque fait dégats D6+2"
   },
   {
     "id": "unit.weapon.XXXXXXXXXXXXXXXX",

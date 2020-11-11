@@ -1,10 +1,11 @@
 [
   {
-    "id": "unit.ability_name.Psychic hood",
-    "message": "Coiffe Psychique"
+    "id": "unit.ability_name.Psychic Hood",
+    "message":
+      "Coiffe psychique"
   },
   {
-    "id": "unit.ability_description.Psychic hood",
+    "id": "unit.ability_description.Psychic Hood",
     "message":
       "Vous pouvez ajouter 1 aux tests d'Abjuration effectués contre les Psykers à 12'' ou moins"
   },
@@ -95,11 +96,11 @@
       "Vous pouvez relancer les jets de touche de 1 pour les unités Space Wolves amies à 6'' ou moins"
   },
   {
-    "id": "unit.ability_name.Wolf standard",
+    "id": "unit.ability_name.Wolf Standard",
     "message": "Étandard du Loup"
   },
   {
-    "id": "unit.ability_description.Wolf standard",
+    "id": "unit.ability_description.Wolf Standard",
     "message":
       "Vous pouvez relancer les jets de 1 pour une unité qui a un étandard du loup lorsqu'elle Avance ou Charge"
   },
@@ -221,7 +222,7 @@
   {
     "id": "unit.ability_description.Crushing Charge",
     "message":
-      "Jetez un D6 à chaque fois qu'une figurine termine un mouvement de charge à 1'' ou moins d'une figurine ennemie ; sur 6 l'unité enemie subit 1 blessure mortelle"
+      "Jetez un D6 à chaque fois qu'une figurine termine un mouvement de charge à 1'' ou moins d'une figurine ennemie ; sur 6 l'unité enemie subit 1 BM"
   },
   {
     "id": "unit.ability_name.Pack Mentality",
@@ -234,20 +235,11 @@
   },
   {
     "id": "unit.ability_name.Swift Hunters",
-    "message": "Chasseurs Agiles"
+    "message": "Chasseurs véloces"
   },
   {
     "id": "unit.ability_description.Swift Hunters",
-    "message": "Vous pouvez relancer les jets de charge ratés pour cette unité"
-  },
-  {
-    "id": "unit.ability_name.Beserk Charge",
-    "message": "Charge Berserk"
-  },
-  {
-    "id": "unit.ability_description.Beserk Charge",
-    "message":
-      "Lors d'un tour où cette unité a réussi une charge, les figurines de cette unité gagnent +1 attaque"
+    "message": "Peu avancer et charger le même tour. Peut faire un mouvement de consolidation de 1'' supplémentaire (après combat)"
   },
   {
     "id": "unit.ability_name.Headstrong",
@@ -283,7 +275,31 @@
   {
     "id": "unit.ability_description.Champion of the Kingsguard",
     "message":
-      "Vous pouvez relancer les jets de touches ratés en phase de combat lorsqu'il cible un personnage. En outre vous pouvez effectuer +1 attaque en phase de combat pour toutes les figurines WOLF GUARD amies à 6'' ou moins au début de la phase"
+      "Chaque fois que ce modèle effectue une attaque en mêlée contre une unité du PERSONAGE, vous pouvez relancer le jet de dé."
+  },
+  {
+    "id": "unit.ability_name.The Anvil Shield",
+    "message": "Le bouclier Enclume"
+  },
+  {
+    "id": "unit.ability_description.The Anvil Shield",
+    "message":"Arjac Rockfist a une sauvegarde invulnérable de 3+."
+  },
+  {
+    "id": "unit.ability_name.Savage Fury",
+    "message": "Fureur sauvage sauvage"
+  },
+  {
+    "id": "unit.ability_description.Savage Fury",
+    "message":"Tant que la Doctrine d'Assaut est active, un jet de touche de mêlée de 6 non modifié inflige 1 coup supplémentaire à la cible."
+  },
+  {
+    "id": "unit.ability_name.Tactical Precision (Aura)",
+    "message": "Précision tactique"
+  },
+  {
+    "id": "unit.ability_description.Tactical Precision (Aura)",
+    "message":"Relance des jets de blessure de 1 aux unités BASE à 6''"
   },
   {
     "id": "unit.ability_name.Thane to the High King",
@@ -301,7 +317,7 @@
   {
     "id": "unit.ability_description.Death Frenzy",
     "message":
-      "Jetez un D6 chaque fois qu'une figurine perd un PV ; sur 5+ ce PV n'est pas perdu. Si une figurine est tuée lors d'une phase de combat, vous pouvez attaquer avec cette figurine avant de la retirer une fois que l'unité énnemie a effectué toutes ses attaques, même si vous avez déjà attaqué à ce tour"
+      "Chaque fois qu'une figurine est tuée en mêlée, ne la retirez pas. La figurine détruite peut combatre après que l'unité ennemie a terminé de faire ses attaques, puis elle est retirée du jeu."
   },
   {
     "id": "unit.ability_name.Curse of the Wulfen (Hunt)",
@@ -341,5 +357,203 @@
     "id": "unit.ability_description.Hunters Unleashed",
     "message":
       "Si cette unité a chargé, a été chargée ou a effectuée une intervention héroïque, +1 attaque en phase de combat. Les personnages font des interventions héroïques à 6''"
+  },
+  {
+    "id": "unit.ability_name.Staff of the Stormcaller",
+    "message": "Bâton des templêtes"
+  },
+  {
+    "id": "unit.ability_description.Staff of the Stormcaller",
+    "message":
+      "Vous pouvez relancer les tests d'abjuration effectués pour ce modèle."
+  },
+  {
+    "id": "unit.ability_description.Runic Armour",
+    "message":
+      "Armoure runique"
+  },
+  {
+    "id": "unit.ability_name.Litany of Hate",
+    "message":
+      "Litanie de la haine"
+  },
+  {
+    "id": "unit.ability_description.Runic Armour",
+    "message": "Sauvegarde invulnérable à 5+"
+  },
+  {
+    "id": "unit.ability_description.Litany of Hate",
+    "message":
+    "Sur 3+, une unité amie à 6'' 'peut relancer ses jets de touche de mêlée'"
+  },
+  {
+    "id": "unit.ability_name.1. Litany of Faith",
+    "message":
+      "Litanie de la foi"
+  },
+  {
+    "id": "unit.ability_description.1. Litany of Faith",
+    "message": "Sur 3+, alors lorsqu'un modèle dans une unité amie à moins de 6'' de ce modèle perdrait une blessure à cause d'une BM, lancez un D6 ; sur un 5+ cette blessure n'est pas perdue."
+  },
+  {
+    "id": "unit.ability_name.2. Catechism of Fire",
+    "message":
+      "Catéchisme du feu"
+  },
+  {
+    "id": "unit.ability_description.2. Catechism of Fire",
+    "message": "Sur 3+, choisissez une unité amie à moins de 6'' de ce modèle. Chaque fois qu'une figurine de l'unité fait une attaque de tir contre la cible la plus proche, ajoutez 1 au jet de blessure"
+  },
+  {
+    "id": "unit.ability_name.3. Exhortation of Rage",
+    "message":
+      "Exhortation à l rage"
+  },
+  {
+    "id": "unit.ability_description.3. Exhortation of Rage",
+    "message": "Sur 3+, une unité amie à 6'' obtient +1 aux jets de blessure de mêlée"
+  },
+  {
+    "id": "unit.ability_name.4. Mantra of Strength",
+    "message":  "Le mantra de la force"
+  },
+  {
+    "id": "unit.ability_description.4. Mantra of Strength",
+    "message":  "Sur 3+, ajoutez 1 à la caractéristique de force de ce prêtre, et ajoutez 1 à la caractéristique de dégats des armes de mêlée de ce prêtre"
+  },
+  {
+    "id": "unit.ability_name.5. Recitation of Focus",
+    "message": "Récitation de la concentration"
+  },
+  {
+    "id": "unit.ability_description.5. Recitation of Focus",
+    "message":
+      "Sur 3+, une unité amie à 6'' obtient +1 aux jets de touche de tir"
+  },
+  {
+    "id": "unit.ability_name.6. Canticle of Hate",
+    "message": "Cantique de la haine"
+  },
+  {
+    "id": "unit.ability_description.6. Canticle of Hate",
+    "message":
+      "Sur 3+, une unité amie à 6'' obtient +2 aux jets de charge, et peut ajouter 3'' aux mouvements d'engagement ou de consolidation"
+  },
+  {
+    "id": "unit.ability_name.Wolf Helm of Russ (Aura)",
+    "message": "Heaume di loup de Russ (Aura)"
+  },
+  {
+    "id": "unit.ability_description.Wolf Helm of Russ (Aura)",
+    "message":
+      "Les unités BASE à 9'' peuvent utiliser la caractéristique de commandement de cette figurine"
+  },
+  {
+    "id": "unit.ability_name.Berserk Charge",
+    "message": "Charge Berserk"
+  },
+  {
+    "id": "unit.ability_description.Berserk Charge",
+    "message":
+      "Si l'unité a fait un mouvement de charge à ce tour, +1 attaque par figurine"
+  },
+  {
+    "id": "unit.ability_name.Murder-maker",
+    "message": "Meurtrier"
+  },
+  {
+    "id": "unit.ability_description.Murder-maker",
+    "message":
+      "Vous pouvez relancer les jets de charge. Cette figurine fait 3 attaques supplémentaires au lieu d'une gr6ace à son aptitude Assaut percutant"
+  },
+  {
+    "id": "unit.ability_name.Bestial Rage",
+    "message": "Rage bestiale"
+  },
+  {
+    "id": "unit.ability_description.Bestial Rage",
+    "message":
+      "Cette unité ne peut pas réaliser d'actions d'objectifs"
+  },
+  {
+    "id": "unit.ability_name.Wulfen Howl (Aura)",
+    "message": "Hurlement de Wulfen (Aura)"
+  },
+  {
+    "id": "unit.ability_description.Wulfen Howl (Aura)",
+    "message":
+      "Les unités amies Infanterie, Motards ou Cavalerie à 6'' peuvent relancer leurs jets de charge. à 12'' pour les Blood Claws"
+  },
+  {
+    "id": "unit.ability_name.Savage Killers",
+    "message": "Tueurs sauvages"
+  },
+  {
+    "id": "unit.ability_description.Savage Killers",
+    "message":
+      "Unité toujours considérée comme étant en doctrine d'Assaut, ou ayant chargé à ce tour (+1 attaque, +1PA)"
+  },
+  {
+    "id": "unit.ability_name.Anti-grav Upwash",
+    "message": "Peut se déplacer de 20'' si l'unité contient 3 figurines"
+  },
+  {
+    "id": "unit.ability_description.Anti-grav Upwash",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
   }
 ]

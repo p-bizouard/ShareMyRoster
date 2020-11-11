@@ -5,7 +5,7 @@
   },
   {
     "id": "unit.psychic_description.Living Lightning",
-    "message": "S'il est manifesté, l'unité ennemie visible la plus proche à 18'' ou moins subit D3 BM. Si cela détruit l'unité, l'unité ennemie la plus proche et à 18'' ou moins de la dernière figurine retirée de cette unité subit D3 blessures mortelles, et ainsi de suite."
+    "message": "L'unité visible la plus proche à 18'' subit D3 BM. Jetez alors un D6, sur 2-4 l'unité ennemie la plus proche à 6'' et visible de la première unité subit 1BM, sur 5+ elle subit D3 BM."
   },
   {
     "id": "unit.psychic_name.Tempest's Wrath",
@@ -21,7 +21,7 @@
   },
   {
     "id": "unit.psychic_description.Murderous Hurricane",
-    "message": "S'il est manifesté, choisisez ue unité ennemie visible à 18'' ou moins. Jetez un dé par figurine dans l'unité ; l'unité subit une BM pour chaque 6 obtenu."
+    "message": "Sur une unité ennemie. Si elle n'est pas entièrement dans un élément de terrain, elle ne peut pas tirer en État d'Alerte. À la phase de combat, l'unité n'est pas éligible pour combattre avant que toutes les unités Space Wolves aient combattu."
   },
   {
     "id": "unit.psychic_name.Fury of the Wolf Spirits",
@@ -37,7 +37,7 @@
   },
   {
     "id": "unit.psychic_description.Storm Caller",
-    "message": "S'il est manifesté, jusqu'au début de votre prochaine phase psychique, les psykers et les unités Space Wolves amies à 6'' ou moins de lui gagnent le bénéfice du couvert"
+    "message": "S'il est manifesté, jusqu'au début de votre prochaine phase psychique, les psykers et les unités Space Wolves amies à 6'' ou moins de lui gagnent le bénéfice du couvert léger"
   },
   {
     "id": "unit.psychic_name.Jaws of the World Wolf",
@@ -45,15 +45,15 @@
   },
   {
     "id": "unit.psychic_description.Jaws of the World Wolf",
-    "message": "S'il est manifesté, choisissez une unité ennemie à 18'' ou moins et n'étant pas un Véhicule. Jetez 2D6 et soustrayez la caractéristique de Mouvement de la cible ; la cible subit un nombre de BM égal au résultat."
+    "message": "Choisir une unité ennemie visible à 18''. Jetez un D6 pour chaque figurine en ajoutant 1 au résultat si le test Psychique était 9 ou plus. Pour chaque jet de 6 l'unité subit 1 BM"
   },
   {
-    "id": "unit.psychic_name.XXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXXX"
+    "id": "unit.psychic_name.Instincts Awoken",
+    "message": "Instinct éveillé"
   },
   {
-    "id": "unit.psychic_description.XXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXXX"
+    "id": "unit.psychic_description.Instincts Awoken",
+    "message": "S'il est manifesté, choisissez une unité amie à 18'' ou moins. La doctrine d'Assault est considérée comme active pour l'attaque au lieu de la doctrine actuellement active. Si la doctrine d'Assaut est déjà active, alors sur un jet de blessure non modifié de 6, améliorez de 1 la PA"
   },
   {
     "id": "unit.psychic_name.XXXXXXXXXXXXXX",
