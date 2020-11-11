@@ -19,20 +19,21 @@ export default class Force extends Component {
       })
     }).isRequired,
     recap: PropTypes.string,
-    rosterType: PropTypes.string.isRequired,
+    rosterType: PropTypes.string,
     index: PropTypes.number.isRequired,
     rosterName: PropTypes.string.isRequired,
     cost: PropTypes.arrayOf(PropTypes.shape({
       $: PropTypes.shape({
         name: PropTypes.string.isRequired,
-        value: PropTypes.number.isRequired
+        value: PropTypes.string.isRequired
       })
     })).isRequired,
     showOnlyIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   static defaultProps = {
-    recap: 'false'
+    recap: 'false',
+    rosterType: null
   };
 
 
@@ -130,9 +131,8 @@ export default class Force extends Component {
         if (this.props.recap === "true") {
           if (unitsCompare.includes(unit.$.name.replace(/\s*\(x?\d+\)/, ''))) return;
           currentUnitComponent = (
-            <ErrorBoundary>
+            <ErrorBoundary key={`force-unit-${unit.$.id}`}>
               <UnitModelsTable
-                key={`models_table_${unit.$.id}`}
                 unit={unit}
                 onlyModel="true"
                 showOnlyIds={this.props.showOnlyIds}

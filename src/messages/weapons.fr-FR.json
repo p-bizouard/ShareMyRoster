@@ -232,12 +232,12 @@
     "message": "Si la cible est à mi-portée ou moins de cette arme, l'attaque fait dégats D6+2"
   },
   {
-    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon.Wulfen Frost claws",
+    "message": "Griffes de wulfen"
   },
   {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon_ability.Wulfen Frost claws",
+    "message": "+1 attaque avec cette arme, possibilité de relancer les jets de blessure ratés."
   },
   {
     "id": "unit.weapon.XXXXXXXXXXXXXXXX",

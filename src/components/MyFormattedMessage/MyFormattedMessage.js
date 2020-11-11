@@ -12,19 +12,6 @@ import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 
 class MyFormattedMessage extends React.Component {
-  static propTypes = {
-    prefix: PropTypes.string.isRequired,
-    defaultMessage: PropTypes.string,
-    message: PropTypes.string.isRequired,
-    join: PropTypes.arrayOf(String),
-    intl: PropTypes.func.isRequired,
-  };
-
-  static defaultProps = {
-    defaultMessage: null,
-    join: [],
-  };
-
   static formatLabel(label, value) {
     if (!value) {
       return label;
@@ -38,6 +25,19 @@ class MyFormattedMessage extends React.Component {
       return prev.concat(current);
     }, []);
   }
+
+  static propTypes = {
+    prefix: PropTypes.string.isRequired,
+    defaultMessage: PropTypes.string,
+    message: PropTypes.string.isRequired,
+    join: PropTypes.arrayOf(PropTypes.string),
+    intl: PropTypes.func.isRequired,
+  };
+
+  static defaultProps = {
+    defaultMessage: null,
+    join: [],
+  };
 
   translateSingle(message) {
     const { intl } = this.props;

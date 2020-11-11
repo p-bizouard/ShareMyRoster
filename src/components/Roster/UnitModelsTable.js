@@ -264,7 +264,7 @@ class UnitModelsTable extends React.Component {
           <i>
             <FormattedMessage
               id="DatasheetTemplate.weapon"
-              defaultMessage={`{count, plural, one {Weapon} other {Weapons}} :`}
+              defaultMessage="{count, plural, one {Weapon} other {Weapons}} :"
               values={{ count: parseInt(model.$.number, 10) }}
             />
           </i>{' '}
@@ -317,7 +317,7 @@ class UnitModelsTable extends React.Component {
           <i>
             <FormattedMessage
               id="DatasheetTemplate.weapon"
-              defaultMessage={`{count, plural, one {Weapon} other {Weapons}} :`}
+              defaultMessage="{count, plural, one {Weapon} other {Weapons}} :"
               values={{ count: weapons.length }}
             />{' '}
           </i>
@@ -394,7 +394,7 @@ class UnitModelsTable extends React.Component {
           <i>
             <FormattedMessage
               id="DatasheetTemplate.keyword"
-              defaultMessage={`{count, plural, one {Keyword} other {Keywords}} :`}
+              defaultMessage="{count, plural, one {Keyword} other {Keywords}} :"
               values={{ count: keywords.length }}
             />
           </i>{' '}
@@ -454,7 +454,7 @@ class UnitModelsTable extends React.Component {
                           {UnitModelsTable.renderModelsTransport(subModel)}
                         </ul>
                       ) : (
-                        ''
+                        null
                       )}
                     </td>
 
@@ -490,7 +490,7 @@ class UnitModelsTable extends React.Component {
                 {canHaveSubModels ? this.renderSubModels(models, model) : ''}
               </ul>
             ) : (
-              ''
+              null
             )}
           </td>
 
@@ -767,7 +767,7 @@ class UnitModelsTable extends React.Component {
                     {UnitModelsTable.renderModelsTransport(subModel)}
                   </ul>
                 ) : (
-                  ''
+                  null
                 )}
               </li>,
             ];
@@ -861,9 +861,8 @@ class UnitModelsTable extends React.Component {
                     defaultMessage="Max"
                   />
                 </th>
-              ) : (
-                ''
-              )}
+              )
+              : null}
             </tr>
           </thead>
           <tbody>

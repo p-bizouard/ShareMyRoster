@@ -41,23 +41,6 @@ import {
 } from '../../actions/roster';
 
 class Header extends React.Component {
-  static propTypes = {
-    roster: PropTypes.shape({
-      key: PropTypes.string.isRequired,
-      json: PropTypes.string.isRequired,
-    }),
-    initRosterFromKey: PropTypes.func.isRequired,
-    saveRosterRosz: PropTypes.func.isRequired,
-    setRuntimeVariable: PropTypes.func.isRequired,
-    setRosterKey: PropTypes.func.isRequired,
-    setRosterJson: PropTypes.func.isRequired,
-    rosz: PropTypes.shape({}),
-  };
-  static defaultProps = {
-    roster: null,
-    rosz: null,
-  };
-
   static hideShow(e) {
     const { action } = e.target.parentElement.dataset;
     // eslint-disable-next-line no-undef
@@ -67,6 +50,23 @@ class Header extends React.Component {
     e.preventDefault();
     return true;
   }
+
+  static propTypes = {
+    roster: PropTypes.shape({
+      key: PropTypes.string,
+      json: PropTypes.shape({})
+    }),
+    initRosterFromKey: PropTypes.func.isRequired,
+    saveRosterRosz: PropTypes.func.isRequired,
+    setRuntimeVariable: PropTypes.func.isRequired,
+    setRosterKey: PropTypes.func.isRequired,
+    setRosterJson: PropTypes.func.isRequired,
+    rosz: PropTypes.string,
+  };
+  static defaultProps = {
+    roster: null,
+    rosz: null,
+  };
 
   constructor(props) {
     super(props);
