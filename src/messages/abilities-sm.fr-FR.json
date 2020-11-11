@@ -161,7 +161,7 @@
   {
     "id": "unit.ability_description.Storm shield",
     "message":
-      "Une figurine équipée d'un bouclier Storm a une sauvegarde invulnérable de 3+"
+      "Une figurine équipée d'un bouclier Storm a une sauvegarde invulnérable de 4+ et +1 à sa sauvegarde normale"
   },
   {
     "id": "unit.ability_name.Storm Shield",
@@ -170,7 +170,7 @@
   {
     "id": "unit.ability_description.Storm Shield",
     "message":
-      "Une figurine équipée d'un bouclier Storm a une sauvegarde invulnérable de 3+"
+      "Une figurine équipée d'un bouclier Storm a une sauvegarde invulnérable de 4+ et +1 à sa sauvegarde normale"
   },
   {
     "id": "unit.ability_name.Murderlust",
