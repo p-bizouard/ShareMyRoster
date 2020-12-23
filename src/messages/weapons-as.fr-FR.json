@@ -1,0 +1,90 @@
+[
+  {
+    "id": "unit.weapon.Neural whips",
+    "message": "Fouets neuraux"
+  },
+  {
+    "id": "unit.weapon_ability.Neural whips",
+    "message": "Quand vous résolvez une attaque de cette arme contre une unité (autre qu'un véhicule) dont aucune figurine n'a une caractéristique de Cd supérieure à 7, ajoutez 1 au jet de blessure."
+  },
+  {
+    "id": "unit.weapon.The Ardent Blade (melee)",
+    "message": "La Lame Ardente (mêlée)"
+  },
+  {
+    "id": "unit.weapon_ability.The Ardent Blade (melee)",
+    "message": ""
+  },
+  {
+    "id": "unit.weapon.The Ardent Blade (shooting)",
+    "message": "La Lame Ardente (tir)"
+  },
+  {
+    "id": "unit.weapon_ability.The Ardent Blade (shooting)",
+    "message": "Quand vous résolvez une attaque de cette arme, ne faites pas de jet de touche : elle touche automatiquement"
+  },
+  {
+    "id": "unit.weapon.Arco-flails",
+    "message": "Arco-félaux"
+  },
+  {
+    "id": "unit.weapon_ability.Arco-flails",
+    "message": "Faites D3 jets de touche au lieu de 1 pour chaque attaque effectuée avec cette arme"
+  },
+  {
+    "id": "unit.weapon.Penitent Eviscerator",
+    "message": "Eviscerator de pénitent"
+  },
+  {
+    "id": "unit.weapon_ability.Penitent Eviscerator",
+    "message": "Quand vous résolvez une attaque de cette arme, soustrayez 1 au jet de touche"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "message": "Éssssssssssssssssvre"
+  },
+  {
+    "id": "unit.weapon_ability.xxxxxxxxxxx",
+    "message": "sssssssssssssssssssssssssssssssssssrme"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "message": "Éssssssssssssssssvre"
+  },
+  {
+    "id": "unit.weapon_ability.xxxxxxxxxxx",
+    "message": "sssssssssssssssssssssssssssssssssssrme"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "message": "Éssssssssssssssssvre"
+  },
+  {
+    "id": "unit.weapon_ability.xxxxxxxxxxx",
+    "message": "sssssssssssssssssssssssssssssssssssrme"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "message": "Éssssssssssssssssvre"
+  },
+  {
+    "id": "unit.weapon_ability.xxxxxxxxxxx",
+    "message": "sssssssssssssssssssssssssssssssssssrme"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "message": "Éssssssssssssssssvre"
+  },
+  {
+    "id": "unit.weapon_ability.xxxxxxxxxxx",
+    "message": "sssssssssssssssssssssssssssssssssssrme"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "message": "Éssssssssssssssssvre"
+  },
+  {
+    "id": "unit.weapon_ability.xxxxxxxxxxx",
+    "message": "sssssssssssssssssssssssssssssssssssrme"
+  }
+]
