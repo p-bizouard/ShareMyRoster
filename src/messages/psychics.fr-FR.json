@@ -56,11 +56,11 @@
     "message": "S'il est manifesté, choisissez une unité amie à 18'' ou moins. La doctrine d'Assault est considérée comme active pour l'attaque au lieu de la doctrine actuellement active. Si la doctrine d'Assaut est déjà active, alors sur un jet de blessure non modifié de 6, améliorez de 1 la PA"
   },
   {
-    "id": "unit.psychic_name.XXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXXX"
+    "id": "unit.psychic_name.Smite",
+    "message": "Châtiment"
   },
   {
-    "id": "unit.psychic_description.XXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXXX"
+    "id": "unit.psychic_description.Smite",
+    "message": "S'il est manifesté, l'unité ennemie visible la plus proche à 18'' ou moins du psyker subit D3 blessures mortelles. Si le résultat du test est supérieur à 10, la cible subit D6 BM"
   }
 ]

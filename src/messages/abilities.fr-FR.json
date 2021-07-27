@@ -18,6 +18,15 @@
       "Si cette figurine est réduite à 0 PV, jetez un D6 avant de retirer cette figurine. Sur un 6 les unités à 6'' subissent D3 blessures mortelles"
   },
   {
+    "id": "unit.ability_name.Explodes (6/6\"/D3)",
+    "message": "Explosion"
+  },
+  {
+    "id": "unit.ability_description.Explodes (6/6\"/D3)",
+    "message":
+      "Si cette figurine est réduite à 0 PV, jetez un D6 avant de retirer cette figurine. Sur un 6 les unités à 6'' subissent D3 blessures mortelles"
+  },
+  {
     "id": "unit.ability_name.Smoke Launchers",
     "message": "Fumigènes"
   },

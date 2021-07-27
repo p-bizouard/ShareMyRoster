@@ -184,6 +184,22 @@
     "message": "Lourd"
   },
   {
+    "id": "unit.weapon.Heavy 2D6",
+    "message": "Lourd 2D6"
+  },
+  {
+    "id": "unit.weapon.Heavy 2D3",
+    "message": "Lourd 2D3"
+  },
+  {
+    "id": "unit.weapon.Heavy 3D6",
+    "message": "Lourd 3D6"
+  },
+  {
+    "id": "unit.weapon.Heavy 3D3",
+    "message": "Lourd 3D3"
+  },
+  {
     "id": "unit.weapon.Assault",
     "message": "Assaut"
   },
@@ -238,6 +254,38 @@
   {
     "id": "unit.weapon_ability.Wulfen Frost claws",
     "message": "+1 attaque avec cette arme, possibilité de relancer les jets de blessure ratés."
+  },
+  {
+    "id": "unit.weapon.Power maul",
+    "message": "Masse énergétique"
+  },
+  {
+    "id": "unit.weapon_ability.Power maul",
+    "message": ""
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
+  },
+  {
+    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
+    "message": "XXXXXXXXXXXXXXXX"
   },
   {
     "id": "unit.weapon.XXXXXXXXXXXXXXXX",

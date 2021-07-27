@@ -52,8 +52,28 @@
     "message": "Transport assigné"
   },
   {
-    "id": "unit.keyword.XXXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXXX"
+    "id": "unit.keyword.Acts of Faith",
+    "message": "Actes de foi"
+  },
+  {
+    "id": "unit.keyword.Shield of Faith",
+    "message": "Bouclier de la Foi (inv 6+, abj 1D6 et 6 auto)"
+  },
+  {
+    "id": "unit.keyword.Sacred Rites",
+    "message": "Rites Sacrés"
+  },
+  {
+    "id": "unit.keyword.Smokescreen",
+    "message": "Écran de fumée (1PC, -1 touche tir)"
+  },
+  {
+    "id": "unit.keyword.Hallowed",
+    "message": "Consacré"
+  },
+  {
+    "id": "unit.keyword.Core",
+    "message": "Base"
   },
   {
     "id": "unit.keyword.XXXXXXXXXXXXXXXXX",

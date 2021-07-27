@@ -241,14 +241,15 @@ export default class Force extends Component {
         </div>
       );
     }
+
     return (
       <div className="force mt-4">
         {this.props.index === 0 && (
           <h2>
-            {this.props.rosterName} ({this.props.cost[0].$.value}
+            {this.props.rosterName} ({Math.round(this.props.cost[0].$.value)}
             {this.props.cost[0].$.name},
             {this.props.cost[1]
-              ? `${this.props.cost[1].$.value} ${this.props.cost[1].$.name}`
+              ? `${Math.round(this.props.cost[1].$.value)} ${this.props.cost[1].$.name}`
               : ''}
             )
           </h2>

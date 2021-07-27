@@ -662,25 +662,28 @@ class UnitModelsTable extends React.Component {
     }
 
     // Characteristics of sub models
-    let characteristicsOfUnit = this.props.unit.selections[0].selection.map(
-      submodel => {
-        if (!submodel.profiles) return [0];
+    let characteristicsOfUnit = [];
+    if (this.props.unit.selections && this.props.unit.selections.length) {
+      characteristicsOfUnit = this.props.unit.selections[0].selection.map(
+        submodel => {
+          if (!submodel.profiles) return [0];
 
-        return submodel.profiles[0].profile
-          .filter(
-            profile =>
-              profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
-          )
-          .map(unit =>
-            parseInt(
-              unit.characteristics[0].characteristic.find(
-                characteristic => characteristic.$.name === characteristicName,
-              )._,
-              10,
-            ),
-          );
-      },
-    );
+          return submodel.profiles[0].profile
+            .filter(
+              profile =>
+                profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
+            )
+            .map(unit =>
+              parseInt(
+                unit.characteristics[0].characteristic.find(
+                  characteristic => characteristic.$.name === characteristicName,
+                )._,
+                10,
+              ),
+            );
+        },
+      );
+    } 
 
     // Characteristics of top models
     if (this.props.unit.profiles) {
@@ -787,7 +790,7 @@ class UnitModelsTable extends React.Component {
     if (this.props.onlyModel === 'true')
       return [
         this.renderModels([this.props.unit], true),
-        this.renderModels(this.props.unit.selections[0].selection, false),
+        this.props.unit.selections ? this.renderModels(this.props.unit.selections[0].selection, false) : '',
       ];
     return (
       <div className="table-responsive">

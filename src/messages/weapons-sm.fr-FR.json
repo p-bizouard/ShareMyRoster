@@ -52,6 +52,10 @@
     "message": "Gantelet Boltstorm (tir)"
   },
   {
+    "id": "unit.weapon.Staff of the Stormcallers",
+    "message": "Baton des tempêtes"
+  },
+  {
     "id": "unit.weapon_ability.Staff of the Stormcaller",
     "message": "Vous pouvez relancer 1 test d'Abjuration raté à chaque phase Psychique adverse"
   },
@@ -96,28 +100,32 @@
     "message": "+1 attaque si l'unité a chargé lors du tour"
   },
   {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon.Krak grenades",
+    "message": "Grenades krak"
   },
   {
-    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon.Frag grenades",
+    "message": "Grenades frag"
   },
   {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon_ability.Frag grenades",
+    "message": "Déflagration (3 attaques min si cible avec 6+ figurines, le max si 11+)"
   },
   {
-    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon.Artificer Crozius",
+    "message": "Crozius d'artificier"
   },
   {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon.Astartes Chainsword",
+    "message": "Épée tronçonneuse Astartes"
   },
   {
-    "id": "unit.weapon.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon_ability.Astartes Chainsword",
+    "message": "+1 attaque en phase de Combat"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxx"
   },
   {
     "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",

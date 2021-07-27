@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { injectIntl, FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import MyFormattedMessage from '../MyFormattedMessage';
 
-export default class UnitAbilitiesTable extends Component {
+class UnitAbilitiesTable extends Component {
   static propTypes = {
     unit: PropTypes.shape({
       $: PropTypes.shape({
@@ -14,6 +14,9 @@ export default class UnitAbilitiesTable extends Component {
       categories: PropTypes.array,
       selections: PropTypes.array,
       profiles: PropTypes.array,
+    }).isRequired,
+    intl: PropTypes.shape({
+      formatMessage: PropTypes.func.isRequired,
     }).isRequired,
   };
 
@@ -100,7 +103,16 @@ export default class UnitAbilitiesTable extends Component {
         .flat();
     }
 
+    // Remove empties
     abilities = abilities.flat().filter(n => n);
+
+    // Remove ignored abilities
+    abilities = abilities.flat().filter(ability => {
+      const translation = this.props.intl.formatMessage({
+        id: `unit.ability_name.${ability.name}`,
+      });
+      return translation !== 'IGNORE';
+    });
 
     const dedupAbilities = Array.from(new Set(abilities.map(a => a.name))).map(
       name => abilities.find(a => a.name === name),
@@ -157,3 +169,5 @@ export default class UnitAbilitiesTable extends Component {
     );
   }
 }
+
+export default injectIntl(UnitAbilitiesTable);

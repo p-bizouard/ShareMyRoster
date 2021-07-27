@@ -375,7 +375,21 @@
   {
     "id": "unit.ability_name.Litany of Hate",
     "message":
-      "Litanie de la haine"
+      "0. Litanie de la haine"
+  },
+  {
+    "id": "unit.ability_description.Runic Armour",
+    "message": "Sauvegarde invulnérable à 5+"
+  },
+  {
+    "id": "unit.ability_name.1. Litany of Faith (Aura)",
+    "message":
+      "1. Litanie de la foi"
+  },
+  {
+    "id": "unit.ability_description.1. Litany of Faith (Aura)",
+    "message":
+      "Sur 3+, si cette litanie réussit, tant qu'une unité BASE ou PERSONNAGE amie est à 6'' de ce prêtre, chaque fois qu'une figurine de l'unité est cencée perdre un PV suit à une BM, jetez un D6. Sur 5+ le PV n'est pas perdu."
   },
   {
     "id": "unit.ability_description.Runic Armour",
@@ -393,51 +407,51 @@
   },
   {
     "id": "unit.ability_description.1. Litany of Faith",
-    "message": "Sur 3+, alors lorsqu'un modèle dans une unité amie à moins de 6'' de ce modèle perdrait une blessure à cause d'une BM, lancez un D6 ; sur un 5+ cette blessure n'est pas perdue."
+    "message": "Sur 3+, si cette litanie réussit, alors lorsqu'un modèle dans une unité amie à moins de 6'' de ce modèle perdrait une blessure à cause d'une BM, lancez un D6 ; sur un 5+ cette blessure n'est pas perdue."
   },
   {
     "id": "unit.ability_name.2. Catechism of Fire",
     "message":
-      "Catéchisme du feu"
+      "2. Catéchisme du feu"
   },
   {
     "id": "unit.ability_description.2. Catechism of Fire",
-    "message": "Sur 3+, choisissez une unité amie à moins de 6'' de ce modèle. Chaque fois qu'une figurine de l'unité fait une attaque de tir contre la cible la plus proche, ajoutez 1 au jet de blessure"
+    "message": "Sur 3+, si cette litanie réussit, choisissez une unité amie à moins de 6'' de ce modèle. Chaque fois qu'une figurine de l'unité fait une attaque de tir contre la cible la plus proche, ajoutez 1 au jet de blessure"
   },
   {
     "id": "unit.ability_name.3. Exhortation of Rage",
     "message":
-      "Exhortation à l rage"
+      "3. Exhortation à l rage"
   },
   {
     "id": "unit.ability_description.3. Exhortation of Rage",
-    "message": "Sur 3+, une unité amie à 6'' obtient +1 aux jets de blessure de mêlée"
+    "message": "Sur 3+, si cette litanie réussit, une unité amie à 6'' obtient +1 aux jets de blessure de mêlée"
   },
   {
     "id": "unit.ability_name.4. Mantra of Strength",
-    "message":  "Le mantra de la force"
+    "message":  "4. Le mantra de la force"
   },
   {
     "id": "unit.ability_description.4. Mantra of Strength",
-    "message":  "Sur 3+, ajoutez 1 à la caractéristique de force de ce prêtre, et ajoutez 1 à la caractéristique de dégats des armes de mêlée de ce prêtre"
+    "message":  "Sur 3+, si cette litanie réussit, ajoutez 1 à la caractéristique de force de ce prêtre, et ajoutez 1 à la caractéristique de dégats des armes de mêlée de ce prêtre"
   },
   {
     "id": "unit.ability_name.5. Recitation of Focus",
-    "message": "Récitation de la concentration"
+    "message": "5. Récitation de la concentration"
   },
   {
     "id": "unit.ability_description.5. Recitation of Focus",
     "message":
-      "Sur 3+, une unité amie à 6'' obtient +1 aux jets de touche de tir"
+      "Sur 3+, si cette litanie réussit, une unité amie à 6'' obtient +1 aux jets de touche de tir"
   },
   {
-    "id": "unit.ability_name.6. Canticle of Hate",
-    "message": "Cantique de la haine"
+    "id": "unit.ability_name.6. Canticle of Hate (Aura)",
+    "message": "6. Cantique de la haine"
   },
   {
-    "id": "unit.ability_description.6. Canticle of Hate",
+    "id": "unit.ability_description.6. Canticle of Hate (Aura)",
     "message":
-      "Sur 3+, une unité amie à 6'' obtient +2 aux jets de charge, et peut ajouter 3'' aux mouvements d'engagement ou de consolidation"
+      "Sur 3+, si cette litanie réussit, une unité amie à 6'' obtient +2 aux jets de charge, et peut ajouter 3'' aux mouvements d'engagement ou de consolidation"
   },
   {
     "id": "unit.ability_name.Wolf Helm of Russ (Aura)",
@@ -495,21 +509,21 @@
   },
   {
     "id": "unit.ability_name.Anti-grav Upwash",
-    "message": "Peut se déplacer de 20'' si l'unité contient 3 figurines"
+    "message": "Anti-grav Upwash"
   },
   {
     "id": "unit.ability_description.Anti-grav Upwash",
     "message":
-      "xxxxxxxxxxxxxxxxx"
+    "Peut se déplacer de 20'' si l'unité contient 3 figurines"
   },
   {
-    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
-    "message": "xxxxxxxxxxxxxxxxx"
+    "id": "unit.ability_name.Duty Eternal",
+    "message": "Devoir éternel"
   },
   {
-    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "id": "unit.ability_description.Duty Eternal",
     "message":
-      "xxxxxxxxxxxxxxxxx"
+      "À chaque dégats subits, soustrayez 1 à la caractéristique de dégats de l'attaque"
   },
   {
     "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",

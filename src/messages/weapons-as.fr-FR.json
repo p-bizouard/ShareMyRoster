@@ -1,10 +1,10 @@
 [
   {
-    "id": "unit.weapon.Neural whips",
+    "id": "unit.weapon.Neural Whips",
     "message": "Fouets neuraux"
   },
   {
-    "id": "unit.weapon_ability.Neural whips",
+    "id": "unit.weapon_ability.Neural Whips",
     "message": "Quand vous résolvez une attaque de cette arme contre une unité (autre qu'un véhicule) dont aucune figurine n'a une caractéristique de Cd supérieure à 7, ajoutez 1 au jet de blessure."
   },
   {
@@ -13,7 +13,7 @@
   },
   {
     "id": "unit.weapon_ability.The Ardent Blade (melee)",
-    "message": ""
+    "message": "À chaque attaque avec cette arme, sur un jet de touche non modifié de 6, la cible subit 2 BM et la séquence d'attaque prend fin"
   },
   {
     "id": "unit.weapon.The Ardent Blade (shooting)",
@@ -40,51 +40,79 @@
     "message": "Quand vous résolvez une attaque de cette arme, soustrayez 1 au jet de touche"
   },
   {
-    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "id": "unit.weapon.Sweeping Blow",
+    "message": "Lance de l'illumination : Balayage"
+  },
+  {
+    "id": "unit.weapon_ability.Sweeping Blow",
+    "message": "Faites 2 jets de dès de touche au lieu d'1"
+  },
+  {
+    "id": "unit.weapon.Lunging Strike",
+    "message": "Lance de l'illumination : Coup d'estoc"
+  },
+  {
+    "id": "unit.weapon_ability.Lunging Strike",
+    "message": "Sur un jet de blessure non modifié de 6, la cible subit 1 BM en plus des dégats normaux."
+  },
+  {
+    "id": "unit.weapon.Sanctorum Missile",
+    "message": "Lance-missiles Parangon : Sanctorum"
+  },
+  {
+    "id": "unit.weapon_ability.Sanctorum Missile",
+    "message": "Déflagration (3 attaques min si cible avec 6+ figurines, le max si 11+)"
+  },
+  {
+    "id": "unit.weapon.Prioris Missile",
+    "message": "Lance-missiles Parangon : Prioris"
+  },
+  {
+    "id": "unit.weapon.Mace of the Righteous",
+    "message": "Masse du juste"
+  },
+  {
+    "id": "unit.weapon_ability.Mace of the Righteous",
+    "message": ""
+  },
+  {
+    "id": "unit.weapon.Ministorum Heavy Flamer",
+    "message": "Lance-flammes lourd Ministorum"
+  },
+  {
+    "id": "unit.weapon_ability.Ministorum Heavy Flamer",
+    "message": "Touche automatiquement"
+  },
+  {
+    "id": "unit.weapon.Penitent Flails",
+    "message": "Fléau de pénitent"
+  },
+  {
+    "id": "unit.weapon_ability.Penitent Flails",
+    "message": "À chaque attaque avec cette arme, faites 2 jets de touche au lieu de 1"
+  },
+  {
+    "id": "unit.weapon.xxxxxxxxxxx",
     "message": "Éssssssssssssssssvre"
   },
   {
     "id": "unit.weapon_ability.xxxxxxxxxxx",
-    "message": "sssssssssssssssssssssssssssssssssssrme"
+    "message": "xxxxxxxxxxxxxxxxxxxxxx"
   },
   {
-    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "id": "unit.weapon.xxxxxxxxxxx",
     "message": "Éssssssssssssssssvre"
   },
   {
     "id": "unit.weapon_ability.xxxxxxxxxxx",
-    "message": "sssssssssssssssssssssssssssssssssssrme"
+    "message": "xxxxxxxxxxxxxxxxxxxxxx"
   },
   {
-    "id": "unit.weapon.xxxxxxxxxxxxx",
+    "id": "unit.weapon.xxxxxxxxxxx",
     "message": "Éssssssssssssssssvre"
   },
   {
     "id": "unit.weapon_ability.xxxxxxxxxxx",
-    "message": "sssssssssssssssssssssssssssssssssssrme"
-  },
-  {
-    "id": "unit.weapon.xxxxxxxxxxxxx",
-    "message": "Éssssssssssssssssvre"
-  },
-  {
-    "id": "unit.weapon_ability.xxxxxxxxxxx",
-    "message": "sssssssssssssssssssssssssssssssssssrme"
-  },
-  {
-    "id": "unit.weapon.xxxxxxxxxxxxx",
-    "message": "Éssssssssssssssssvre"
-  },
-  {
-    "id": "unit.weapon_ability.xxxxxxxxxxx",
-    "message": "sssssssssssssssssssssssssssssssssssrme"
-  },
-  {
-    "id": "unit.weapon.xxxxxxxxxxxxx",
-    "message": "Éssssssssssssssssvre"
-  },
-  {
-    "id": "unit.weapon_ability.xxxxxxxxxxx",
-    "message": "sssssssssssssssssssssssssssssssssssrme"
+    "message": "xxxxxxxxxxxxxxxxxxxxxx"
   }
 ]
