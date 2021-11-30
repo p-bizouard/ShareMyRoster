@@ -264,7 +264,7 @@ class UnitModelsTable extends React.Component {
           <i>
             <FormattedMessage
               id="DatasheetTemplate.weapon"
-              defaultMessage={`{count, plural, one {Weapon} other {Weapons}} :`}
+              defaultMessage="{count, plural, one {Weapon} other {Weapons}} :"
               values={{ count: parseInt(model.$.number, 10) }}
             />
           </i>{' '}
@@ -317,7 +317,7 @@ class UnitModelsTable extends React.Component {
           <i>
             <FormattedMessage
               id="DatasheetTemplate.weapon"
-              defaultMessage={`{count, plural, one {Weapon} other {Weapons}} :`}
+              defaultMessage="{count, plural, one {Weapon} other {Weapons}} :"
               values={{ count: weapons.length }}
             />{' '}
           </i>
@@ -394,7 +394,7 @@ class UnitModelsTable extends React.Component {
           <i>
             <FormattedMessage
               id="DatasheetTemplate.keyword"
-              defaultMessage={`{count, plural, one {Keyword} other {Keywords}} :`}
+              defaultMessage="{count, plural, one {Keyword} other {Keywords}} :"
               values={{ count: keywords.length }}
             />
           </i>{' '}
@@ -454,7 +454,7 @@ class UnitModelsTable extends React.Component {
                           {UnitModelsTable.renderModelsTransport(subModel)}
                         </ul>
                       ) : (
-                        ''
+                        null
                       )}
                     </td>
 
@@ -490,7 +490,7 @@ class UnitModelsTable extends React.Component {
                 {canHaveSubModels ? this.renderSubModels(models, model) : ''}
               </ul>
             ) : (
-              ''
+              null
             )}
           </td>
 
@@ -662,25 +662,28 @@ class UnitModelsTable extends React.Component {
     }
 
     // Characteristics of sub models
-    let characteristicsOfUnit = this.props.unit.selections[0].selection.map(
-      submodel => {
-        if (!submodel.profiles) return [0];
+    let characteristicsOfUnit = [];
+    if (this.props.unit.selections && this.props.unit.selections.length) {
+      characteristicsOfUnit = this.props.unit.selections[0].selection.map(
+        submodel => {
+          if (!submodel.profiles) return [0];
 
-        return submodel.profiles[0].profile
-          .filter(
-            profile =>
-              profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
-          )
-          .map(unit =>
-            parseInt(
-              unit.characteristics[0].characteristic.find(
-                characteristic => characteristic.$.name === characteristicName,
-              )._,
-              10,
-            ),
-          );
-      },
-    );
+          return submodel.profiles[0].profile
+            .filter(
+              profile =>
+                profile.$.typeName === 'Unit' || profile.$.typeName === 'Model',
+            )
+            .map(unit =>
+              parseInt(
+                unit.characteristics[0].characteristic.find(
+                  characteristic => characteristic.$.name === characteristicName,
+                )._,
+                10,
+              ),
+            );
+        },
+      );
+    } 
 
     // Characteristics of top models
     if (this.props.unit.profiles) {
@@ -767,7 +770,7 @@ class UnitModelsTable extends React.Component {
                     {UnitModelsTable.renderModelsTransport(subModel)}
                   </ul>
                 ) : (
-                  ''
+                  null
                 )}
               </li>,
             ];
@@ -787,7 +790,7 @@ class UnitModelsTable extends React.Component {
     if (this.props.onlyModel === 'true')
       return [
         this.renderModels([this.props.unit], true),
-        this.renderModels(this.props.unit.selections[0].selection, false),
+        this.props.unit.selections ? this.renderModels(this.props.unit.selections[0].selection, false) : '',
       ];
     return (
       <div className="table-responsive">
@@ -861,9 +864,8 @@ class UnitModelsTable extends React.Component {
                     defaultMessage="Max"
                   />
                 </th>
-              ) : (
-                ''
-              )}
+              )
+              : null}
             </tr>
           </thead>
           <tbody>

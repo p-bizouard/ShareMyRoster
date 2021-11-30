@@ -13,8 +13,6 @@ View, share and print your Battlescribe rosters ! Live at [https://www.sharemyro
 
 ## Getting Started
 
-### Prerequisites
-
 ### Installation
 
 1.  Clone the repo

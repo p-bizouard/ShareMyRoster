@@ -148,11 +148,11 @@
       "Si un Officier ami est à 3'' ou moins d'une unité avec un Émétteur vox, elle peut étenddre la portée de ses ordres à 18'' si l'unité ciblée a aussi un émetteur vox"
   },
   {
-    "id": "unit.ability_name.Astral Devination",
+    "id": "unit.ability_name.Astral Divination",
     "message": "Divination astrale"
   },
   {
-    "id": "unit.ability_description.Astral Devination",
+    "id": "unit.ability_description.Astral Divination",
     "message":
       "Au début de votre phase de tir, choisissez une unité ennemie à 18''. Pour la durée de la phase, l'unité ne bénéfície d'aucun couvert pour ses jets de sauvegarde des unités AM amies à 6'' ou moins du Psyker"
   },
@@ -279,5 +279,158 @@
     "id": "unit.ability_description.Head Shot",
     "message":
       "Après la phase de tir, lancez un D6 si cette figurine a infligé un dégat mais n'a pas été tuée. Lancez un D6. Sur 3+ cette unité subit une BM. Si cette unité n'a pas été tuée, lancez un D6. Puis sur 5+, puis sur 6+"
+  },
+  {
+    "id": "unit.ability_name.Airborne",
+    "message": "Aéroporté"
+  },
+  {
+    "id": "unit.ability_description.Airborne",
+    "message":
+      "Cette figurine ne peut charger ou être chargée que par des unités qui ont le mot clé Vol."
+  },
+  {
+    "id": "unit.ability_name.Crash and Burn",
+    "message": "Descente en flamme"
+  },
+  {
+    "id": "unit.ability_description.Crash and Burn",
+    "message":
+      "Si détruite, avant de la retirer ou de faire débarquer les unités, jeter un D6. Sur 6 elle s'écrase et explose, chaque unité à 6'' ou moins subit D3 BM"
+  },
+  {
+    "id": "unit.ability_name.Supersonic",
+    "message": "Supersonic"
+  },
+  {
+    "id": "unit.ability_description.Supersonic",
+    "message":
+      "Au déplacement, peut pivoter jusqu'à 90 degrés, et n'avancer qu'en ligne droite. Jet d'avance de 20 auto."
+  },
+  {
+    "id": "unit.ability_name.Hard to Hit",
+    "message": "Cible floue"
+  },
+  {
+    "id": "unit.ability_description.Hard to Hit",
+    "message":
+      "-1 aux jets de touche au tir sur cette unité"
+  },
+  {
+    "id": "unit.ability_name.Hover Jet",
+    "message": "Stationnaire"
+  },
+  {
+    "id": "unit.ability_description.Hover Jet",
+    "message":
+      "Avant de déplacer la figurine, vous pouvez décider de la placer en vol stationnaire. Sa caractéristique de mouvement devient 20'' et perd les aptitudes Aéroporté, Cible Floue et Supersonique"
+  },
+  {
+    "id": "unit.ability_name.Grav Chute Insertion",
+    "message": "Saut antigrav"
+  },
+  {
+    "id": "unit.ability_description.Grav Chute Insertion",
+    "message":
+      "Des figurines peuvent débarquer, mais si la Valkyrie se déplace de + de 20'', jetez un D6 pour chaque figurine qui débarque. Sur 1 la figurine est tuée. Les figurines qui débarquent de cette façon doivent être placées à + de 9'' d'une figurine ennemie"
+  },
+  {
+    "id": "unit.ability_name.Daemonifuge",
+    "message": "Démonifuge (Ephrael)"
+  },
+  {
+    "id": "unit.ability_description.Daemonifuge",
+    "message":
+      "Spécifique chaos"
+  },
+  {
+    "id": "unit.ability_name.Divine Protection",
+    "message": "Protection divine (Ephrael)"
+  },
+  {
+    "id": "unit.ability_description.Divine Protection",
+    "message":
+      "Sauvegarde invulnérable à 4+. -1 aux jets de touche contre cette figurine"
+  },
+  {
+    "id": "unit.ability_name.Knight of Shadows",
+    "message": "Chevalier des ombres (Kyganil)"
+  },
+  {
+    "id": "unit.ability_description.Knight of Shadows",
+    "message":
+      "Sauvegarde invulnérable à 4+. Cette figurine peut combatre en premier même si elle n'a pas chargé à ce tour. Si l'adversaire a des unités ayant chargé, il combat en premier, puis choisissez à tour de rôle"
+  },
+  {
+    "id": "unit.ability_name.Mysterious Saviour",
+    "message": "Mystérieux Sauveur (Kyganil)"
+  },
+  {
+    "id": "unit.ability_description.Mysterious Saviour",
+    "message":
+      "Tant que cette figurine est à 3'' d'Ephrael, Ephrael dispose d'un FNP à 5+"
+  },
+  {
+    "id": "unit.ability_name.Cast Together by Fate",
+    "message": "Rassemblés par le sort"
+  },
+  {
+    "id": "unit.ability_description.Cast Together by Fate",
+    "message":
+      "Au déploiement, ces 2 figurines doivent être placées en même temps, mais sont indépendantes"
+  },
+  {
+    "id": "unit.ability_name.Wanderers",
+    "message": "Vagabonds"
+  },
+  {
+    "id": "unit.ability_description.Wanderers",
+    "message":
+      "Peuvent être placés dans la Toile au déploiement. À partir de la 2ème phase de mouvement, ces figurines pourront être déploiyées à 3'' ou moins l'une de l'autre et à + de 9'' de toute figurine énnemie"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+    "message": "xxxxxxxxxxxxxxxxx"
+  },
+  {
+    "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+    "message":
+      "xxxxxxxxxxxxxxxxx"
   }
 ]

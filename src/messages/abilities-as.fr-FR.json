@@ -1,0 +1,395 @@
+[
+    {
+      "id": "unit.ability_name.Stoic Endurance",
+      "message": "Endurance Stoïque"
+    },
+    {
+      "id": "unit.ability_description.Stoic Endurance",
+      "message": "FNP à 5+, réduit les PA -1 et -2 de 1"
+    },
+    {
+      "id": "unit.ability_name.Driven Onward",
+      "message": "Exhortation"
+    },
+    {
+      "id": "unit.ability_description.Driven Onward",
+      "message": "À votre phase de commandement, vous pouvez choisir une unitié de Soeurs Repentia à 3''. Jusqu'à la fin du tour, cette figurine et l'unité peuvent avancer et charger. Pour charger jetez 3D6 et défaussez en 1"
+    },
+    {
+      "id": "unit.ability_name.Scourge of the Penitent",
+      "message": "IGNORE"
+    },
+    {
+      "id": "unit.ability_description.Scourge of the Penitent",
+      "message": "IGNORE"
+    },
+    {
+      "id": "unit.ability_name.Overseer of Redemption (Aura)",
+      "message": "Supervision de la Rédemption (Aura)"
+    },
+    {
+      "id": "unit.ability_description.Overseer of Redemption (Aura)",
+      "message": "Ajoutez 1 aux jets de blessure des unités Soeurs Repentia à 6''"
+    },
+    {
+      "id": "unit.ability_name.Rapturous Blows: Blessing",
+      "message": "Coups Exultants : Bénédiction"
+    },
+    {
+      "id": "unit.ability_description.Rapturous Blows: Blessing",
+      "message": "+1 de force et de dégats pour toutes les armes de mêlée de cette figurine (hors reliques)"
+    },
+    {
+      "id": "unit.ability_name.Rapturous Blows: Miraculous ability",
+      "message": "Coups Exultants : Miracle"
+    },
+    {
+      "id": "unit.ability_description.Rapturous Blows: Miraculous ability",
+      "message": "À votre phase de CO, défaussez 1 dé de miracle (1: 1'', 2-5: 3'', 6: 6''). Aura pour les unités à X''. À chaque attaque de mêlée d'une figurine de l'unité, sur un jet de blessure non modifié de 6, inflige 1 BM en plus."
+    },
+    {
+      "id": "unit.ability_name.Relic: Mantle of Ophelia",
+      "message": "Manteau d'Ophelia"
+    },
+    {
+      "id": "unit.ability_description.Relic: Mantle of Ophelia",
+      "message": "À chaque attaque allouée au porteur, la caractéristique de Dégats est remplacée par 1"
+    },
+    {
+      "id": "unit.ability_name.Rosarius",
+      "message": "Rosarius"
+    },
+    {
+      "id": "unit.ability_description.Rosarius",
+      "message": "Sauvegarde de 4+ invulnérable"
+    },
+    {
+      "id": "unit.ability_name.Lead the Righteous (Aura)",
+      "message": "Guider les justes (Aura)"
+    },
+    {
+      "id": "unit.ability_description.Lead the Righteous (Aura)",
+      "message": "Pour les unités BASE à 6'', relancez les jets de touche de 1"
+    },
+    {
+      "id": "unit.ability_name.Lifewards",
+      "message": "Protectrices"
+    },
+    {
+      "id": "unit.ability_description.Lifewards",
+      "message": "Tant que cette unité contient une figurine Geminae Superia, les attaques doivent être allouées à ces figurines. Si Célestine est détruite, les Geminae Superia sont également détruites"
+    },
+    {
+      "id": "unit.ability_name.Divine Guardians",
+      "message": "Gardiènnes Divines"
+    },
+    {
+      "id": "unit.ability_description.Divine Guardians",
+      "message": "Geminae Superia : sauvegarde invulnérable de 4+"
+    },
+    {
+      "id": "unit.ability_name.The Armour of Saint Katherine",
+      "message": "L'armure de Sainte Katherine"
+    },
+    {
+      "id": "unit.ability_description.The Armour of Saint Katherine",
+      "message": "Célestine : sauvegarde invulnérable de 4+. Soustrayez les dégats de 1."
+    },
+    {
+      "id": "unit.ability_name.Miraculous Intervention",
+      "message": "Intervention Miraculeuse"
+    },
+    {
+      "id": "unit.ability_description.Miraculous Intervention",
+      "message": "La 1ère fois que Célestine est détruite, jetez un D6 à la fin de la phase. Sur 2+ replacer Célestine aussi près que possible de là où elle a été détruite, et hors de portée d'engagement des unités ennemies, avec tous ses PV."
+    },
+    {
+      "id": "unit.ability_name.Saintly Blessings (Aura)",
+      "message": "Bienfaits de Sainteté (Aura)"
+    },
+    {
+      "id": "unit.ability_description.Saintly Blessings (Aura)",
+      "message": "Tant qu'une unité d'infanterie amie est à 6'' de Célestine, les figurines de cette unité ont une sauvegarde invulnérable de 6+"
+    },
+    {
+      "id": "unit.ability_name.Sky Strike",
+      "message": "Frappe Aérienne"
+    },
+    {
+      "id": "unit.ability_description.Sky Strike",
+      "message": "Frappe en téléportarium"
+    },
+    {
+      "id": "unit.ability_name.Angelic Saviour",
+      "message": "Sauveuse Angélique"
+    },
+    {
+      "id": "unit.ability_description.Angelic Saviour",
+      "message": "Peut faire des intervention Héroiques à 6''"
+    },
+    {
+      "id": "unit.ability_name.Healing Tears",
+      "message": "Larmes Guérisseuses"
+    },
+    {
+      "id": "unit.ability_description.Healing Tears",
+      "message": "Tant que cette unité a perdu 1+ PV, cette unité peut tenter l'action suivante, qui commence en phase de commandement et est accomplie à la fin de la phase de tir. Si une figurine a perdu 1+ PV, la figurine récupère tous ses PV. Si l'unité est en dessous de son effectif initial, 1 figurine Geminae Superia est rammenée dans l'unité avec tous ses PV"
+    },
+    {
+      "id": "unit.ability_name.Paragon Missile Launcher",
+      "message": "Lance-missiles Parangon"
+    },
+    {
+      "id": "unit.ability_description.Paragon Missile Launcher",
+      "message": "Sélectionner l'un des profils au moment de tirer"
+    },
+    {
+      "id": "unit.ability_name.Lance of Illumination",
+      "message": "Lance de l'Illumination"
+    },
+    {
+      "id": "unit.ability_description.Lance of Illumination",
+      "message": "À chaque attaque avec cette arme, choisissez l'un des 2 profils"
+    },
+    {
+      "id": "unit.ability_name.Righteous Rage",
+      "message": "Rage Vertueuse"
+    },
+    {
+      "id": "unit.ability_description.Righteous Rage",
+      "message": "À chaque attaque de mêlée de ce Seigneur de Guerre, vous pouvez relancer le jet de touche et le jet de blessure"
+    },
+    {
+      "id": "unit.ability_name.Purgator Mirabilis Warsuit",
+      "message": "Exo-harnas Purgator Mirabilis"
+    },
+    {
+      "id": "unit.ability_description.Purgator Mirabilis Warsuit",
+      "message": "Sauvegarde invulnérable 4+. Chaque fois que cette figurine est censée perdre un PV suite à une BM, jetez un D6. Sur 4+ elle ne le perd pas"
+    },
+    {
+      "id": "unit.ability_name.Holy Aegis",
+      "message": "Saint Égide"
+    },
+    {
+      "id": "unit.ability_description.Holy Aegis",
+      "message": "À chaque attaque allouée à cette figurine, divisez par 2 les dégats de l'attaque (arrondie au supérieur)"
+    },
+    {
+      "id": "unit.ability_name.Abess Sanctorum (Aura)",
+      "message": "Abbesse Sanctorum (Aura)"
+    },
+    {
+      "id": "unit.ability_description.Abess Sanctorum (Aura)",
+      "message": "Unités BASE à 6'', relancez les jets de touche et les jets de blessure de 1"
+    },
+    {
+      "id": "unit.ability_name.Commander of the Adepta Sororitas",
+      "message": "Commandante de l'Adepta Sororita"
+    },
+    {
+      "id": "unit.ability_description.Commander of the Adepta Sororitas",
+      "message": "À votre phase de CO, choisissez une unité Adepta Sororitas Base ou Personnage à 6''. Jusqu'au début de votre prochaine phase de CO, à chaque attaque d'une figurine de l'unité choisie, vous pouvez relancer les jets de touche et de blessure"
+    },
+    {
+      "id": "unit.ability_name.Righteous Repugnance",
+      "message": "Répugnance Légitime"
+    },
+    {
+      "id": "unit.ability_description.Righteous Repugnance",
+      "message": "Une fois par bataille, à la fin de la phase de combat, cette figurine peut combatre à nouveau"
+    },
+    {
+      "id": "unit.ability_name.High Lord of the Imperium",
+      "message": "IGNORE"
+    },
+    {
+      "id": "unit.ability_name.Explodes (Vahl)",
+      "message": "Explosion"
+    },
+    {
+      "id": "unit.ability_description.Explodes (Vahl)",
+      "message": "Quand cette figurine est détruite, jetez un D6. Sur un jet de 6 elle explose, chaque unité à 6'' subit 1 BM"
+    },
+    {
+      "id": "unit.ability_name.Fury of the Righteous (Aura)",
+      "message": "Fureur des justes (Aura)"
+    },
+    {
+      "id": "unit.ability_description.Fury of the Righteous (Aura)",
+      "message": "Pour les unités BASE à 6'', relancez les jets de blessure de 1"
+    },
+    {
+      "id": "unit.ability_name.Simulacrum Imperialis",
+      "message": "Simulacrum Imperialis"
+    },
+    {
+      "id": "unit.ability_description.Simulacrum Imperialis",
+      "message": "Une fois par phase, l'unité du porteur peut accomplir un Acte de Foi même si une autre unité de votre armée a déjà accompli un Acte de Foi à cette phase."
+    },
+    {
+      "id": "unit.ability_name.Incensor Cherub",
+      "message": "Chérubin à encensoir"
+    },
+    {
+      "id": "unit.ability_description.Incensor Cherub",
+      "message": "Un fois par bataille, au début de n'importe quelle phase, vous pouvez jeter 2D6 et défausser l'un d'eux. La valeur du dé restant peut accomplir un Acte de Foi à cette phase uniquement"
+    },
+    {
+      "id": "unit.ability_name.Zealot",
+      "message": "Zélote"
+    },
+    {
+      "id": "unit.ability_description.Zealot",
+      "message": "À chaque attaque de mêlée de cette figurine, si l'unité a fait un mouvement de charge, a été chargée ou a accompli une Intervention Héroïque à ce tour, vous pouvez relancer le jet de touche de l'attaque"
+    },
+    {
+      "id": "unit.ability_name.Ecclesiarchy Battle Conclave (Arco)",
+      "message": "IGNORE"
+    },
+    {
+      "id": "unit.ability_name.Berserk Killing Machines",
+      "message": "Machines à Tuer Frénétiques"
+    },
+    {
+      "id": "unit.ability_description.Berserk Killing Machines",
+      "message": "Feel no pain à 5+"
+    },
+    {
+      "id": "unit.ability_name.Instrument of Pain and Penance",
+      "message": "Instrument de Douleur et de Contrition"
+    },
+    {
+      "id": "unit.ability_description.Instrument of Pain and Penance",
+      "message": "Cette unité ne peut accomplir aucune action"
+    },
+    {
+      "id": "unit.ability_name.War Hymn",
+      "message": "Hymne de Guerre"
+    },
+    {
+      "id": "unit.ability_description.War Hymn",
+      "message": "Sur 3+ en phase de CO. Si cette hymne réussi, choisissez une unnité BASE, Personnage ou Machine de Rédemption à 6''. Jusqu'au début de la prochaine phase de CO, ajoutez 1 à la caractéristique d'Attaque des figurines."
+    },
+    {
+      "id": "unit.ability_name.1. Refrain of Blazing Piety",
+      "message": "1. Refrain de piété Ardente"
+    },
+    {
+      "id": "unit.ability_description.1. Refrain of Blazing Piety",
+      "message": "Sur 3+ en phase de CO. Si cette hymne réussi, choisissez une unité ennemie à 12'' et visible. L'unité subit D3 BM"
+    },
+    {
+      "id": "unit.ability_name.Sacred Task (Aura)",
+      "message": "Tâche Sacrée (Aura)"
+    },
+    {
+      "id": "unit.ability_description.Sacred Task (Aura)",
+      "message": "Tant qu'une unité BASE qui accomplit une action est à 6'', elle peut tirer sans faire échouer l'action"
+    },
+    {
+      "id": "unit.ability_name.Unflinching Determination",
+      "message": "Détermination Inflexible"
+    },
+    {
+      "id": "unit.ability_description.Unflinching Determination",
+      "message": "À votre phase de CO, vous pouvez choisir une unité BASE à 6''. Jusqu'au début de votre prochaine phase de CO, l'unité a l'aptitude Objectif Sécurisé. Si elle l'a déjà les figurines comptes double."
+    },
+    {
+      "id": "unit.ability_name.Priest",
+      "message": "IGNORE"
+    },
+    {
+      "id": "unit.ability_name.Tale of the Warrior (Aura)",
+      "message": "Parabole du Guerrier (Aura)"
+    },
+    {
+      "id": "unit.ability_description.Tale of the Warrior (Aura)",
+      "message": "Tant qu'une unité BASE est à 6'' de cette figurine, ajoutez 1 à la caractéristique de force des figurines de l'unité."
+    },
+    {
+      "id": "unit.ability_name.Litany of Deeds",
+      "message": "IGNORE"
+    },
+    {
+      "id": "unit.ability_name.Martyrdom",
+      "message": "Martyre"
+    },
+    {
+      "id": "unit.ability_description.Martyrdom",
+      "message": "Si cette unité est détruite au cours d'une phase, à la fin de la phase, vous ganez 1 dé de Miracle"
+    },
+    {
+      "id": "unit.ability_name.Solace in Anguish",
+      "message": "Réconfort dans la Douleur"
+    },
+    {
+      "id": "unit.ability_description.Solace in Anguish",
+      "message": "FNP 5+"
+    },
+    {
+      "id": "unit.ability_name.Angelic Visage",
+      "message": "Visage Angélique"
+    },
+    {
+      "id": "unit.ability_description.Angelic Visage",
+      "message": "Amélioration de la sauvegarde invulnérable de Bouclier de la Foi de +1, jusqu'à un maximum de 4+"
+    },
+    {
+      "id": "unit.ability_name.Endless Suffering",
+      "message": "Souffrance Sans Fin"
+    },
+    {
+      "id": "unit.ability_description.Endless Suffering",
+      "message": "Peut avancer et charger au même tour. Pour ses mouvements d'engagement et de consolidation, cette unité peut se déplacer de 2'' supplémentaires"
+    },
+    {
+      "id": "unit.ability_name.Wrath of the Penitent",
+      "message": "Colère du Pénitent"
+    },
+    {
+      "id": "unit.ability_description.Wrath of the Penitent",
+      "message": "Si cette figurine a 2x la même arme de mêlée, elle a une caractéristique d'attaque de 5"
+    },
+    {
+      "id": "unit.ability_name.Armourium Cherub",
+      "message": "Chérubin de l'armirium"
+    },
+    {
+      "id": "unit.ability_description.Armourium Cherub",
+      "message": "Une fois par bataille, une figurine de l'unité peut re-tirer. Retirer une figurine à l'utilisation. Les chérubins ne sont pas des figurines au sens des règles."
+    },
+    {
+      "id": "unit.ability_name.Storm of Retribution",
+      "message": "Tempête de Rétribution"
+    },
+    {
+      "id": "unit.ability_description.Storm of Retribution",
+      "message": "Chaque fois qu'une figurine de cette unité effectue une attaque avec une arme lourde, la cible ne bénéficie pas du couvert contre l'attaque"
+    },
+    {
+      "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+      "message": "xxxxxxxxxxxxxxxxx"
+    },
+    {
+      "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+      "message": "xxxxxxxxxxxxxxxxx"
+    },
+    {
+      "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+      "message": "xxxxxxxxxxxxxxxxx"
+    },
+    {
+      "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+      "message": "xxxxxxxxxxxxxxxxx"
+    },
+    {
+      "id": "unit.ability_name.xxxxxxxxxxxxxxxxx",
+      "message": "xxxxxxxxxxxxxxxxx"
+    },
+    {
+      "id": "unit.ability_description.xxxxxxxxxxxxxxxxx",
+      "message": "xxxxxxxxxxxxxxxxx"
+    }
+  ]
+  

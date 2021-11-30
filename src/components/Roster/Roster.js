@@ -19,9 +19,11 @@ class Roster extends React.Component {
   static propTypes = {
     printType: PropTypes.string,
     roster: PropTypes.shape({
-      json: PropTypes.string.isRequired,
+      json: PropTypes.shape({}),
     }),
-    intl: PropTypes.func.isRequired,
+    intl: PropTypes.shape({
+      formatMessage: PropTypes.func.isRequired,
+    }).isRequired
   };
 
   static defaultProps = {
@@ -64,13 +66,14 @@ class Roster extends React.Component {
     })`;
 
     return [
-      <Helmet>
+      <Helmet
+      key="roster-helmet">
         <title>{title}</title>
         <meta property="og:title" content={title} />
       </Helmet>,
       this.getRoster().forces[0].force.map((force, index) => (
         <Force
-          key={force.$.id}
+          key={`roster-${force.$.id}`}
           force={force}
           index={index}
           rosterName={this.getRoster().$.name}
@@ -114,7 +117,7 @@ class Roster extends React.Component {
               {this.getRoster().forces[0].force.map(
                 (force, index) => (
                   <Force
-                    key={force.$.id}
+                    key={`recap-${force.$.id}`}
                     force={force}
                     index={index}
                     rosterName={this.getRoster().$.name}
@@ -141,10 +144,10 @@ class Roster extends React.Component {
       <div className="container">
         <div id="roster" className={printType}>
           {this.getRoster()
-            ? [
-                this.renderRoster(showOnlyIds),
-                this.renderModelsRecap(showOnlyIds),
-              ]
+            ? <div>
+                {this.renderRoster(showOnlyIds)}
+                {this.renderModelsRecap(showOnlyIds)}
+              </div>
             : this.renderHelp()}
         </div>
       </div>

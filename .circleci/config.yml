@@ -59,7 +59,7 @@ jobs:
           name: Deploy Code
           command: |
             docker login $DOCKER_REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
-            helm upgrade -i sharemyroster ./helm-chart/ --reuse-values --set image.version="$CIRCLE_SHA1"
+            helm upgrade -n sharemyroster -i sharemyroster ./helm-chart/ --reuse-values --set application.image.version="$CIRCLE_SHA1"
 workflows:
   version: 2
   build_and_test:

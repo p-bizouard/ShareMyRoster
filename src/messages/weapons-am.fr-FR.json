@@ -104,15 +104,23 @@
       "Les sauvegardes invulnérables ne peuvent pas être prises en compte. Cette arme inflige des dégats sur les Infanterie sur du 2+"
   },
   {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
+    "id": "unit.weapon.Sanctity",
+    "message": "Sainteté (Ephrael)"
+  },
+  {
+    "id": "unit.weapon.Harlequin's Kiss",
+    "message": "Baiser d'Harlequin (Kyganil)"
+  },
+  {
+    "id": "unit.weapon.The Outcast's Blades",
+    "message": "Les Lames du Proscrit (Kyganil)"
+  },
+  {
+    "id": "unit.weapon_ability.The Outcast's Blades",
+    "message": "+1 attaque avec cette arme"
   },
   {
     "id": "unit.weapon.XXXXXXXXXXXXXXXX",
-    "message": "XXXXXXXXXXXXXXXX"
-  },
-  {
-    "id": "unit.weapon_ability.XXXXXXXXXXXXXXXX",
     "message": "XXXXXXXXXXXXXXXX"
   },
   {
