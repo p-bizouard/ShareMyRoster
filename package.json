@@ -42,7 +42,7 @@
     "graphql": "^0.13.2",
     "graphql-tag": "^2.6.1",
     "graphql-tools": "^2.16.0",
-    "handlebars": "^4.5.1",
+    "handlebars": "^4.7.7",
     "history": "^4.7.2",
     "intl": "^1.2.5",
     "intl-locales-supported": "^1.0.0",
