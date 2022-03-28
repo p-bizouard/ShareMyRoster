@@ -1,7 +1,4 @@
 version: '3.2'
-# Create networks to be used to isolate containers
-
-# Define services to be run.
 services:
   postgres:
     image: postgres:12
@@ -11,15 +8,4 @@ services:
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: docker
     ports: 
-      - 127.0.0.1:5432:5432
-  phppgadmin:
-    build: phppgadmin-docker
-    ports:
-      - 127.0.0.1:9080:80
-    depends_on:
-      - postgres
-    environment:
-      PPA_DEFAULTDB: docker
-      PPA_HOST: postgres
-    depends_on:
-      - postgres
+      - 5432:5432
