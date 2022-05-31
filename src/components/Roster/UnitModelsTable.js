@@ -15,16 +15,17 @@ class UnitModelsTable extends React.Component {
         name: PropTypes.string.isRequired,
       }),
       categories: PropTypes.array.isRequired,
-      selections: PropTypes.array.isRequired,
+      selections: PropTypes.array,
       profiles: PropTypes.array.isRequired,
     }).isRequired,
-    rosterType: PropTypes.string.isRequired,
+    rosterType: PropTypes.string,
     onlyModel: PropTypes.string,
     showOnlyIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   static defaultProps = {
     onlyModel: 'false',
+    rosterType: ''
   };
 
   static getModelCharacteristic(model, profiles, characteristicName) {
@@ -287,7 +288,7 @@ class UnitModelsTable extends React.Component {
                 profile => profile.$.typeName === 'Weapon',
               ).length
             )
-              return '';
+              return null;
             return modelAttributs.$.name;
           }),
         ),
@@ -303,7 +304,7 @@ class UnitModelsTable extends React.Component {
                 profile => profile.$.typeName === 'Weapon',
               ).length
             )
-              return '';
+              return null;
             return modelAttributs.$.name;
           }),
         ),
@@ -423,9 +424,53 @@ class UnitModelsTable extends React.Component {
 
       // If multiples submodels with different characteristics, do not regroup them but display new line for each
       if (UnitModelsTable.hasDifferentSubModelsCharacteristics(model)) {
-        return models.filter(selection => selection.selections).map(
-          selection =>
-            selection.selections[0].selection
+        const modelFromCharacteristics = models.filter(selection => selection.profiles).map(profile => profile.profiles[0].profile
+            .filter(
+              subModel =>
+                subModel.$.typeName === 'Unit' || profile.$.typeName === 'Model'
+            )
+            .map(subModel => {
+              if (modelsDone.includes(subModel.$.name)) return null;
+              modelsDone.push(subModel.$.name);
+              return [
+                <tr key={`model-table-${model.$.id}`}>
+                  <td>
+                    <b>
+                      <MyFormattedMessage
+                        prefix="unit.name"
+                        message={subModel.$.name}
+                      />
+                      {subModel.$.number && subModel.$.number !== '1' && (
+                        <span> ({subModel.$.number})</span>
+                      )}
+                    </b>
+                    {this.props.onlyModel !== 'true' ? (
+                      <ul className="list-unstyled">
+                        {this.renderModelsWeapons(subModel, model)}
+                        {UnitModelsTable.renderModelsAbilities(subModel)}
+                        {this.renderModelsPsychics(subModel)}
+                        {UnitModelsTable.renderModelsExplosion(subModel)}
+                        {UnitModelsTable.renderModelsTransport(subModel)}
+                      </ul>
+                    ) : (
+                      null
+                    )}
+                  </td>
+
+                  {this.characteristicsName.map(value =>
+                    this.renderCharacteristic(
+                      subModel,
+                      value,
+                      model.profiles ? model.profiles[0].profile : null,
+                    ),
+                  )}
+                </tr>,
+              ];
+            }, this), this);
+        if (modelFromCharacteristics.length) return modelFromCharacteristics;
+        
+
+        return models.filter(selection => selection.selections).map(selection => selection.selections[0].selection
               .filter(
                 subModel =>
                   subModel.$.type === 'model' && subModel.$.entryGroupId,
@@ -467,8 +512,7 @@ class UnitModelsTable extends React.Component {
                     )}
                   </tr>,
                 ];
-              }, this),
-          this,
+              }, this), this,
         );
       }
 
