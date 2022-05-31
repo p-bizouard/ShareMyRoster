@@ -106,7 +106,7 @@ export default class Force extends Component {
     const unitComponents = [];
     const unitsCompare = [];
     selectionArray.forEach(constUnit => {
-      if (constUnit.$.name === 'List Configuration') return;
+      if (['Detachment Command Cost', 'List Configuration'].includes(constUnit.$.name)) return;
 
       const unit = JSON.parse(JSON.stringify(constUnit));
       const unitJSON = JSON.stringify(
@@ -127,7 +127,7 @@ export default class Force extends Component {
       if (countDup > 1) unit.$.name = `${unit.$.name} (x${countDup})`;
 
       if (!unitsCompare.includes(unitJSON)) {
-        let currentUnitComponent;
+        let currentUnitComponent = null;
         if (this.props.recap === "true") {
           if (unitsCompare.includes(unit.$.name.replace(/\s*\(x?\d+\)/, ''))) return;
           currentUnitComponent = (
@@ -232,7 +232,7 @@ export default class Force extends Component {
                     />
                   </th>
                 ) : (
-                    ''
+                    null
                   )}
               </tr>
             </thead>
