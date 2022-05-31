@@ -27,8 +27,12 @@ class Unit extends React.Component {
       categories: PropTypes.array.isRequired,
       selections: PropTypes.array.isRequired,
     }).isRequired,
-    rosterType: PropTypes.string.isRequired,
+    rosterType: PropTypes.string,
     showOnlyIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+  };
+
+  static defaultProps = {
+    rosterType: '',
   };
 
 
