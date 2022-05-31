@@ -9,7 +9,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
+import { intlShape, injectIntl } from 'react-intl';
 
 class MyFormattedMessage extends React.Component {
   static formatLabel(label, value) {
@@ -29,14 +29,16 @@ class MyFormattedMessage extends React.Component {
   static propTypes = {
     prefix: PropTypes.string.isRequired,
     defaultMessage: PropTypes.string,
-    message: PropTypes.string.isRequired,
-    join: PropTypes.arrayOf(PropTypes.string),
-    intl: PropTypes.func.isRequired,
+    message: PropTypes.oneOfType([PropTypes.array, PropTypes.string])
+      .isRequired,
+    join: PropTypes.string,
+    intl: PropTypes.shape(intlShape),
   };
 
   static defaultProps = {
     defaultMessage: null,
-    join: [],
+    join: ', ',
+    intl: {},
   };
 
   translateSingle(message) {
@@ -68,6 +70,7 @@ class MyFormattedMessage extends React.Component {
     if (Array.isArray(this.props.message))
       return MyFormattedMessage.formatLabel(
         this.props.message
+          .filter(n => n) // Remove nulls
           .map(message => this.translateSingle(message))
           .join(this.props.join),
         regexTest,
