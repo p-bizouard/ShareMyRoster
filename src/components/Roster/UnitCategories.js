@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react/default-props-match-prop-types */
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
@@ -13,8 +14,8 @@ export default class UnitCategories extends Component {
         name: PropTypes.string.isRequired,
       }),
       categories: PropTypes.array.isRequired,
-      selections: PropTypes.array.isRequired,
-      profiles: PropTypes.array.isRequired,
+      selections: PropTypes.array,
+      profiles: PropTypes.array,
       rules: PropTypes.array.isRequired,
     }).isRequired,
   };
