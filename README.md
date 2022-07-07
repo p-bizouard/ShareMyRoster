@@ -31,6 +31,7 @@ yarn install
 3.  Run dev server
 
 ```sh
+docker-compose up -d
 yarn start
 ```
 
