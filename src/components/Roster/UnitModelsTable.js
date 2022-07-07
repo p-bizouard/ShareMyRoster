@@ -28,6 +28,18 @@ class UnitModelsTable extends React.Component {
     rosterType: ''
   };
 
+
+  static removeIds(obj) {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const prop in obj) {
+      if (['id', 'entryId', 'typeId', 'entryGroupId'].includes(prop))
+        // eslint-disable-next-line no-param-reassign
+        delete obj[prop];
+      else if (typeof obj[prop] === 'object') this.removeIds(obj[prop]);
+    }
+    return obj;
+  }
+
   static getModelCharacteristic(model, profiles, characteristicName) {
     if (
       !profiles
@@ -419,9 +431,8 @@ class UnitModelsTable extends React.Component {
       )
         return null;
 
-      if (modelsDone.includes(model.$.name)) return null;
-      modelsDone.push(model.$.name);
-
+      if (modelsDone.includes(JSON.stringify(UnitModelsTable.removeIds(model)))) return null;
+      modelsDone.push(JSON.stringify(UnitModelsTable.removeIds(model)));
       // If multiples submodels with different characteristics, do not regroup them but display new line for each
       if (UnitModelsTable.hasDifferentSubModelsCharacteristics(model)) {
         const modelFromCharacteristics = models.filter(selection => selection.profiles).map(profile => profile.profiles[0].profile
@@ -430,8 +441,8 @@ class UnitModelsTable extends React.Component {
                 subModel.$.typeName === 'Unit' || profile.$.typeName === 'Model'
             )
             .map(subModel => {
-              if (modelsDone.includes(subModel.$.name)) return null;
-              modelsDone.push(subModel.$.name);
+              if (modelsDone.includes(JSON.stringify(UnitModelsTable.removeIds(subModel)))) return null;
+              modelsDone.push(JSON.stringify(UnitModelsTable.removeIds(subModel)));
               return [
                 <tr key={`model-table-${model.$.id}`}>
                   <td>
@@ -476,8 +487,8 @@ class UnitModelsTable extends React.Component {
                   subModel.$.type === 'model' && subModel.$.entryGroupId,
               )
               .map(subModel => {
-                if (modelsDone.includes(subModel.$.name)) return null;
-                modelsDone.push(subModel.$.name);
+                if (modelsDone.includes(JSON.stringify(UnitModelsTable.removeIds(subModel)))) return null;
+                modelsDone.push(JSON.stringify(UnitModelsTable.removeIds(subModel)));
                 return [
                   <tr key={`model-table-${model.$.id}`}>
                     <td>
@@ -792,8 +803,8 @@ class UnitModelsTable extends React.Component {
             subModel => subModel.$.type === 'model' && subModel.$.entryGroupId,
           )
           .map(subModel => {
-            if (modelsDone.includes(subModel.$.name)) return null;
-            modelsDone.push(subModel.$.name);
+            if (modelsDone.includes(JSON.stringify(UnitModelsTable.removeIds(subModel)))) return null;
+            modelsDone.push(JSON.stringify(UnitModelsTable.removeIds(subModel)));
             return [
               <li key={`submodel_${subModel.$.id}`}>
                 <u>
