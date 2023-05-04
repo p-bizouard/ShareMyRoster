@@ -102,7 +102,7 @@
     "universal-router": "^6.0.0",
     "url-parse": "1.5.9",
     "whatwg-fetch": "^2.0.3",
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.42",
